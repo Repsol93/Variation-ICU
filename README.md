@@ -8,16 +8,19 @@ la nuit, lors de l'évaporation de la chaleur, piégée et enmaganisée par la s
 
 Données libre d'entrée:
 
-- 2 jour de données (une température toutes les heures) : 
+- 2 jour de données des stations météo: 
     - 1 jour avec un effet de l'ICU élevé (08/05/2018)
     - 1 jour avec un effet de l'ICU faible (13/09/2017)
-    
+Les données contiennent pour chaque station localisé et identifié, une température à chaque heure de la journée.
+
 - Base de données Apur :
     - Emprise du bâtiment PARIS
     - Emprise du bâtiment PETITE COURONNE
+Les données contiennent un "Shapefile" de l'emprise des bâtiments de Paris et de la petite couronne. Leurs délimitations au sol est également accompagnées d'informations sur leur datation et hauteur.
 
 - Base de données IAU :
     - Ilôts morphologiques urbains ILE-DE-FRANCE
+Les données contiennent un "Shapefile" de la délimitation des îlots morphologiques urbains d'Île-de-France. Les îlots morphologiques urbains
     
 - Image satellite SENTINEL2 de Level-2A :
     - Image du 6 mai 2018 ILE-DE-FRANCE
