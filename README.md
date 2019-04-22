@@ -9,8 +9,8 @@ la nuit, lors de l'évaporation de la chaleur, piégée et enmaganisée par la s
 Données libre d'entrée:
 
 - 2 jour de données (une température toutes les heures) : 
-    . 1 jour avec un effet de l'ICU élevé (08/05/2018)
-    . 1 jour avec un effet de l'ICU faible (13/09/2017)
+    - 1 jour avec un effet de l'ICU élevé (08/05/2018)
+    - 1 jour avec un effet de l'ICU faible (13/09/2017)
     
 - Base de données Apur :
     . Emprise du bâtiment PARIS
