@@ -13,15 +13,15 @@ Données libre d'entrée:
     - 1 jour avec un effet de l'ICU faible (13/09/2017)
     
 - Base de données Apur :
-    . Emprise du bâtiment PARIS
-    . Emprise du bâtiment PETITE COURONNE
+    - Emprise du bâtiment PARIS
+    - Emprise du bâtiment PETITE COURONNE
 
 - Base de données IAU :
-    . Ilôts morphologiques urbains ILE-DE-FRANCE
+    - Ilôts morphologiques urbains ILE-DE-FRANCE
     
 - Image satellite SENTINEL2 de Level-2A :
-    . Image du 6 mai 2018 ILE-DE-FRANCE
-    . Image du 27 août 2018 ILE-DE-FRANCE
+    - Image du 6 mai 2018 ILE-DE-FRANCE
+    - Image du 27 août 2018 ILE-DE-FRANCE
 
     
 
