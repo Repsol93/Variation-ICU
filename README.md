@@ -17,6 +17,10 @@ Détails des données d'entrée:
     - 1 jour avec un effet de l'ICU faible (13/09/2017)
 Les données contiennent pour chaque station localisé et identifié, une température à chaque heure de la journée.
 
+
+![station](https://user-images.githubusercontent.com/48625647/57014438-69b11400-6c10-11e9-9631-de13c6bc9ca3.png)
+
+
 - Base de données Apur :
     - Emprise du bâtiment PARIS
     - Emprise du bâtiment PETITE COURONNE
