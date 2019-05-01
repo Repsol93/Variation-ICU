@@ -35,7 +35,7 @@ Les données contiennent un "Shapefile" de la délimitation des îlots morpholog
     - Image du 27 août 2018 ILE-DE-FRANCE
 Les images satellites SENTINEL2 de Level-2A comporte une correction atmosphériques qui vise à trnasformer la réflectance Top Of Atmosphere (TOA) en réflectance Bottom Of Atmosphere (BOA). Les images ont des résolutions de 10,20 ou 60m.
     
-
+![sentinel2_2018](https://user-images.githubusercontent.com/48625647/57014437-69187d80-6c10-11e9-8e27-4c608b30befd.png)
 
 
 ## Résultats
