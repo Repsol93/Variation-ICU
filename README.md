@@ -10,7 +10,7 @@
 
 ## Méthodologie
 
-Données libre d'entrée:
+Détails des données d'entrée:
 
 - 2 jour de données des stations météo: 
     - 1 jour avec un effet de l'ICU élevé (08/05/2018)
@@ -24,7 +24,7 @@ Les données contiennent un "Shapefile" de l'emprise des bâtiments de Paris et 
 
 - Base de données IAU :
     - Ilôts morphologiques urbains ILE-DE-FRANCE
-Les données contiennent un "Shapefile" de la délimitation des îlots morphologiques urbains d'Île-de-France. Les îlots morphologiques urbains
+Les données contiennent un "Shapefile" de la délimitation des îlots morphologiques urbains d'Île-de-France. L'IAU se sont inpirés de plusiseurs exemples d'îlot et de recherches, tel que la classification Local Climate Zone (LCZ) de Stewart et Oke. Les îlots morphologiques urbains
     
 - Image satellite SENTINEL2 de Level-2A :
     - Image du 6 mai 2018 ILE-DE-FRANCE
