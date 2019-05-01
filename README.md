@@ -9,6 +9,8 @@
   
   On observe un ICU pour l'agglomération de Paris comparés a ses alentours (moins urbanisé). Pour simplifier il y a un décalage de température la nuit entre la "ville" et la "campagne" car les caractéristiques de la surface du sol et la morphologie de l'espace est différentes (rayons lumineux piégés entre les hauts bâtiments accumulant la chaleur, absorption et retention de la chaleur par le sol, ...). Ce qui est particulièrement intéressant dans cette étude est d'essayer de montrer la variation décroissante de la température, depuis le centre de Paris jusqu'au limite de l'Île-de-France, à partir de données libres acquises par des particuliers.
   
+J'ai choisis d'effectuer l'étude sur la zone Sud de Paris où le nombre de station é
+  
 
 
 ## Méthodologie
@@ -49,7 +51,11 @@ Les images satellites SENTINEL2 de Level-2A comporte une correction atmosphériq
     
 ![sentinel2_2018](https://user-images.githubusercontent.com/48625647/57014437-69187d80-6c10-11e9-8e27-4c608b30befd.png)
 
-### Détails de la méthodologie
+### Description de la méthode
+
+L'étude repose sur les valeurs de températures obtenus de stations météo détenus par des particuliers. Chaque station est localisée par ses coordonnées géographique. Le but de cette méthodologie est d'utiliser les géotraitements afin de caractéristisés l'espace autour de chaque station. En effet, l'environnement autour d'une station pourrait nous permettre de distinguer un type d'espace particulier qui serait propice à des variations de température importante. La position des stations pourrait également nous permettre de vérifier l'effet de l'ICU entre la ville de Paris et ses alentours. 
+
+Afin de caractériser l'environnement de chaque station, nous allons créer des zones tampons de 50, 100 et 200m autour de la station. Nous prenons trois distances de zone tampon afin de s'assurer un résultat le plus optimum pour la description de l'espace autour de la station et une liaison possible avec la variation de température.
 
 
 
