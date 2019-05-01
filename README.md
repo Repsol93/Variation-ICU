@@ -27,7 +27,8 @@ Les données contiennent un "Shapefile" de l'emprise des bâtiments de Paris et 
 Les données contiennent un "Shapefile" de la délimitation des îlots morphologiques urbains d'Île-de-France. L'IAU se sont inpirés de plusiseurs exemples d'îlot et de recherches, tel que la classification Local Climate Zone (LCZ) de Stewart et Oke. Les îlots morphologiques urbains comprennent différents mode d'occupation du sol avec un indice typo-morphologique de la rugosité urbaine. Celui-ci est calculé à partir du coefficient d'emprise au sol, de la densité du bâti volumique et de la hauteur moyenne pondéré du bâti.
 
 
-    ![IMU](https://user-images.githubusercontent.com/48625647/57012729-3cf8fe80-6c08-11e9-8ecb-561b24627f50.png)
+![IMU](https://user-images.githubusercontent.com/48625647/57013236-d6c1ab00-6c0a-11e9-9520-510c7ae50765.png)
+
 
 
 - Image satellite SENTINEL2 de Level-2A :
