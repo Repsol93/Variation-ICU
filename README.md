@@ -1,3 +1,6 @@
+
+# Etude de l'îlot de chaleur urbain et de la variation de température entre ville et zone rurale dans la région d'Île-De-France.
+
 ## Introduction
 
   L'agglomération de Paris est touché comme chaque ville fortement urbanisé, par une élévation des températures. Elle se produit la nuit, lors de l'évaporation de la chaleur, piégée et enmaganisée par la surface du sol durant la journée. Ce phénomène est nommé "îlot de chaleur urbain" (ICU). L'objectif de cette étude est d'appréhender ces variations de température dû à l'ICU dans la région de l'Île-de-France. 
@@ -10,7 +13,7 @@
 
 ## Méthodologie
 
-Détails des données d'entrée:
+### Détails des données d'entrée
 
 - 2 jour de données des stations météo: 
     - 1 jour avec un effet de l'ICU élevé (08/05/2018)
@@ -45,6 +48,11 @@ Les images satellites SENTINEL2 de Level-2A comporte une correction atmosphériq
 
     
 ![sentinel2_2018](https://user-images.githubusercontent.com/48625647/57014437-69187d80-6c10-11e9-8e27-4c608b30befd.png)
+
+### Détails de la méthodologie
+
+
+
 
 
 ## Résultats
