@@ -59,7 +59,7 @@ L'étude repose sur les valeurs de températures obtenus de stations météo dé
 Afin de caractériser l'environnement de chaque station, nous allons créer des zones tampons de 50, 100 et 200m autour de la station. Nous prenons trois distances de zone tampon afin de s'assurer un résultat le plus optimum pour la description de l'espace autour de la station et une liaison possible avec la variation de température.
 
 
-![image](https://user-images.githubusercontent.com/48625647/57017338-04185400-6c1f-11e9-8d58-28c8072d8762.png)
+![buffer](https://user-images.githubusercontent.com/48625647/57017363-37f37980-6c1f-11e9-8b59-d4693cde4231.png)
 
 
 
