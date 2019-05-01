@@ -30,11 +30,10 @@ Les données contiennent un "Shapefile" de la délimitation des îlots morpholog
    ![IMU](https://user-images.githubusercontent.com/48625647/57013236-d6c1ab00-6c0a-11e9-9520-510c7ae50765.png)
 
 
-
 - Image satellite SENTINEL2 de Level-2A :
     - Image du 6 mai 2018 ILE-DE-FRANCE
     - Image du 27 août 2018 ILE-DE-FRANCE
-
+Les images satellites SENTINEL2 de Level-2A comporte une correction atmosphériques qui vise à trnasformer la réflectance Top Of Atmosphere (TOA) en réflectance Bottom Of Atmosphere (BOA). Les images ont des résolutions de 10,20 ou 60m.
     
 
 
