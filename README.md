@@ -26,6 +26,10 @@ Les données contiennent pour chaque station localisé et identifié, une tempé
     - Emprise du bâtiment PETITE COURONNE
 Les données contiennent un "Shapefile" de l'emprise des bâtiments de Paris et de la petite couronne. Leurs délimitations au sol est également accompagnées d'informations sur leur datation et hauteur.
 
+
+![emprisbati](https://user-images.githubusercontent.com/48625647/57014436-69187d80-6c10-11e9-9857-ce9f8f13468e.png)
+
+
 - Base de données IAU :
     - Ilôts morphologiques urbains ILE-DE-FRANCE
 Les données contiennent un "Shapefile" de la délimitation des îlots morphologiques urbains d'Île-de-France. L'IAU se sont inpirés de plusiseurs exemples d'îlot et de recherches, tel que la classification Local Climate Zone (LCZ) de Stewart et Oke. Les îlots morphologiques urbains comprennent différents mode d'occupation du sol avec un indice typo-morphologique de la rugosité urbaine. Celui-ci est calculé à partir du coefficient d'emprise au sol, de la densité du bâti volumique et de la hauteur moyenne pondéré du bâti.
@@ -38,6 +42,7 @@ Les données contiennent un "Shapefile" de la délimitation des îlots morpholog
     - Image du 6 mai 2018 ILE-DE-FRANCE
     - Image du 27 août 2018 ILE-DE-FRANCE
 Les images satellites SENTINEL2 de Level-2A comporte une correction atmosphériques qui vise à trnasformer la réflectance Top Of Atmosphere (TOA) en réflectance Bottom Of Atmosphere (BOA). Les images ont des résolutions de 10,20 ou 60m.
+
     
 ![sentinel2_2018](https://user-images.githubusercontent.com/48625647/57014437-69187d80-6c10-11e9-8e27-4c608b30befd.png)
 
