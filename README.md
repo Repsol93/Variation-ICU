@@ -62,10 +62,8 @@ Les images satellites SENTINEL2 de [Level-2A](https://earth.esa.int/web/sentinel
 ![sentinel2_2018](https://user-images.githubusercontent.com/48625647/57014437-69187d80-6c10-11e9-8e27-4c608b30befd.png)
 
 
-- Image du SVF ( à voir si on en parle)
 
-
-### 2.2 Description générale
+### 2.2 Description de la méthodologie
 
 L'étude repose sur les valeurs de températures obtenus de stations météo détenus par des particuliers. Chaque station est localisée par ses coordonnées géographique. Le but de cette méthodologie est d'utiliser les géotraitements afin de caractéristisés l'espace autour de chaque station. En effet, l'environnement autour d'une station pourrait nous permettre de distinguer des types d'espace particuliers qui serait propice à des températures importantes ou non. La position des stations pourrait également nous permettre de vérifier l'effet de l'ICU entre la ville de Paris et ses alentours. 
 
@@ -75,15 +73,26 @@ Afin de caractériser l'environnement de chaque station, nous allons créer des 
 ![buffer](https://user-images.githubusercontent.com/48625647/57017363-37f37980-6c1f-11e9-8b59-d4693cde4231.png)
 
 
-A l'intérieur de ces zones tampons, nous voulons décrire l'environnement par rapport à l'occupation du sol et à la rugosité des infrastructures. Pour cela nous utiliserons différentes données (voir 2.1) afin de représenter pour chaque zone tampon la surface de:
+A l'intérieur de ces zones tampons, nous voulons essayer de caractériser l'environnement par rapport à l'occupation du sol et à la rugosité des bâtiments. Pour cela nous utiliserons différentes données (voir 2.1) afin de représenter pour chaque zone tampon la surface de:
 - l'emprise de l'IMU du "bâti résidentiel", car elle est majoritaire dans notre zone d'étude. Nous allons plutôt nous intéresser précisement à l'indice typo-morphologique de cet IMU, pour mettre l'accent sur la rugosité urbaine de ces emprises.
-- l'emprise du bâtiment pour la ville de Paris et la Petite Couronne. A l'intérieur de cette base, il y a les hauteurs médianne et moyenne des emprises de bâtiments qui seront utilisés.
+- l'emprise du bâtiment pour la ville de Paris et la Petite Couronne. A l'intérieur de cette base, il y a un champ des hauteurs médianne et moyenne pour chaque emprise de bâtiment qui seront utilisés.
 - l'emprise de la végétation obtenu grâce au NDVI calculé à partir des images satellites SENTINEL2.
 - l'emprise des "fonds de vallées" obtenu (par un seuillage des valeurs proche de 0) d'un SVF calculé avec l'extension SAGA sur QGIS.
+
+L'étude concernant le géotraitement a été réalisé avec ModelBuilder afin de gagner du temps sur la répétition de la chaîne de traitement, sur les différentes zones tampons pour les deux jours. Cette étude est constitué en 3 étapes :
+
+
+#### 2.2.1 Emprise du bâtiment
+
+
+#### 2.2.2 Emprise des IMU
+
+
+#### 2.2.3 Emprise de la végétation
 
 
 
 ## 3. Résultats
-
+Statistiques
 
 ## 4. Conclusion
