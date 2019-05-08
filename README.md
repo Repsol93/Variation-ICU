@@ -39,7 +39,7 @@ Les données contiennent un "Shapefile" de l'emprise des bâtiments de Paris et 
 
 - Base de données IAU :
     - Ilôts morphologiques urbains ILE-DE-FRANCE
-Les données contiennent un "Shapefile" de la délimitation des îlots morphologiques urbains (IMU) d'Île-de-France. L'IAU se sont inpirés de plusiseurs exemples d'îlot et de recherches, tel que la classification Local Climate Zone (LCZ) de Stewart et Oke. Les îlots morphologiques urbains comprennent différents mode d'occupation du sol avec un indice typo-morphologique de la rugosité urbaine. Celui-ci est calculé à partir du coefficient d'emprise au sol, de la densité du bâti volumique et de la hauteur moyenne pondéré du bâti. Si l'indice est élevé la rugosité urbaine est importante, c'est à dire une concentration et des hauteurs de bâtiment fortes. Voir ci-dessous :
+Les données contiennent un "Shapefile" de la délimitation des îlots morphologiques urbains (IMU) d'Île-de-France. L'IAU se sont inpirés de plusiseurs exemples d'îlot et de recherches, tel que la classification Local Climate Zone (LCZ) de Stewart et Oke ( * [LCZ](https://iainstew.files.wordpress.com/2013/01/seattle.pdf) - Plus d'infos). Les îlots morphologiques urbains comprennent différents mode d'occupation du sol avec un indice typo-morphologique de la rugosité urbaine. Celui-ci est calculé à partir du coefficient d'emprise au sol, de la densité du bâti volumique et de la hauteur moyenne pondéré du bâti. Si l'indice est élevé la rugosité urbaine est importante, c'est à dire une concentration et des hauteurs de bâtiment fortes. Voir ci-dessous :
 
 
 
