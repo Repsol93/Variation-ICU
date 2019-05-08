@@ -65,7 +65,27 @@ Les images satellites SENTINEL2 de [Level-2A](https://earth.esa.int/web/sentinel
 
 ### 2.2 Description de la méthodologie
 
-L'étude repose sur les valeurs de températures obtenus de stations météo détenus par des particuliers. Chaque station est localisée par ses coordonnées géographique. Le but de cette méthodologie est d'utiliser les géotraitements afin de caractéristisés l'espace autour de chaque station. En effet, l'environnement autour d'une station pourrait nous permettre de distinguer des types d'espace particuliers qui serait propice à des températures importantes ou non. La position des stations pourrait également nous permettre de vérifier l'effet de l'ICU entre la ville de Paris et ses alentours. 
+L'étude repose sur les valeurs de températures obtenus de stations météo détenus par des particuliers. Chaque station est localisée par ses coordonnées géographique. Le but de cette méthodologie est d'utiliser les outils de géomatique afin de caractéristisés l'espace autour de chaque station. En effet, l'environnement autour d'une station pourrait nous permettre de distinguer des types d'espace particuliers qui serait propice à des températures importantes ou non. La position des stations pourrait également nous permettre de vérifier l'effet de l'ICU entre la ville de Paris et ses alentours. 
+
+Tout d'abord nous allons sélectionner dans notre base de donnée pour les deux jours, les températures calculée de 19h à 6h. Les effets de l'ICU se produisent la nuit et c'est pour cette raison que nous sélectionnons les températures dans cette tranche horaire. A partir de RStudio nous allons pouvoir directement extraire les horaires des températures qui nous intéresse afin de les sauvegarder en format CSV et les ouvrir sur le logiciel ArcGIS. Voir script ci-dessous : 
+
+```
+jour1 <- readRDS("C:/Users/Quentin/Desktop/Mini_projet/R/Quentin_ex1.rds", refhook = NULL)
+jour2 <- readRDS("C:/Users/Quentin/Desktop/Mini_projet/R/Quentin_ex2.rds", refhook = NULL)
+
+library(dplyr)
+#On choisit les mesures effectué à une heure spécifique
+DonneesJ1H19_6 <- subset(jour1, jour1$H == 19 | jour1$H == 20 | jour1$H == 21 | jour1$H == 22 | jour1$H == 23 | jour1$H == 0 
+                         | jour1$H == 1 | jour1$H == 2 | jour1$H == 3 | jour1$H == 4 |jour1$H == 5 |jour1$H == 6 )
+DonneesJ2H19_6 <- subset(jour2, jour2$H == 19 | jour2$H == 20 | jour2$H == 21 | jour2$H == 22 | jour2$H == 23 | jour2$H == 0 
+                         | jour2$H == 1 | jour2$H == 2 |jour2$H == 3 |jour2$H == 4 |jour2$H == 5 |jour2$H == 6)
+DonneesJ2H23 <- subset(jour2, jour2$H == 23)
+DonneesJ1H23 <- subset(jour2, jour2$H == 23)
+#sauv en CSV pour les mettre sur Arcmap
+write.csv(DonneesJ1H19_6, file = "DonneesJ1H19_6.csv",row.names=FALSE)
+write.csv(DonneesJ2H19_6, file = "DonneesJ2H19_6.csv",row.names=FALSE)
+
+```
 
 Afin de caractériser l'environnement de chaque station, nous allons créer des zones tampons de 50, 100 et 200m autour de la station (figure ci-dessous). Nous prenons trois distances de zone tampon afin de s'assurer un résultat le plus optimum, pour la description de l'espace autour de la station et une possibilité de liaison avec la variation de température. 
 
