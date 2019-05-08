@@ -3,6 +3,8 @@
 
 ## 1. Introduction
 
+Au cours de mon master 2 de Télédétection et Géomatique Appliquées à l'Environnement de l'année scolaire 2018/2019, j'ai a réalisé un mini-projet. L'étude a été effectué à partir des logiciels SIG (ArcGIS 10.5.1 et QGIS 2.18.15). De plus les traitements statistiques ont été faits avec le logiciel RStudio.
+
   L'agglomération de Paris est touché comme chaque ville fortement urbanisé, par une élévation des températures. Elle se produit la nuit, lors de l'évaporation de la chaleur, piégée et enmaganisée par la surface du sol durant la journée. Ce phénomène est nommé "îlot de chaleur urbain" (ICU). L'objectif de cette étude est d'appréhender ces variations de température dû à l'ICU dans la région de l'Île-de-France. 
   
 ![ICU](https://user-images.githubusercontent.com/48625647/57013235-d6291480-6c0a-11e9-85d5-4364b2b2e150.png)
@@ -39,7 +41,7 @@ Les données contiennent un "Shapefile" de l'emprise des bâtiments de Paris et 
 
 - Base de données IAU :
     - Ilôts morphologiques urbains ILE-DE-FRANCE
-Les données contiennent un "Shapefile" de la délimitation des îlots morphologiques urbains (IMU) d'Île-de-France. L'IAU se sont inpirés de plusiseurs exemples d'îlot et de recherches, tel que la classification Local Climate Zone (LCZ) de Stewart et Oke ( * [LCZ](https://iainstew.files.wordpress.com/2013/01/seattle.pdf) - Plus d'infos). Les îlots morphologiques urbains comprennent différents mode d'occupation du sol avec un indice typo-morphologique de la rugosité urbaine. Celui-ci est calculé à partir du coefficient d'emprise au sol, de la densité du bâti volumique et de la hauteur moyenne pondéré du bâti. Si l'indice est élevé la rugosité urbaine est importante, c'est à dire une concentration et des hauteurs de bâtiment fortes. Voir ci-dessous :
+Les données contiennent un "Shapefile" de la délimitation des îlots morphologiques urbains ([IMU](https://www.iau-idf.fr/fileadmin/NewEtudes/Etude_1270/Les_ilots_morphologiques_urbains.pdf)) d'Île-de-France . L'IAU se sont inpirés de plusieurs exemples d'îlot et de recherches, tel que la classification Local Climate Zone ([LCZ](https://iainstew.files.wordpress.com/2013/01/seattle.pdf)) de Stewart et Oke . Les îlots morphologiques urbains comprennent différents mode d'occupation du sol avec un indice typo-morphologique de la rugosité urbaine. Celui-ci est calculé à partir du coefficient d'emprise au sol, de la densité du bâti volumique et de la hauteur moyenne pondéré du bâti. Si l'indice est élevé la rugosité urbaine est importante, c'est à dire une concentration et des hauteurs de bâtiment fortes. Voir ci-dessous :
 
 
 
@@ -49,7 +51,7 @@ Les données contiennent un "Shapefile" de la délimitation des îlots morpholog
 - Image satellite SENTINEL2 de Level-2A :
     - Image du 6 mai 2018 ILE-DE-FRANCE
     - Image du 27 août 2018 ILE-DE-FRANCE
-Les images satellites SENTINEL2 de Level-2A comporte une correction atmosphériques qui vise à trnasformer la réflectance Top Of Atmosphere (TOA) en réflectance Bottom Of Atmosphere (BOA). Les images ont des résolutions de 10,20 ou 60m. Voir ci-dessous :
+Les images satellites SENTINEL2 de [Level-2A](https://earth.esa.int/web/sentinel/technical-guides/sentinel-2-msi/level-2a/algorithm) comporte une correction atmosphériques qui vise à trnasformer la réflectance Top Of Atmosphere (TOA) en réflectance Bottom Of Atmosphere (BOA). Les images ont des résolutions de 10,20 ou 60m. Voir ci-dessous :
 
 
    
