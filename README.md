@@ -21,7 +21,7 @@ Le choix de la zone d'étude s'est porté sur l'endroit où la position des stat
 - 2 jour de données des stations météo: 
     - 1 jour avec un effet de l'ICU élevé (08/05/2018)
     - 1 jour avec un effet de l'ICU faible (13/09/2017)
-Les données contiennent pour chaque station localisé et identifié, une température à chaque heure de la journée. Voir ci-dessous :
+Les données contiennent l'identification et la localisation de chaque station météo, avec une température donnée à chaque heure de la journée. Voir ci-dessous :
 
 
 ![station](https://user-images.githubusercontent.com/48625647/57014438-69b11400-6c10-11e9-9631-de13c6bc9ca3.png)
