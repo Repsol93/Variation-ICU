@@ -31,8 +31,8 @@ Les données contiennent l'identification et la localisation de chaque station m
 
 
 - Base de données Apur :
-    - Emprise du bâtiment PARIS
-    - Emprise du bâtiment PETITE COURONNE
+    - [Emprise du bâtiment PARIS](https://www.iau-idf.fr/fileadmin/NewEtudes/Etude_1270/Les_ilots_morphologiques_urbains.pdf)
+    - [Emprise du bâtiment PETITE COURONNE](https://www.apur.org/open_data/EMPRISE_BATIE_PC_OD.pdf)
 
 Les données contiennent un "Shapefile" de l'emprise des bâtiments de Paris et de la petite couronne. Leurs délimitations au sol est également accompagnées d'informations sur leur datation et hauteur. Voir ci-dessous :
 
