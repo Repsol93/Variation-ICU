@@ -1,9 +1,9 @@
 
-# Etude de l'îlot de chaleur urbain et de la variation de température entre ville et zone rurale dans la région d'Île-De-France.
+# Etude de l'îlot de chaleur urbain et de la variation de température entre espace urbain et rurale dans la région d'Île-De-France.
+
+  Au cours du second semestre de master 2 Télédétection et Géomatique Appliquées à l'Environnement (TGAE) en 2019, j'ai eu a réaliser un mini-projet. Celui-ci s'intéresse aux variations de températures dû à l'îlots de chaleur urbain à partir de données public. L'étude a été effectué avec des logiciels SIG (ArcGIS 10.5.1 et QGIS 2.18.15). De plus, les traitements statistiques ont été faits avec le logiciel RStudio.
 
 ## 1. Introduction
-
-Au cours de mon master 2 de Télédétection et Géomatique Appliquées à l'Environnement de l'année scolaire 2018/2019, j'ai a réalisé un mini-projet. L'étude a été effectué à partir des logiciels SIG (ArcGIS 10.5.1 et QGIS 2.18.15). De plus les traitements statistiques ont été faits avec le logiciel RStudio.
 
   L'agglomération de Paris est touché comme chaque ville fortement urbanisé, par une élévation des températures. Elle se produit la nuit, lors de l'évaporation de la chaleur, piégée et enmaganisée par la surface du sol durant la journée. Ce phénomène est nommé "îlot de chaleur urbain" (ICU). L'objectif de cette étude est d'appréhender ces variations de température dû à l'ICU dans la région de l'Île-de-France. 
   
