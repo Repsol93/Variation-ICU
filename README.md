@@ -77,15 +77,17 @@ A l'intérieur de ces zones tampons, nous voulons essayer de caractériser l'env
 - l'emprise de l'IMU du "bâti résidentiel", car elle est majoritaire dans notre zone d'étude. Nous allons plutôt nous intéresser précisement à l'indice typo-morphologique de cet IMU, pour mettre l'accent sur la rugosité urbaine de ces emprises.
 - l'emprise du bâtiment pour la ville de Paris et la Petite Couronne. A l'intérieur de cette base, il y a un champ des hauteurs médianne et moyenne pour chaque emprise de bâtiment qui seront utilisés.
 - l'emprise de la végétation obtenu grâce au NDVI calculé à partir des images satellites SENTINEL2.
-- l'emprise des "fonds de vallées" obtenu (par un seuillage des valeurs proche de 0) d'un SVF calculé avec l'extension SAGA sur QGIS.
+(- l'emprise des "fonds de vallées" obtenu (par un seuillage des valeurs proche de 0) d'un SVF calculé avec l'extension SAGA sur QGIS.)
 
-L'étude concernant le géotraitement a été réalisé avec ModelBuilder afin de gagner du temps sur la répétition de la chaîne de traitement, sur les différentes zones tampons pour les deux jours. Cette étude est constitué en 3 étapes :
+L'étude concernant le géotraitement a été réalisé avec ModelBuilder afin de gagner du temps sur la répétition de la chaîne de traitement, sur les différentes zones tampons pour les deux jours. Cette étude est réalisés en 3 étapes :
 
 
-#### 2.2.1 Emprise du bâtiment
+#### 2.2.1 Emprise du bâtiment 
+
 
 
 #### 2.2.2 Emprise des IMU
+
 
 
 #### 2.2.3 Emprise de la végétation
