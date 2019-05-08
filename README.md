@@ -108,6 +108,23 @@ L'étude concernant le géotraitement a été réalisé avec ModelBuilder afin d
 
 #### 2.2.1 Emprise du bâtiment 
 
+Nous intersectons les zones tampons avec l'emprise du bâti
+
+
+![inter_empbati](https://user-images.githubusercontent.com/48625647/57386539-d601b980-71b4-11e9-8ff1-c53596bbcea7.png)
+
+
+Nous fusionons l'meprise bâti afin de sommer les champs "SurfxHmed" et "SurfBâti"
+
+
+![fusion_empbati](https://user-images.githubusercontent.com/48625647/57386538-d601b980-71b4-11e9-98f0-90fea668b8c0.png)
+
+
+Nous calculons la hauteur pondéré
+
+
+![exemple_htpond](https://user-images.githubusercontent.com/48625647/57386537-d5692300-71b4-11e9-9d2b-a883eac091f2.png)
+
 
 
 #### 2.2.2 Emprise des IMU
