@@ -69,11 +69,11 @@ Afin de caractériser l'environnement de chaque station, nous allons créer des 
 ![buffer](https://user-images.githubusercontent.com/48625647/57017363-37f37980-6c1f-11e9-8b59-d4693cde4231.png)
 
 
-A l'intérieur de ces zones tampons, nous voulons décrire l'environnement par rapport à l'occupation du sol et à la rugosité des infrastructures. Pour cela nous utiliserons différentes données (voir 2.1) afin de représenter :
-- L'emprise de l'IMU du "bâti résidentiel", car elle est majoritaire dans notre zone d'étude. Nous allons plutôt nous intéresser précisement à l'indice typo-morphologique de cet IMU, pour mettre l'accent sur la rugosité urbaine de ces emprises.
-- L'emprise du bâtiment pour la ville de Paris et la Petite Couronne. A l'intérieur de cette base, il y a les hauteurs médianne et moyenne des emprises de bâtiments qui seront utilisés.
-- L'emprise de la végétation obtenu grâce au NDVI calculé à partir des images satellites SENTINEL2.
-- L'emprise des "fonds de vallées" obtenu (par un seuillage des valeurs proche de 0) d'un SVF calculé avec l'extension SAGA sur QGIS.
+A l'intérieur de ces zones tampons, nous voulons décrire l'environnement par rapport à l'occupation du sol et à la rugosité des infrastructures. Pour cela nous utiliserons différentes données (voir 2.1) afin de représenter pour chaque zone tampon la surface de:
+- l'emprise de l'IMU du "bâti résidentiel", car elle est majoritaire dans notre zone d'étude. Nous allons plutôt nous intéresser précisement à l'indice typo-morphologique de cet IMU, pour mettre l'accent sur la rugosité urbaine de ces emprises.
+- l'emprise du bâtiment pour la ville de Paris et la Petite Couronne. A l'intérieur de cette base, il y a les hauteurs médianne et moyenne des emprises de bâtiments qui seront utilisés.
+- l'emprise de la végétation obtenu grâce au NDVI calculé à partir des images satellites SENTINEL2.
+- l'emprise des "fonds de vallées" obtenu (par un seuillage des valeurs proche de 0) d'un SVF calculé avec l'extension SAGA sur QGIS.
 
 
 
