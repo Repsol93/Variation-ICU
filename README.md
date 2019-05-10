@@ -138,6 +138,15 @@ Afin de calculer notre hauteur pondéré, nous allons créer un champ pour le ca
 #### 2.2.2 Emprise des IMU
 
 
+![etape1IMU](https://user-images.githubusercontent.com/48625647/57558310-799dc600-737d-11e9-83e4-2f3916d97236.png)
+
+
+![etape2_IMU](https://user-images.githubusercontent.com/48625647/57558311-799dc600-737d-11e9-9177-3143be7dd10f.png)
+
+
+![etape3_imu](https://user-images.githubusercontent.com/48625647/57558313-799dc600-737d-11e9-94b7-db76b4d7c473.png)
+
+
 
 #### 2.2.3 Emprise de la végétation
 
