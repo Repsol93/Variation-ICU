@@ -119,9 +119,6 @@ Dans cette partie, nous voulons obtenir la surface et la hauteur du bâti à l'i
 
 Afin d'être rigoureux dans la caractérisation de l'environnement des stations météo, nous allons calculer une hauteur pondéré à l'intérieur de notre zone tampon, au lieu d'estimer une moyenne de la hauteur. En effet la hauteur pondéré permet de prendre en compte la surface du bâti ce qui donne un poid plus ou moins important à la hauteur de celui-ci. 
 
-
-![exemple_htpond](https://user-images.githubusercontent.com/48625647/57386537-d5692300-71b4-11e9-9d2b-a883eac091f2.png)
-
 ![exemple2](https://user-images.githubusercontent.com/48625647/57558573-81119f00-737e-11e9-8812-25b39e714905.png)
 
 Dans l'exemple ci-dessus, le bâtiment bleu à 10 étages avec une surface de 500m² et le bâtiment rouge à 2 étages avec une surface de 100m². On va pondérer le nombre d'étages des bâtiments par leur surface à l'intérieur de la zone tampon. Puis on divise par le total de surface de bâtiment dans la zone tampon. On a :
