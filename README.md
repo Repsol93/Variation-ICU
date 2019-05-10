@@ -112,17 +112,23 @@ L'étude concernant le géotraitement a été réalisé avec ModelBuilder afin d
 
 #### 2.2.1 Emprise du bâtiment 
 
-Dans cette partie, nous voulons obtenir la surface de bâti à l'intérieur de chaque zone tampon. De plus la hauteur des bâtiments est un facteur important (formation de couloir qui piège les rayons lumineux). Tout d'abord on va intersecter notre couche d'emprise du bâtiment de Paris et de la Petite Couronne avec nos zones tampons. Voir le résultat ci-dessous :
+Dans cette partie, nous voulons obtenir la surface et la hauteur du bâti à l'intérieur de chaque zone tampon. Tout d'abord on va intersecter notre couche d'emprise du bâtiment de Paris et de la Petite Couronne avec nos zones tampons. Voir le résultat ci-dessous :
 
 ![inter_empbati](https://user-images.githubusercontent.com/48625647/57386539-d601b980-71b4-11e9-8ff1-c53596bbcea7.png)
 
-Afin d'être rigoureux dans nla caactérisation de l'environnement des stations météo, nous allons calculer une hauteur pondéré à l'intérieur de notre zone tampon. En effet le schéma ci-dessous nous montre deux bâtiments dont les emprises "réel" sont différentes que celles qui est représenté dans la zone tampon. Le bâtiment bleu à 10 étages et le bâtiment rouge à 2 étages 
+
+Afin d'être rigoureux dans la caractérisation de l'environnement des stations météo, nous allons calculer une hauteur pondéré à l'intérieur de notre zone tampon, au lieu d'estimer une moyenne de la hauteur. En effet la hauteur pondéré permet de prendre en compte la surface du bâti ce qui donne un poid plus ou moins important à la hauteur de celui-ci. 
 
 
 ![exemple_htpond](https://user-images.githubusercontent.com/48625647/57386537-d5692300-71b4-11e9-9d2b-a883eac091f2.png)
 
+Dans l'exemple ci-dessus, le bâtiment bleu à 10 étages avec une surface de 500m² et le bâtiment rouge à 2 étages avec une surface de 100m². On va pondérer le nombre d'étages des bâtiments par leur surface à l'intérieur de la zone tampon. Puis on divise par le total de surface de bâtiment dans la zone tampon. On a :
 
-Nous fusionons l'meprise bâti afin de sommer les champs "SurfxHmed" et "SurfBâti"
+(10 x 500 + 2 x 100) / 600 = 8,6 m
+
+Le résultat donne une hauteur pondéré de 8,6m. En effet le poid du bâtiment bleu est plus forte, car celui-ci à une emprise plus importante dans la zone tampon que le bâtiment rouge. 
+
+Afin de calculer notre hauteur pondéré, nous allons créer un champ pour le calcul de la hauteur fois la surface. Puis un champ pour le calcul de la surface du bâti dans notre zone tampon. A partir d'ArcGIS nous allons fusionner notre couche. Cela va nous permettre de sommer nos deux champs nouvellement créé dans notre table attributaire. Après traitement, il suffira de créer et calculer un nouveau champ qui sera notre hauteur pondérée. On divisera nos deux champs précédent afin d'en finir et d'obtenir comme résultat la hauteur pondéré pour chaque zone tampon. Voir la chaîne de traitement ci-dessous :
 
 
 ![fusion_empbati](https://user-images.githubusercontent.com/48625647/57386538-d601b980-71b4-11e9-98f0-90fea668b8c0.png)
