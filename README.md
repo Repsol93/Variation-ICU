@@ -126,14 +126,13 @@ Dans l'exemple ci-dessus, le bâtiment bleu à 10 étages avec une surface de 50
 
 (10 x 500 + 2 x 100) / 600 = 8,6 m
 
-Le résultat donne une hauteur pondéré de 8,6m. En effet le poid du bâtiment bleu est plus forte, car celui-ci à une emprise plus importante dans la zone tampon que le bâtiment rouge. 
-
-Afin de calculer notre hauteur pondéré, nous allons créer un champ pour le calcul de la hauteur fois la surface. Puis un champ pour le calcul de la surface du bâti dans notre zone tampon. A partir d'ArcGIS nous allons fusionner notre couche. Cela va nous permettre de sommer nos deux champs nouvellement créé dans notre table attributaire. Après traitement, il suffira de créer et calculer un nouveau champ qui sera notre hauteur pondérée. On divisera nos deux champs précédent afin d'en finir et d'obtenir comme résultat la hauteur pondéré pour chaque zone tampon. Voir la chaîne de traitement ci-dessous :
+Le résultat donne une hauteur pondéré de 8,6m. En effet le poid du bâtiment bleu est plus forte, car celui-ci à une emprise plus importante dans la zone tampon que le bâtiment rouge. La chaîne de traitement pour le calcul de la hauteur pondéré est à voir ci-dessous :
 
 
 ![fusion_empbati](https://user-images.githubusercontent.com/48625647/57386538-d601b980-71b4-11e9-98f0-90fea668b8c0.png)
 
 
+Afin de calculer notre hauteur pondéré, nous allons créer un champ pour le calcul de la hauteur fois la surface. Puis un champ pour le calcul de la surface du bâti dans notre zone tampon. A partir d'ArcGIS nous allons fusionner notre couche. Cela va nous permettre de sommer nos deux champs nouvellement créé dans notre table attributaire. Après traitement, il suffira de créer et calculer un nouveau champ qui sera notre hauteur pondérée. On divisera nos deux champs précédent afin d'en finir et d'obtenir comme résultat la hauteur pondéré pour chaque zone tampon. 
 
 
 #### 2.2.2 Emprise des IMU
