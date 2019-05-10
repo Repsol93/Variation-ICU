@@ -116,7 +116,7 @@ Dans cette partie, nous voulons obtenir la surface de bâti à l'intérieur de c
 
 ![inter_empbati](https://user-images.githubusercontent.com/48625647/57386539-d601b980-71b4-11e9-8ff1-c53596bbcea7.png)
 
-Afin d'être rigoureux dans notre caractérisation de l'environnement des stations météo, nous allons calculer une hauteur pondéré à l'intérieur de notre zone tampon. En effet le schéma ci-dessous nous montre 
+Afin d'être rigoureux dans nla caactérisation de l'environnement des stations météo, nous allons calculer une hauteur pondéré à l'intérieur de notre zone tampon. En effet le schéma ci-dessous nous montre deux bâtiments dont les emprises "réel" sont différentes que celles qui est représenté dans la zone tampon. Le bâtiment bleu à 10 étages et le bâtiment rouge à 2 étages 
 
 
 ![exemple_htpond](https://user-images.githubusercontent.com/48625647/57386537-d5692300-71b4-11e9-9d2b-a883eac091f2.png)
