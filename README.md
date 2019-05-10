@@ -95,7 +95,7 @@ write.csv(DonneesJ2H19_6, file = "DonneesJ2H19_6.csv",row.names=FALSE)
 
 
 
-Afin de caractériser l'environnement de chaque station, nous allons créer des zones tampons de 50, 100 et 200m autour de chaque station météo (figure ci-dessous)localisé sur notre zone d'étude. Nous prenons trois distances de zone tampon afin de s'assurer un résultat le plus optimum, pour la description de l'espace autour de la station et une possibilité de liaison avec la variation de température. 
+Afin de caractériser l'environnement de chaque station, nous allons créer des [zones tampons](http://desktop.arcgis.com/fr/arcmap/10.3/tools/coverage-toolbox/buffer.htm) de 50, 100 et 200m autour de chaque station météo (figure ci-dessous)localisé sur notre zone d'étude. Nous prenons trois distances de zone tampon afin de s'assurer un résultat le plus optimum, pour la description de l'espace autour de la station et une possibilité de liaison avec la variation de température. 
 
 
 ![buffer](https://user-images.githubusercontent.com/48625647/57017363-37f37980-6c1f-11e9-8b59-d4693cde4231.png)
