@@ -1,7 +1,7 @@
 
 # Etude de l'îlot de chaleur urbain et de la variation de température entre espace urbain et rurale dans la région d'Île-De-France.
 
-  Au cours du second semestre de master 2 Télédétection et Géomatique Appliquées à l'Environnement (TGAE) en 2019, j'ai eu a réaliser un mini-projet. Celui-ci s'intéresse aux variations de températures dû à l'îlots de chaleur urbain à partir de données obtenus par des stations météo de particuliers. L'étude a été effectué avec des logiciels SIG (ArcGIS 10.5.1 et QGIS 2.18.15). De plus, les traitements statistiques ont été faits avec le logiciel RStudio.
+  Au cours du second semestre de master 2 Télédétection et Géomatique Appliquées à l'Environnement (TGAE) en 2019, j'ai eu a réaliser un mini-projet. Celui-ci s'intéresse aux variations de températures liés aux effets de l'îlots de chaleur urbain à partir de données obtenus par des stations météo de particuliers. L'étude a été effectué avec des logiciels SIG (ArcGIS 10.5.1 et QGIS 2.18.15). De plus, les traitements statistiques ont été faits avec le logiciel RStudio.
 
 ## 1. Introduction
 
@@ -112,10 +112,14 @@ L'étude concernant le géotraitement a été réalisé avec ModelBuilder afin d
 
 #### 2.2.1 Emprise du bâtiment 
 
-Nous intersectons les zones tampons avec l'emprise du bâti
-
+Dans cette partie, nous voulons obtenir la surface de bâti à l'intérieur de chaque zone tampon. De plus la hauteur des bâtiments est un facteur important (formation de couloir qui piège les rayons lumineux). Tout d'abord on va intersecter notre couche d'emprise du bâtiment de Paris et de la Petite Couronne avec nos zones tampons. Voir le résultat ci-dessous :
 
 ![inter_empbati](https://user-images.githubusercontent.com/48625647/57386539-d601b980-71b4-11e9-8ff1-c53596bbcea7.png)
+
+Afin d'être rigoureux dans notre caractérisation de l'environnement des stations météo, nous allons calculer une hauteur pondéré à l'intérieur de notre zone tampon. En effet le schéma ci-dessous nous montre 
+
+
+![exemple_htpond](https://user-images.githubusercontent.com/48625647/57386537-d5692300-71b4-11e9-9d2b-a883eac091f2.png)
 
 
 Nous fusionons l'meprise bâti afin de sommer les champs "SurfxHmed" et "SurfBâti"
@@ -123,11 +127,6 @@ Nous fusionons l'meprise bâti afin de sommer les champs "SurfxHmed" et "SurfBâ
 
 ![fusion_empbati](https://user-images.githubusercontent.com/48625647/57386538-d601b980-71b4-11e9-98f0-90fea668b8c0.png)
 
-
-Nous calculons la hauteur pondéré
-
-
-![exemple_htpond](https://user-images.githubusercontent.com/48625647/57386537-d5692300-71b4-11e9-9d2b-a883eac091f2.png)
 
 
 
