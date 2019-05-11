@@ -13,10 +13,9 @@
 ![ICU](https://user-images.githubusercontent.com/48625647/57013235-d6291480-6c0a-11e9-85d5-4364b2b2e150.png)
   *Figure 1*
   
-  On observe un ICU pour l'agglomération de Paris comparés a ses alentours (moins urbanisé). Pour simplifier il y a un décalage de température la nuit entre la "ville" et la "campagne" car les caractéristiques de la surface du sol et la morphologie de l'espace est différentes. En effet les rayons lumineux piégés entre les hauts bâtiments accumulent la chaleur, puis l'absorption et la retention de la chaleur diffères selon le type de sol (ref fig.1). Ce qui est particulièrement intéressant dans cette étude est d'essayer de montrer la variation décroissante de la température, depuis le centre de Paris jusqu'au limite de l'Île-de-France, à partir de données libres acquises par des particuliers.
+  On observe un ICU pour l'agglomération de Paris comparés a ses alentours (moins urbanisé). Pour simplifier il y a un décalage de température la nuit entre la "ville" et la "campagne" car les caractéristiques de la surface du sol et la morphologie de l'espace est différentes. En effet les rayons lumineux piégés entre les hauts bâtiments accumulent la chaleur, puis l'absorption et la retention de la chaleur diffères selon le type de sol (fig.1). Ce qui est particulièrement intéressant dans cette étude est d'essayer de montrer la variation décroissante de la température, depuis le centre de Paris jusqu'au limite de l'Île-de-France, à partir de données libres acquises par des particuliers.
   
-Le choix de la zone d'étude s'est porté sur l'endroit où la position des stations était le plus homogène. Nous avons sélectionné le sud de Paris et les alentours, afin d'avoir une zone tranversale. En effet celle-ci se situe à l'intérieur d'une partie de l'agglomération de Paris (ville) et va jusqu'au delà de la petite couronne (zone rurale). La localisation de la zone d'étude est représenté ci-dessous :
-
+Le choix de la zone d'étude s'est porté sur l'endroit où la position des stations était le plus homogène. Nous avons sélectionné le sud de Paris et les alentours, afin d'avoir une zone tranversale (fig.2). En effet celle-ci se situe à l'intérieur d'une partie de l'agglomération de Paris (ville) et va jusqu'au delà de la petite couronne (zone rurale). 
 
 ![zoneetude](https://user-images.githubusercontent.com/48625647/57020473-a0dfef00-6c29-11e9-96e8-e653a7ac3e06.png)
     *Figure 2*
@@ -32,7 +31,7 @@ Le choix de la zone d'étude s'est porté sur l'endroit où la position des stat
     - 1 jour avec un effet de l'ICU élevé (08/05/2018)
     - 1 jour avec un effet de l'ICU faible (13/09/2017)
 
-> **Note**: Les données contiennent l'identification et la localisation de chaque station météo, avec une température donnée à chaque heure de la journée. 
+> **Note**: Les données contiennent l'identification et la localisation de chaque station météo (fig.3), avec une température donnée à chaque heure de la journée. 
 
 
 
@@ -46,7 +45,7 @@ Le choix de la zone d'étude s'est porté sur l'endroit où la position des stat
     - [Emprise du bâtiment Paris](https://www.iau-idf.fr/fileadmin/NewEtudes/Etude_1270/Les_ilots_morphologiques_urbains.pdf)
     - [Emprise du bâtiment Petite Couronne](https://www.apur.org/open_data/EMPRISE_BATIE_PC_OD.pdf)
 
-> **Note**: Les données contiennent une couche "Shapefile" avec les entités de chaque bâtiment de Paris et de la Petite Couronne. Les entités sont également accompagnées d'informations sur leur datation et hauteur. 
+> **Note**: Les données contiennent une couche "Shapefile" avec les entités de chaque bâtiment de Paris et de la Petite Couronne (fig.4). Les entités sont également accompagnées d'informations sur leur datation et hauteur. 
 
 
 
@@ -58,7 +57,7 @@ Le choix de la zone d'étude s'est porté sur l'endroit où la position des stat
 - Base de données de l'Institut d'Aménagement et d'Urbanisme de la région Île-de-France :
     - [Ilôts Morphologiques Urbains (IMU)](https://www.iau-idf.fr/fileadmin/NewEtudes/Etude_1270/Les_ilots_morphologiques_urbains.pdf)
 
-> **Note**: Les données contiennent un "Shapefile" avec les entités de chaque IMU d'Île-de-France . L'IAU se sont inpirés pour parfaire leurs classes, de plusieurs exemples d'îlot et de recherches, tel que la classification Local Climate Zone ([LCZ](https://iainstew.files.wordpress.com/2013/01/seattle.pdf)) de Stewart et Oke . Les îlots morphologiques urbains comprennent différents mode d'occupation du sol avec un indice typo-morphologique de la rugosité urbaine. Celui-ci est calculé à partir du coefficient d'emprise au sol, de la densité du bâti volumique et de la hauteur moyenne pondéré du bâti. Si l'indice est élevé la rugosité urbaine est importante, c'est à dire une concentration et des hauteurs de bâtiment fortes. Voir ci-dessous :
+> **Note**: Les données contiennent un "Shapefile" avec les entités de chaque IMU d'Île-de-France . L'IAU se sont inpirés pour parfaire leurs classes, de plusieurs exemples d'îlot et de recherches, tel que la classification Local Climate Zone ([LCZ](https://iainstew.files.wordpress.com/2013/01/seattle.pdf)) de Stewart et Oke . Les îlots morphologiques urbains comprennent différents mode d'occupation du sol avec un indice typo-morphologique de la rugosité urbaine renseigné dans le champ "Classe_IMU" (fig 5). Celui-ci est calculé à partir du coefficient d'emprise au sol, de la densité du bâti volumique et de la hauteur moyenne pondéré du bâti. Si l'indice est élevé la rugosité urbaine est importante, c'est à dire une concentration et des hauteurs de bâtiment fortes. Voir ci-dessous :
 
 
 
@@ -71,7 +70,7 @@ Le choix de la zone d'étude s'est porté sur l'endroit où la position des stat
     - Image du 6 mai 2018 
     - Image du 27 août 2018 
 
-> **Note**: Les images satellites SENTINEL2 de Level-2A comporte une correction atmosphériques qui vise à transformer la réflectance Top Of Atmosphere (TOA) en réflectance Bottom Of Atmosphere (BOA). Les images ont des résolutions de 10,20 et 60m. 
+> **Note**: Les images satellites SENTINEL2 de Level-2A (fig.6) comporte une correction atmosphériques qui vise à transformer la réflectance Top Of Atmosphere (TOA) en réflectance Bottom Of Atmosphere (BOA). Les images ont des résolutions de 10,20 et 60m. 
 
 
    
@@ -120,17 +119,17 @@ Afin de caractériser l'environnement de chaque station, nous allons créer des 
 
 
 A l'intérieur de ces zones tampons, nous voulons essayer de caractériser l'environnement par rapport à l'occupation du sol et à la rugosité des bâtiments. Pour cela nous utiliserons nos données d'entrée (ref 2.1) afin de représenter pour chaque zone tampon la surface de:
-- l'emprise de l'IMU du "bâti résidentiel", car elle est majoritaire dans notre zone d'étude. Nous allons plutôt nous intéresser précisement à l'indice typo-morphologique de cet IMU, pour mettre l'accent sur la rugosité urbaine de ces emprises.
-- l'emprise du bâtiment pour la ville de Paris et la Petite Couronne. A l'intérieur de cette base, il y a un champ des hauteurs médianne et moyenne pour chaque emprise de bâtiment qui seront utilisés.
-- l'emprise de la végétation obtenu grâce au NDVI calculé à partir des images satellites SENTINEL2.
+- l'emprise du bâtiment pour la ville de Paris et la Petite Couronne (ref fig.4). A l'intérieur de cette base, il y a un champ des hauteurs médianne et moyenne pour chaque emprise de bâtiment qui seront utilisés.
+- l'emprise de l'IMU du "bâti résidentiel" (ref fig.5), car elle est majoritaire dans notre zone d'étude. Nous allons plutôt nous intéresser précisement à l'indice typo-morphologique de cet IMU, pour mettre l'accent sur la rugosité urbaine de ces emprises.
+- l'emprise de la végétation obtenu grâce au NDVI calculé à partir des images satellites SENTINEL2 (ref fig.6).
 (- l'emprise des "fonds de vallées" obtenu (par un seuillage des valeurs proche de 0) d'un SVF calculé avec l'extension SAGA sur QGIS.)
 
 L'étude concernant le géotraitement a été réalisé avec ModelBuilder afin de gagner du temps sur la répétition de la chaîne de traitement, sur les différentes zones tampons pour les deux jours. Cette étude est réalisés en 3 étapes :
 
 
-#### 2.2.1 Emprise du bâtiment 
+#### 2.2.1 Etape 1 : Emprise du bâtiment 
 
-Dans cette partie, nous voulons obtenir la surface et la hauteur du bâti à l'intérieur de chaque zone tampon. Tout d'abord on va [intersecter](http://desktop.arcgis.com/fr/arcmap/10.3/tools/analysis-toolbox/intersect.htm) notre couche d'emprise du bâtiment de Paris et de la Petite Couronne avec nos zones tampons. Voir le résultat ci-dessous :
+Dans cette partie, nous voulons obtenir la surface et la hauteur du bâti à l'intérieur de chaque zone tampon. Tout d'abord on va [intersecter](http://desktop.arcgis.com/fr/arcmap/10.3/tools/analysis-toolbox/intersect.htm) (fig.8) notre couche d'emprise du bâtiment de Paris et de la Petite Couronne avec nos zones tampons. Voir le résultat ci-dessous :
 
 
 
@@ -146,7 +145,7 @@ Afin d'être rigoureux dans la caractérisation de l'environnement des stations 
   *Figure 9*
 
 
-Dans l'exemple ci-dessus, le bâtiment bleu à 10 étages avec une surface de 500m² et le bâtiment rouge à 2 étages avec une surface de 100m². On va pondérer le nombre d'étages des bâtiments par leur surface à l'intérieur de la zone tampon. Puis on divise par le total de surface de bâtiment dans la zone tampon. On a :
+Dans l'exemple figure 9, le bâtiment bleu à 10 étages avec une surface de 500m² et le bâtiment rouge à 2 étages avec une surface de 100m². On va pondérer le nombre d'étages des bâtiments par leur surface à l'intérieur de la zone tampon. Puis on divise par le total de surface de bâtiment dans la zone tampon. On a :
 
 (10 x 500 + 2 x 100) / 600 = 8,6 m
 
@@ -158,10 +157,10 @@ Le résultat donne une hauteur pondéré de 8,6m. En effet le poid du bâtiment 
   *Figure 10*
 
 
-Afin de calculer notre hauteur pondéré, nous allons créer un champ pour le calcul de la hauteur fois la surface. Puis un champ pour le calcul de la surface du bâti dans notre zone tampon. A partir d'ArcGIS nous allons [fusionner](https://desktop.arcgis.com/fr/arcmap/latest/tools/coverage-toolbox/dissolve.htm) notre couche. Cela va nous permettre de sommer nos deux champs nouvellement créé dans notre table attributaire. Après traitement, il suffira de créer et calculer un nouveau champ qui sera notre hauteur pondérée. On divisera nos deux champs précédent afin d'en finir et d'obtenir comme résultat la hauteur pondéré pour chaque zone tampon. 
+Afin de calculer notre hauteur pondéré, nous allons créer un champ pour le calcul de la hauteur fois la surface. Puis un champ pour le calcul de la surface du bâti dans notre zone tampon. A partir d'ArcGIS nous allons [fusionner](https://desktop.arcgis.com/fr/arcmap/latest/tools/coverage-toolbox/dissolve.htm) notre couche. Cela va nous permettre de sommer nos deux champs nouvellement créé dans notre table attributaire. Après traitement, il suffira de créer et calculer un nouveau champ qui sera notre hauteur pondérée. On divisera nos deux champs précédent afin d'en finir et d'obtenir comme résultat la hauteur pondéré pour chaque zone tampon (fig.10). 
 
 
-#### 2.2.2 Emprise des IMU
+#### 2.2.2 Etape 2 : Emprise des IMU
 
 Nous allons nous occuper maintenant des IMU dans notre zone d'étude. Nous nous intéresserons particulièrement au champ "Classe_IMU" ou se trouve l'indice typo-morphologique de rugosité urbaine (ref 2.1.3). Ici la très grande majorité d'indice dans notre zone d'étude est le bâti résidentiel (1). Nous utiliserons donc seulement cette classe. Cela va nous permettre de détailler la rugosité urbaine de cette classe grâce à l'indice typo-morphologique. Comme sur la figure présentant la classe IMU (ref fig.5)
 
@@ -176,7 +175,7 @@ Nous allons nous occuper maintenant des IMU dans notre zone d'étude. Nous nous 
   *Figure 13*
 
 
-#### 2.2.3 Emprise de la végétation
+#### 2.2.3 Etape 3 : Emprise de la végétation
 
 
 
