@@ -109,7 +109,7 @@ Afin de caractériser l'environnement de chaque station, nous allons créer des 
 
 
 ![buffer](https://user-images.githubusercontent.com/48625647/57566873-8b10bd80-73d1-11e9-8bbd-abe53beec57b.png)
-
+Figure 5
 
 
 A l'intérieur de ces zones tampons, nous voulons essayer de caractériser l'environnement par rapport à l'occupation du sol et à la rugosité des bâtiments. Pour cela nous utiliserons différentes données (voir 2.1) afin de représenter pour chaque zone tampon la surface de:
@@ -156,7 +156,7 @@ Afin de calculer notre hauteur pondéré, nous allons créer un champ pour le ca
 
 #### 2.2.2 Emprise des IMU
 
-
+Nous allons nous occuper maintenant des IMU dans notre zone d'étude. Nous nous intéresserons particulièrement au champ "Classe_IMU" ou se trouve l'indice typo-morphologique de rugosité urbaine (ref IMU 2.1). Ici la très grande majorité d'indice dans notre zone d'étude est le bâti résidentiel (1). Nous utiliserons donc seulement cette classe. Cela va nous permettre de détailler la rugosité urbaine de cette classe grâce à l'indice typo-morphologique. Comme sur la figure présentant la classe IMU (ref IMU2.1)
 
 ![etape1IMU](https://user-images.githubusercontent.com/48625647/57558310-799dc600-737d-11e9-83e4-2f3916d97236.png)
 
