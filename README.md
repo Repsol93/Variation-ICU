@@ -25,7 +25,7 @@ Le choix de la zone d'étude s'est porté sur l'endroit où la position des stat
 
 ### 2.1 Détails des données d'entrée
 
-- 2 jour de données des stations météo: 
+- 2 jours de données des stations météo: 
     - 1 jour avec un effet de l'ICU élevé (08/05/2018)
     - 1 jour avec un effet de l'ICU faible (13/09/2017)
 
@@ -60,11 +60,11 @@ Le choix de la zone d'étude s'est porté sur l'endroit où la position des stat
 
 
 
-- Image satellite SENTINEL2 de [Level-2A](https://earth.esa.int/web/sentinel/technical-guides/sentinel-2-msi/level-2a/algorithm) :
-    - Image du 6 mai 2018 ILE-DE-FRANCE
-    - Image du 27 août 2018 ILE-DE-FRANCE
+- [Image satellite SENTINEL2 de Level-2A](https://earth.esa.int/web/sentinel/technical-guides/sentinel-2-msi/level-2a/algorithm) :
+    - Image du 6 mai 2018 
+    - Image du 27 août 2018 
 
-> **Note**: Les images satellites SENTINEL2 de Level-2A comporte une correction atmosphériques qui vise à trnasformer la réflectance Top Of Atmosphere (TOA) en réflectance Bottom Of Atmosphere (BOA). Les images ont des résolutions de 10,20 et 60m. 
+> **Note**: Les images satellites SENTINEL2 de Level-2A comporte une correction atmosphériques qui vise à transformer la réflectance Top Of Atmosphere (TOA) en réflectance Bottom Of Atmosphere (BOA). Les images ont des résolutions de 10,20 et 60m. 
 
 
    
