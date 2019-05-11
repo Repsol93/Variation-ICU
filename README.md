@@ -188,7 +188,7 @@ L'intérêt d'effectuer la sélection de chaque indice typo-morphologique est po
 
 
 
-![etape3_imu](https://user-images.githubusercontent.com/48625647/57558313-799dc600-737d-11e9-94b7-db76b4d7c473.png)
+![etape3_imu](https://user-images.githubusercontent.com/48625647/57568192-2b6fdd80-73e4-11e9-9b30-a7923c52acfc.png)
   *Figure 13*
 
 
