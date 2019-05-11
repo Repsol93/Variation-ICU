@@ -162,7 +162,11 @@ Afin de calculer notre hauteur pondéré, nous allons créer un champ pour le ca
 
 #### 2.2.2 Etape 2 : Emprise des IMU
 
-Nous allons nous occuper maintenant des IMU dans notre zone d'étude. Nous nous intéresserons particulièrement au champ "Classe_IMU" ou se trouve l'indice typo-morphologique de rugosité urbaine (ref 2.1.3). Ici la très grande majorité d'indice dans notre zone d'étude est le bâti résidentiel (1). Nous utiliserons donc seulement cette classe. Cela va nous permettre de détailler la rugosité urbaine de cette classe grâce à l'indice typo-morphologique. Comme sur la figure présentant la classe IMU (ref fig.5)
+Nous allons nous occuper maintenant des IMU dans notre zone d'étude. Nous nous intéresserons particulièrement au champ "Classe_IMU" ou se trouve l'indice typo-morphologique de rugosité urbaine (ref 2.1.3). Ici la très grande majorité d'indice dans notre zone d'étude est le bâti résidentiel (1). Nous utiliserons donc seulement cette classe. Cela va nous permettre de détailler la rugosité urbaine de cette classe grâce à l'indice typo-morphologique 1, 11, 21, 31 et 41 (ref fig.5). 
+
+> **Note**: N'ayant pas de numéro d'indice 51 et 61 dans notre zone étude, nous utiliserons les indices listés précédemment.
+
+De la même manière que pour l'étape précédente, nous allons effectuer une intersection entre les emprises des IMU et nos zones tampons. Ensuite nous devons fusionner notre couche, afin d'obtenir une entité seulement pour chaque indice à l'intérieur de la zone. A l'intérieur de chaque zone tampon de nos stations météos, nous obtiendrons une ou plusieurs emprises IMU avec un indice typo-morphologique différents (fig 11).
 
 ![etape1IMU](https://user-images.githubusercontent.com/48625647/57558310-799dc600-737d-11e9-83e4-2f3916d97236.png)
   *Figure 11*
