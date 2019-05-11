@@ -157,7 +157,7 @@ Le résultat donne une hauteur pondéré de 8,6m. En effet le poid du bâtiment 
   *Figure 10*
 
 
-Afin de calculer notre hauteur pondéré, nous allons créer un champ pour le calcul de la hauteur fois la surface. Puis un champ pour le calcul de la surface du bâti dans notre zone tampon. A partir d'ArcGIS nous allons [fusionner](https://desktop.arcgis.com/fr/arcmap/latest/tools/coverage-toolbox/dissolve.htm) notre couche. Cela va nous permettre de sommer nos deux champs nouvellement créé dans notre table attributaire. Après traitement, il suffira de créer et calculer un nouveau champ qui sera notre hauteur pondérée. On divisera nos deux champs précédent afin d'en finir et d'obtenir comme résultat la hauteur pondéré pour chaque zone tampon (fig.10). 
+Afin de calculer notre hauteur pondéré, nous allons créer un champ pour le calcul de la hauteur fois la surface. Puis un champ pour le calcul de la surface du bâti dans notre zone tampon. A partir d'ArcGIS nous allons [fusionner](https://desktop.arcgis.com/fr/arcmap/latest/tools/coverage-toolbox/dissolve.htm) notre couche. Cela va nous permettre de sommer nos deux champs nouvellement créé dans notre table attributaire. Après traitement, il suffira de créer et calculer un nouveau champ qui sera notre hauteur pondérée. On divisera nos deux champs précédent afin d'en finir et d'obtenir comme résultat la hauteur pondéré pour chaque zone tampon (fig.10). Donc nous obtenons la surface du bâti, ainsi que la hauteur pondéré à l'intérieur de chaque zone tampon d'une station météo.
 
 
 #### 2.2.2 Etape 2 : Emprise des IMU
@@ -168,16 +168,31 @@ Nous allons nous occuper maintenant des IMU dans notre zone d'étude. Nous nous 
 
 De la même manière que pour l'étape précédente, nous allons effectuer une intersection entre les emprises des IMU et nos zones tampons. Ensuite nous devons fusionner notre couche, afin d'obtenir une entité seulement pour chaque indice à l'intérieur de la zone. A l'intérieur de chaque zone tampon de nos stations météos, nous obtiendrons une ou plusieurs emprises IMU avec un indice typo-morphologique différents (fig 11).
 
+
+
 ![etape1IMU](https://user-images.githubusercontent.com/48625647/57558310-799dc600-737d-11e9-83e4-2f3916d97236.png)
   *Figure 11*
+
+
+
+Le prochain traitement va nous permettre de calculer la surface de chaque emprise correspondant à un indice typo-morphologique, dans la zone tampon (fig 12).
+
 
 
 ![etape2_IMU](https://user-images.githubusercontent.com/48625647/57558311-799dc600-737d-11e9-9177-3143be7dd10f.png)
   *Figure 12*
 
+
+
+L'intérêt d'effectuer la sélection de chaque indice typo-morphologique est pour la mise en forme de la données en sortie. En effet l'on veut avoir les surfaces de chaque indice typo-mophologique en colonne et non en ligne. Nous effectuons maintenant la jointure attributaire entre nos couches d'indices et la couche de zone tampon. En sortie, nous avons notre couche de zone tampon avec à l'intérieur de notre table attributaire, la surface des emprises d'indices typo-morphologique en colonne (fig.13).
+
+
+
 ![etape3_imu](https://user-images.githubusercontent.com/48625647/57558313-799dc600-737d-11e9-94b7-db76b4d7c473.png)
   *Figure 13*
 
+
+Donc nous obtenons pour chaque zone tampon d'une station météo la surface des emprises d'indices typo-morphologique.
 
 #### 2.2.3 Etape 3 : Emprise de la végétation
 
@@ -187,3 +202,4 @@ De la même manière que pour l'étape précédente, nous allons effectuer une i
 Statistiques
 
 ## 4. Conclusion
+)
