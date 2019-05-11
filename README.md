@@ -25,7 +25,7 @@ Le choix de la zone d'étude s'est porté sur l'endroit où la position des stat
 
 ### 2.1 Détails des données d'entrée
 
-### 2.1.1 Données de températures
+#### 2.1.1 Données de températures
 
 - 2 jours de données des stations météo: 
     - 1 jour avec un effet de l'ICU élevé (08/05/2018)
@@ -39,7 +39,7 @@ Le choix de la zone d'étude s'est porté sur l'endroit où la position des stat
   *Figure 3*
 
 
-### 2.1.2 Données d'emprises du bâtiment
+#### 2.1.2 Données d'emprises du bâtiment
 
 - Base de données Apur :
     - [Emprise du bâtiment Paris](https://www.iau-idf.fr/fileadmin/NewEtudes/Etude_1270/Les_ilots_morphologiques_urbains.pdf)
@@ -52,7 +52,7 @@ Le choix de la zone d'étude s'est porté sur l'endroit où la position des stat
 ![emprisbati](https://user-images.githubusercontent.com/48625647/57014436-69187d80-6c10-11e9-9857-ce9f8f13468e.png)
   *Figure 4*
 
-### 2.1.3 Données d'emprises de l'îlot morphologique urbain
+#### 2.1.3 Données d'emprises de l'îlot morphologique urbain
 
 - Base de données de l'Institut d'Aménagement et d'Urbanisme de la région Île-de-France :
     - [Ilôts Morphologiques Urbains (IMU)](https://www.iau-idf.fr/fileadmin/NewEtudes/Etude_1270/Les_ilots_morphologiques_urbains.pdf)
@@ -64,7 +64,7 @@ Le choix de la zone d'étude s'est porté sur l'endroit où la position des stat
 ![IMU](https://user-images.githubusercontent.com/48625647/57013236-d6c1ab00-6c0a-11e9-9520-510c7ae50765.png)
   *Figure 5*
 
-### 2.1.4 Données satellites SENTINEL2
+#### 2.1.4 Données satellites SENTINEL2
 
 - [Image satellite SENTINEL2 de Level-2A](https://earth.esa.int/web/sentinel/technical-guides/sentinel-2-msi/level-2a/algorithm) :
     - Image du 6 mai 2018 
