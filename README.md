@@ -108,7 +108,7 @@ Afin de caractériser l'environnement de chaque station, nous allons créer des 
 
 
 
-![buffer](https://user-images.githubusercontent.com/48625647/57017363-37f37980-6c1f-11e9-8b59-d4693cde4231.png)
+![buffer](https://user-images.githubusercontent.com/48625647/57566873-8b10bd80-73d1-11e9-8bbd-abe53beec57b.png)
 
 
 
