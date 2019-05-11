@@ -129,6 +129,7 @@ L'étude concernant le géotraitement a été réalisé avec ModelBuilder afin d
 
 #### 2.2.1 Etape 1 : Emprise du bâtiment 
 
+
 Dans cette partie, nous voulons obtenir la surface et la hauteur du bâti à l'intérieur de chaque zone tampon. Tout d'abord on va [intersecter](http://desktop.arcgis.com/fr/arcmap/10.3/tools/analysis-toolbox/intersect.htm) (fig.8) notre couche d'emprise du bâtiment de Paris et de la Petite Couronne avec nos zones tampons. Voir le résultat ci-dessous :
 
 
@@ -162,11 +163,12 @@ Afin de calculer notre hauteur pondéré, nous allons créer un champ pour le ca
 
 #### 2.2.2 Etape 2 : Emprise des IMU
 
-Nous allons nous occuper maintenant des IMU dans notre zone d'étude. Nous nous intéresserons particulièrement au champ "Classe_IMU" ou se trouve l'indice typo-morphologique de rugosité urbaine (ref 2.1.3). Ici la très grande majorité d'indice dans notre zone d'étude est le bâti résidentiel (1). Nous utiliserons donc seulement cette classe. Cela va nous permettre de détailler la rugosité urbaine de cette classe grâce à l'indice typo-morphologique 1, 11, 21, 31 et 41 (ref fig.5). 
+
+Nous allons nous occuper maintenant des IMU dans notre zone d'étude. Nous nous intéresserons particulièrement au champ "Classe_IMU" ou se trouve l'indice typo-morphologique de rugosité urbaine (ref 2.1.3). Ici la très grande majorité d'indice dans notre zone d'étude est le bâti résidentiel (1). Nous utiliserons donc seulement cette classe. Cela va nous permettre de détailler la rugosité urbaine grâce aux indices 1, 11, 21, 31 et 41 (ref fig.5). 
 
 > **Note**: N'ayant pas de numéro d'indice 51 et 61 dans notre zone étude, nous utiliserons les indices listés précédemment.
 
-De la même manière que pour l'étape précédente, nous allons effectuer une intersection entre les emprises des IMU et nos zones tampons. Ensuite nous devons fusionner notre couche, afin d'obtenir une entité seulement pour chaque indice à l'intérieur de la zone. A l'intérieur de chaque zone tampon de nos stations météos, nous obtiendrons une ou plusieurs emprises IMU avec un indice typo-morphologique différents (fig 11).
+De la même manière que pour l'étape précédente, nous allons effectuer une intersection entre les emprises des IMU et nos zones tampons. Ensuite nous devons fusionner notre couche, afin d'obtenir une entité seulement pour chaque indice à l'intérieur de la zone. A l'intérieur de chaque zone tampon de nos stations météos, nous obtiendrons une ou plusieurs emprises IMU avec un indice de rugosité différents (fig 11).
 
 
 
@@ -184,7 +186,7 @@ Le prochain traitement va nous permettre de calculer la surface de chaque empris
 
 
 
-L'intérêt d'effectuer la sélection de chaque indice typo-morphologique est pour la mise en forme de la données en sortie. En effet l'on veut avoir les surfaces de chaque indice typo-mophologique en colonne et non en ligne. Nous effectuons maintenant la jointure attributaire entre nos couches d'indices et la couche de zone tampon. En sortie, nous avons notre couche de zone tampon avec à l'intérieur de notre table attributaire, la surface des emprises d'indices typo-morphologique en colonne (fig.13).
+L'intérêt d'effectuer la sélection de chaque indice de rugosité est pour la mise en forme de la données en sortie. En effet l'on veut avoir les surfaces de chaque indice de rugosité en colonne et non en ligne. Nous effectuons maintenant la jointure attributaire entre nos couches d'indices et la couche de zone tampon. En sortie, nous avons notre couche de zone tampon avec à l'intérieur de notre table attributaire, la surface des emprises d'indices de rugosité en colonne (fig.13).
 
 
 
@@ -192,7 +194,9 @@ L'intérêt d'effectuer la sélection de chaque indice typo-morphologique est po
   *Figure 13*
 
 
-Donc nous obtenons pour chaque zone tampon d'une station météo la surface des emprises d'indices typo-morphologique.
+Donc nous obtenons pour chaque zone tampon d'une station météo la surface des emprises d'indices de rugosité. 
+> **Rappel**: L'indice typo-morphologique de rugosité urbaine est calculé à partir du coefficient d'emprise au sol, de la densité du bâti volumique et de la hauteur moyenne pondéré du bâti. Si l'indice est élevé la rugosité urbaine est importante, c'est à dire que la concentration et les hauteurs de bâtiments sont élévées.
+
 
 #### 2.2.3 Etape 3 : Emprise de la végétation
 
