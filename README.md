@@ -24,38 +24,38 @@ Le choix de la zone d'étude s'est porté sur l'endroit où la position des stat
     - 1 jour avec un effet de l'ICU élevé (08/05/2018)
     - 1 jour avec un effet de l'ICU faible (13/09/2017)
 
-> **Note**: Les données contiennent l'identification et la localisation de chaque station météo, avec une température donnée à chaque heure de la journée. Voir ci-dessous :
+> **Note**:Les données contiennent l'identification et la localisation de chaque station météo, avec une température donnée à chaque heure de la journée. 
 
 
 ![station](https://user-images.githubusercontent.com/48625647/57014438-69b11400-6c10-11e9-9631-de13c6bc9ca3.png)
 
 
 - Base de données Apur :
-    - Emprise du bâtiment PARIS
-    - Emprise du bâtiment PETITE COURONNE
+    - [Emprise du bâtiment Paris](https://www.iau-idf.fr/fileadmin/NewEtudes/Etude_1270/Les_ilots_morphologiques_urbains.pdf)
+    - [Emprise du bâtiment Petite Couronne](https://www.apur.org/open_data/EMPRISE_BATIE_PC_OD.pdf)
 
-Les données contiennent un "Shapefile" de l'emprise des bâtiments de [Paris](https://www.iau-idf.fr/fileadmin/NewEtudes/Etude_1270/Les_ilots_morphologiques_urbains.pdf) et de la [Petite Couronne](https://www.apur.org/open_data/EMPRISE_BATIE_PC_OD.pdf). Leurs délimitations au sol est également accompagnées d'informations sur leur datation et hauteur. Voir ci-dessous :
+> **Note**:Les données contiennent une couche "Shapefile" avec les entités de chaque bâtiment de Paris et de la Petite Couronne. Les entités sont également accompagnées d'informations sur leur datation et hauteur. 
 
 
 
 ![emprisbati](https://user-images.githubusercontent.com/48625647/57014436-69187d80-6c10-11e9-9857-ce9f8f13468e.png)
 
 
-- Base de données IAU :
-    - Ilôts morphologiques urbains ILE-DE-FRANCE
+- Base de données de l'Institut d'Aménagement et d'Urbanisme de la région Île-de-France :
+    - [Ilôts Morphologiques Urbains (IMU)](https://www.iau-idf.fr/fileadmin/NewEtudes/Etude_1270/Les_ilots_morphologiques_urbains.pdf)
 
-Les données contiennent un "Shapefile" de la délimitation des îlots morphologiques urbains ([IMU](https://www.iau-idf.fr/fileadmin/NewEtudes/Etude_1270/Les_ilots_morphologiques_urbains.pdf)) d'Île-de-France . L'IAU se sont inpirés de plusieurs exemples d'îlot et de recherches, tel que la classification Local Climate Zone ([LCZ](https://iainstew.files.wordpress.com/2013/01/seattle.pdf)) de Stewart et Oke . Les îlots morphologiques urbains comprennent différents mode d'occupation du sol avec un indice typo-morphologique de la rugosité urbaine. Celui-ci est calculé à partir du coefficient d'emprise au sol, de la densité du bâti volumique et de la hauteur moyenne pondéré du bâti. Si l'indice est élevé la rugosité urbaine est importante, c'est à dire une concentration et des hauteurs de bâtiment fortes. Voir ci-dessous :
+> **Note**:Les données contiennent un "Shapefile" avec les entités de chaque IMU d'Île-de-France . L'IAU se sont inpirés pour parfaire leurs classes, de plusieurs exemples d'îlot et de recherches, tel que la classification Local Climate Zone ([LCZ](https://iainstew.files.wordpress.com/2013/01/seattle.pdf)) de Stewart et Oke . Les îlots morphologiques urbains comprennent différents mode d'occupation du sol avec un indice typo-morphologique de la rugosité urbaine. Celui-ci est calculé à partir du coefficient d'emprise au sol, de la densité du bâti volumique et de la hauteur moyenne pondéré du bâti. Si l'indice est élevé la rugosité urbaine est importante, c'est à dire une concentration et des hauteurs de bâtiment fortes. Voir ci-dessous :
 
 
 
 ![IMU](https://user-images.githubusercontent.com/48625647/57013236-d6c1ab00-6c0a-11e9-9520-510c7ae50765.png)
 
 
-- Image satellite SENTINEL2 de Level-2A :
+- Image satellite SENTINEL2 de [Level-2A](https://earth.esa.int/web/sentinel/technical-guides/sentinel-2-msi/level-2a/algorithm) :
     - Image du 6 mai 2018 ILE-DE-FRANCE
     - Image du 27 août 2018 ILE-DE-FRANCE
 
-Les images satellites SENTINEL2 de [Level-2A](https://earth.esa.int/web/sentinel/technical-guides/sentinel-2-msi/level-2a/algorithm) comporte une correction atmosphériques qui vise à trnasformer la réflectance Top Of Atmosphere (TOA) en réflectance Bottom Of Atmosphere (BOA). Les images ont des résolutions de 10,20 ou 60m. Voir ci-dessous :
+> **Note**:Les images satellites SENTINEL2 de Level-2A comporte une correction atmosphériques qui vise à trnasformer la réflectance Top Of Atmosphere (TOA) en réflectance Bottom Of Atmosphere (BOA). Les images ont des résolutions de 10,20 et 60m. 
 
 
    
