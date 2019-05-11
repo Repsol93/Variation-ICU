@@ -109,7 +109,7 @@ Afin de caractériser l'environnement de chaque station, nous allons créer des 
 
 
 ![buffer](https://user-images.githubusercontent.com/48625647/57566873-8b10bd80-73d1-11e9-8bbd-abe53beec57b.png)
-Figure 5
+*Figure 5*
 
 
 A l'intérieur de ces zones tampons, nous voulons essayer de caractériser l'environnement par rapport à l'occupation du sol et à la rugosité des bâtiments. Pour cela nous utiliserons différentes données (voir 2.1) afin de représenter pour chaque zone tampon la surface de:
