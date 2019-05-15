@@ -8,7 +8,7 @@
 
 ## 1. Introduction
 
-  L'agglomération de Paris est touché comme chaque ville fortement urbanisé, par une élévation des températures. Elle se produit la nuit, lors de l'évaporation de la chaleur, piégée et enmaganisée par la surface du sol durant la journée. Ce phénomène est nommé "Îlot de Chaleur Urbain" (ICU). L'objectif de cette étude est d'appréhender ces variations de température dû à l'ICU dans la région de l'Île-de-France. 
+  L'agglomération de Paris est touché comme chaque ville fortement urbanisé, par une élévation des températures. Elle se produit la nuit, lors de l'évaporation de la chaleur, piégée et enmaganisée par la surface du sol durant la journée. Ce phénomène est nommé "[Îlot de Chaleur Urbain](https://www.grandlyon.com/fileadmin/user_upload/media/pdf/voirie/referentiel-espaces-publics/20091201_gl_referentiel_espaces_publics_thematique_lutte_contre_ilots_chaleur_urbains.pdf)" (ICU). L'objectif de cette étude est d'appréhender ces variations de température dû à l'ICU dans la région de l'Île-de-France. 
   
 ![ICU](https://user-images.githubusercontent.com/48625647/57013235-d6291480-6c0a-11e9-85d5-4364b2b2e150.png)
   *Figure 1*
@@ -194,13 +194,13 @@ L'intérêt d'effectuer la sélection de chaque indice de rugosité est pour la 
   *Figure 13*
 
 
-Donc nous obtenons pour chaque zone tampon d'une station météo la surface des emprises d'indices de rugosité. 
+A la fin de notre traitement nous obtenons pour chaque zone tampon d'une station météo, la surface des emprises d'indices de rugosité (1,11,21,31 et 41)
 > **Rappel**: L'indice typo-morphologique de rugosité urbaine est calculé à partir du coefficient d'emprise au sol, de la densité du bâti volumique et de la hauteur moyenne pondéré du bâti. Si l'indice est élevé la rugosité urbaine est importante, c'est à dire que la concentration et les hauteurs de bâtiments sont élévées.
 
 
 #### 2.2.3 Etape 3 : Emprise de la végétation
 
-
+La végétation est un facteur également essentiel pour la caractérisation des emprises. Celle-ci joue un rôle dans la diminution de l'ICU.
 
 ## 3. Résultats
 Statistiques
