@@ -202,10 +202,8 @@ A la fin de notre traitement nous obtenons pour chaque zone tampon d'une station
 
 La végétation est un facteur également essentiel pour la caractérisation des emprises. Celle-ci joue un rôle dans la diminution de l'ICU. Ici nous voulons évaluer la surface prise par la végétation dans chacune des zones tampons comportant une station météo. Pour cela nous avons téléchargé deux images satellites SENTINEL2 du 6 mai 2018 et du 27 août 2018. Nous voulons à partir des deux images calculer l'[indice de végétation par différence normalisé](https://www.dronesimaging.com/wp-content/uploads/2013/05/documentation/indice%20de%20v%C3%A9g%C3%A9tation%20NDVI.pdf) (ou NDVI). Les deux images ont un niveau Level-2A, c'est-à-dire que des traitements ont été effectué dessus et nottament une correction atmosphériques. Celle-ci a consister à transformer la réflectance Top Of Atmosphere (TOA) en réflectance Bottom Of Atmosphere (BOA). Pour le calcul de NDVI, la valeur de réflectance BOA utilisé se rapprochera plus de la valeur mesuré au sol. La précision sur nos valeurs de NDVI n'en sera que plus forte. 
 Nous prendrons les images satellites à une résolution de 10 mètres avec plusieurs bandes spectrales à disposition (fig.14).
-- Bande 2 -> Bleu
-- Bande 3 -> Vert
-- Bande 4 -> Rouge
-- Bande 8 -> Proche Infrarouge
+
+
 ![image_gallery](https://user-images.githubusercontent.com/48625647/57800626-1b445f00-7752-11e9-885f-a906dff049f6.jpg)
 
 
