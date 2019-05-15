@@ -211,6 +211,17 @@ Nous prendrons les images satellites à une résolution de 10 mètres, où plusi
 Afin de calculer le NDVI pour les deux dates à partir d'ArcGIS et de la calculatrice raster, nous devons utiliser la bande du rouge (R) et du proche infrarouge (PIR). La formule est "NDVI = (PIR - R) / (PIR + R)". On obtient sur le NDVI pour notre zone d'étude (fig.15).
 
 
+![NDVI2017](https://user-images.githubusercontent.com/48625647/57802580-97d93c80-7756-11e9-9820-b7fff286e15f.png)
+
+
+Ici la végétation va nous intéresser, c'est pour cela que nous devons prendre un seuil des valeurs NDVI élévée correspondant à de la végétation.
+
+
+
+
+
+
+
 ## 3. Résultats
 Statistiques
 
