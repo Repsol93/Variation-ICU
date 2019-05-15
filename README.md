@@ -206,6 +206,9 @@ Nous prendrons les images satellites à une résolution de 10 mètres avec plusi
 - Bande 3 -> Vert
 - Bande 4 -> Rouge
 - Bande 8 -> Proche Infrarouge
+![image_gallery](https://user-images.githubusercontent.com/48625647/57800626-1b445f00-7752-11e9-885f-a906dff049f6.jpg)
+
+
 
 ## 3. Résultats
 Statistiques
