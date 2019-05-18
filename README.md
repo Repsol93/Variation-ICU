@@ -204,8 +204,10 @@ La végétation est un facteur également essentiel pour la caractérisation des
 Nous prendrons les images satellites à une résolution de 10 mètres, où plusieurs bandes spectrales à disposition (fig.14).
 
 
+
 ![image_gallery](https://user-images.githubusercontent.com/48625647/57800626-1b445f00-7752-11e9-885f-a906dff049f6.jpg)
   *Figure 14*
+
 
 
 Afin de calculer le NDVI pour les deux dates à partir d'ArcGIS et de la calculatrice raster, nous devons utiliser la bande du rouge (R) et du proche infrarouge (PIR). La formule est "NDVI = (PIR - R) / (PIR + R)". On obtient sur le NDVI pour notre zone d'étude (fig.15).
@@ -217,8 +219,7 @@ Afin de calculer le NDVI pour les deux dates à partir d'ArcGIS et de la calcula
 
 
 
-Ici la végétation va nous intéresser, c'est pour cela que nous devons prendre un seuil des valeurs NDVI élévée correspondant à de la végétation.
-
+A partir du NDVI nous allons pouvoir extraire les emprises de végétation. En effet, plus le NDVI est fort et plus il y a de présence de végétation saine. C'est pour cela que nous devons prendre un seuil du NDVI qui prendra en compte les emprises de végétation. Dans la littérature scientifique, les formations végétales ont des valeurs NDVI entre 0.1 et 0.7. Néanmoins à une résolution de 10m, la valeur du seuil pris pour l'image du 6 mai 2018 est de 0,5 et celle du 27 août 2017 est de 0,6. Nous avons évalué le résultat des emprises de végétation obtenu avec différents seuils afin de choisir le plus optimum. Néanmoins la valeur de seuil reste légèrement subjectif.
 
 
 
