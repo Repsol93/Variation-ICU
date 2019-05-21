@@ -224,6 +224,12 @@ Afin d'obtenir les emprises de végétation, nous allons effectuer une reclassif
 
 
 
+![vegetation_ndvi](https://user-images.githubusercontent.com/48625647/58127853-a45a0b00-7c16-11e9-91eb-549e9972badf.png)
+*Figure 16*
+
+
+Nous avons terminer nos différentes étapes de la méthodologie. On a obtenu pour l'instant la surface de bâti, la hauteur pondérée, la surface de l'IMU batî avec les différents indices de rugosité (1,11,21,31 et 41) et la surface de végétation.
+Avec ces différentes données obtenus de plusieurs sources, nous allons essayer de mettre en avant les variations de températures et notamment l'effet de l'ICU sur notre zone d'étude.
 
 
 
