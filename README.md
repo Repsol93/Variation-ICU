@@ -194,7 +194,7 @@ Le prochain traitement va nous permettre de calculer la surface de chaque empris
 
 
 
-L'intérêt d'effectuer la sélection de chaque indice de rugosité est pour la mise en forme de la données en sortie. En effet l'on veut avoir les surfaces de chaque indice de rugosité en colonne et non en ligne. Nous effectuons maintenant la jointure attributaire entre nos couches d'indices et la couche de zone tampon. En sortie, nous avons notre couche de zone tampon avec à l'intérieur de notre table attributaire, la surface des emprises d'indices de rugosité en colonne (fig.13).
+L'intérêt d'effectuer la sélection de chaque indice de rugosité est pour la mise en forme de la données en sortie. En effet l'on veut avoir les surfaces de chaque indice de rugosité en colonne et non en ligne. Nous effectuons maintenant la [jointure attributaire](http://desktop.arcgis.com/fr/arcmap/10.3/manage-data/tables/joining-attributes-in-one-table-to-another.htm) entre nos couches d'indices et la couche de zone tampon. En sortie, nous avons notre couche de zone tampon avec à l'intérieur de notre table attributaire, la surface des emprises d'indices de rugosité en colonne (fig.13).
 
 
 
@@ -228,7 +228,11 @@ Afin de calculer le NDVI pour les deux dates à partir d'ArcGIS et de la calcula
 
 
 A partir du NDVI nous allons pouvoir extraire les emprises de végétation. En effet, plus le NDVI est fort et plus il y a de présence de végétation. C'est pour cela que nous devons prendre un seuil du NDVI qui prendra en compte les emprises de végétation. Dans la littérature scientifique, les formations végétales ont des valeurs NDVI entre 0.1 et 0.7. Néanmoins à une résolution de 10m, la valeur du seuil pris pour l'image du 6 mai 2018 est de 0,5 et celle du 27 août 2017 est de 0,6. Nous avons évalué le résultat des emprises de végétation obtenu avec différents seuils afin de choisir le plus optimum. Néanmoins la valeur de seuil reste subjectif.
-Afin d'obtenir les emprises de végétation, nous allons effectuer une reclassification. Les pixels de végétation (>0,6) sont classés dans la classe 1. Les autres sont classés en valeur NoData, car elle ne nous intéresse pas. Après ce traitement, nous allons calculer les statistiques à l'intérieur de chaque zone tampon afin d'en déterminer une surface de végétation. En effet, le traitement "statistique zonale" permet d'obtenir un comptage des pixels à l'intérieur de chaque zone tampon. Connaissant la résolution de l'image de 10m nous savons que chaque pixel fait 10m de côté. La surface d'un carré est égale à côté fois côté, ce qui donne 100m² pour un pixel de 10m. Il suffit de multiplier le nombre total de pixel obtenu lors du comptage par 100 , pour chaque zone tampon. Après notre jointure attributaire entre notre  table de statistique et la couche des zones tampon, on a en sortie la surface de végétation à l'intérieur de chaque zone tampon (fig.16).
+Afin d'obtenir les emprises de végétation, nous allons effectuer une [reclassification](http://desktop.arcgis.com/fr/arcmap/10.3/tools/spatial-analyst-toolbox/reclassify.htm). Les pixels de végétation (>0,6) sont classés dans la classe 1. Les autres sont classés en valeur NoData, car elle ne nous intéresse pas. Après ce traitement, nous allons calculer les statistiques à l'intérieur de chaque zone tampon afin d'en déterminer une surface de végétation. En effet, le traitement [statistiques zonales (table)](http://desktop.arcgis.com/fr/arcmap/10.3/tools/spatial-analyst-toolbox/zonal-statistics-as-table.htm) permet d'obtenir un comptage des pixels à l'intérieur de chaque zone tampon. Ensuite  on multiplie le nombre total de pixel obtenu lors du comptage par 100 , afin d'obtenir la surface. 
+
+> **Note**: Connaissant la résolution de l'image de 10m nous savons que chaque pixel fait 10m de côté. La surface d'un carré est égale à côté fois côté, ce qui donne 100m² pour un pixel de 10m.
+
+Après notre jointure attributaire entre notre  table de statistique et la couche des zones tampon, on a en sortie la surface de végétation à l'intérieur de chaque zone tampon (fig.16).
 
 
 
@@ -237,12 +241,15 @@ Afin d'obtenir les emprises de végétation, nous allons effectuer une reclassif
 
 
 Nous avons terminer nos différentes étapes de la méthodologie. On a obtenu pour l'instant la surface de bâti, la hauteur pondérée, la surface de l'IMU batî avec les différents indices de rugosité (1,11,21,31 et 41) et la surface de végétation.
-Avec ces différentes données obtenus de plusieurs sources, nous allons essayer de mettre en avant les variations de températures et notamment l'effet de l'ICU à l'intérieur de notre zone d'étude.
-
+Avec ces différentes données obtenus de plusieurs sources, nous allons essayer de mettre en avant les variations de températures  et notamment l'effet de l'ICU dans chacune de nos zones tampon à l'intérieur de notre zone d'étude.
 
 
 ## 3. Résultats
-Statistiques
+
+Nous nous intéressons à la caractérisation de l'environmment aux alentours de nos stations météo, afin de faire ressortir des espaces types qui explirait les variations de températures dû à l'ICU. Nos différentes données obtenu composant notre tableau attributaire doivent être traités. Pour cela, nous allons utiliser l'Analyse en Composante Principale (ACP), qui est un traitement statistiques multi-variés. Elle permet de résumer des grands tableaux de données en supprimant les informations
+redondantes. De plus elle va permet de faire des groupes de "ressemblances" entre les différentes zones tampon des station météo et mettre en relation les différentes variables obtenus précédement.
+
+
 
 ## 4. Conclusion
 )
