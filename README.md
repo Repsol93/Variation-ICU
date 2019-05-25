@@ -248,10 +248,17 @@ Avec ces différentes données obtenus de plusieurs sources, nous allons essayer
 
 Nous nous intéressons à la caractérisation de l'environmment aux alentours de nos stations météo, afin de faire ressortir des espaces types qui explirait les variations de températures dû à l'ICU. Nos différentes données obtenu composant notre tableau attributaire doivent être traités. Pour cela, nous allons utiliser l'[Analyse en Composantes Principales ](https://eric.univ-lyon2.fr/~ricco/cours/slides/ACP.pdf)(ACP), qui est un traitement statistiques multi-variés. Elle permet de résumer des grands tableaux de données en supprimant les informations
 redondantes. De plus elle va permet de faire des groupes de "ressemblances" entre les différentes zones tampon des station météo et mettre en relation les différentes variables obtenus précédement.
-
+Nous allons donc enregistrer (en CSV) nos tableaux attributaires des différentes couches de zone tampon (50m, 100m et 200m), afin de les ouvrir sur le logiciel R-studio:
 
 ```
+#ACP(Analyse en composante principale) :
 
+ACPjour2017_50m<- read.csv("C:/Users/Quentin/Desktop/Mini_projet/Tableau_Donnees/Jour201709_50m.csv",sep=";",dec=",",header=T)
+ACPjour2017_100m<- read.csv("C:/Users/Quentin/Desktop/Mini_projet/Tableau_Donnees/Jour201709_100m.csv",sep=";",dec=",",header=T)
+ACPjour2017_200m<- read.csv("C:/Users/Quentin/Desktop/Mini_projet/Tableau_Donnees/Jour201709_200m.csv",sep=";",dec=",",header=T)
+ACPjour2018_50m<- read.csv("C:/Users/Quentin/Desktop/Mini_projet/Tableau_Donnees/Jour201805_50m.csv",sep=";",dec=",",header=T)
+ACPjour2018_100m<- read.csv("C:/Users/Quentin/Desktop/Mini_projet/Tableau_Donnees/Jour201805_100m.csv",sep=";",dec=",",header=T)
+ACPjour2018_200m<- read.csv("C:/Users/Quentin/Desktop/Mini_projet/Tableau_Donnees/Jour201805_200m.csv",sep=";",dec=",",header=T)
 
 ```
 
