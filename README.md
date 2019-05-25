@@ -250,6 +250,10 @@ Nous nous intéressons à la caractérisation de l'environmment aux alentours de
 redondantes. De plus elle va permet de faire des groupes de "ressemblances" entre les différentes zones tampon des station météo et mettre en relation les différentes variables obtenus précédement.
 
 
+```
+
+
+```
 
 ## 4. Conclusion
 )
