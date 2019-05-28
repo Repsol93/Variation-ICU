@@ -8,7 +8,7 @@
 
 ## 1. Introduction
 
-  L'agglomération de Paris est touché comme chaque ville fortement urbanisé, par une élévation des températures. Elle se produit la nuit, lors de l'évaporation de la chaleur, piégée et enmaganisée par la surface du sol durant la journée. Ce phénomène est nommé "[Îlot de Chaleur Urbain](https://www.grandlyon.com/fileadmin/user_upload/media/pdf/voirie/referentiel-espaces-publics/20091201_gl_referentiel_espaces_publics_thematique_lutte_contre_ilots_chaleur_urbains.pdf)" (ICU). L'objectif de cette étude est d'appréhender ces variations de température dû à l'ICU dans la région de l'Île-de-France. 7
+  L'agglomération de Paris est touché comme chaque ville fortement urbanisé, par une élévation des températures. Elle se produit la nuit, lors de l'évaporation de la chaleur, piégée et enmaganisée par la surface du sol durant la journée. Ce phénomène est nommé "[Îlot de Chaleur Urbain](https://www.grandlyon.com/fileadmin/user_upload/media/pdf/voirie/referentiel-espaces-publics/20091201_gl_referentiel_espaces_publics_thematique_lutte_contre_ilots_chaleur_urbains.pdf)" (ICU). L'objectif de cette étude est d'appréhender ces variations de température dû à l'ICU dans la région de l'Île-de-France. 
   
   
 
