@@ -240,8 +240,47 @@ Après notre jointure attributaire entre notre  table de statistique et la couch
 *Figure 16*
 
 
+#### 2.2.4 Etape 4 : Indice de visualisation : Sky-View-Factor
+
+Le [Sky-View-Factor](https://www.researchgate.net/publication/49620296_Sky-View_Factor_as_a_Relief_Visualization_Technique)(SVF)
+utilise la partie visible du ciel ou l'hémisphère céleste (fig.17b). D'après l'étude "Sky-View-Factor as a Relief Visualization Technique" de Zaksek *et al.* publié en 2011, l'illumination du relief est corrélée à la portion du ciel visible qui est limité par l'horizon du relief. La méthode consiste à calculer l'angle d'élévation vertical de l'horizon "y1" dans n directions en spécifiant le rayon R (fig.17a).
+
+
+
+*Figure 17*
+
+
+La mesure du SVF est normalisé et la valeur proche de 1 signifie que l'hémisphère entier est visible comme des plaines ou des pics, tandis que les valeurs proche de 0 représentent les fonds de vallées, où le ciel n'est pratiquement pas visible. De plus, le changement du nombre de direction de recherche et le rayon de recherche maximum influence la mesure, qui peut être optimiser.
+
+Dans notre étude, nous nous intéressons au "couloir" formé par les bâtiments qui joue un rôle dans le piège des rayons lumineux. Grâce à la visualisation SVF nous pouvons obtenir les valeurs d'indice qui correspondent aux fonds de vallées (proche de 0), c'est à dire où le ciel n'est pratiquement pas visible, comme entre les hauts bâtiments. Nous allons prendre un seuil pour les faibles valeurs, afin de calculer une surface des endroits où le ciel est moins visible à l'intérieur de chaque zone tampon. Pour cela nous allons avoir besoin d'un Modèle Numérique de Surface (fig.18).
+
+
+
+
+
+Avec nos données d'entrée, nous pouvons créer notre propre MNS avec la couche d'emprise du bâtiment et la couche d'emprise de la zone d'étude. Sachant que l'on s'intéresse seulement au bâtiment et que nous avons leurs hauteurs médianes, on considérera les zones non bâti comme une hauteur de 0. On va agréger les emprises de bâti et celle de la zone d'étude. Après nous allons rasteriser notre couche vecteur afin d'obtenir des valeurs de pixel correspondant à nos hauteurs de bâtiment et de non-bâti qui sera à 0 (fig.19).
+
+
+
+Le résultat nous donne un MNS (fig.20) où seulement la hauteur des bâtiments a été pris en compte, puisqu'il joue un rôle important dans les effets de l'ICU.
+
+
+
+
+
+
+A partir du logiciel QGIS et de la librairie SAGA, nous pouvons effectuer le traitement "Sky-View-Factor". 
+
+Cela nous donne une valeur d'indice pour chaque pixel. Nous allons prendre un seuil de "" afin de retenir seuelemnt les valeurs inférieur à celui-ci, qui correspond à des endroits où le ciel est peu visible. Nous pouvons déterminer ensuite la surface de ces zones, grâce au comptage des pixels à l'intérieur de chaque zone tampon. Cette étape ressemble à celle utilisée pur les emprises de végétation (2.2.3).
+.
+
+
+
+
+
 Nous avons terminer nos différentes étapes de la méthodologie. On a obtenu pour l'instant la surface de bâti, la hauteur pondérée, la surface de l'IMU batî avec les différents indices de rugosité (1,11,21,31 et 41) et la surface de végétation.
 Avec ces différentes données obtenus de plusieurs sources, nous allons essayer de mettre en avant les variations de températures  et notamment l'effet de l'ICU dans chacune de nos zones tampon à l'intérieur de notre zone d'étude.
+
 
 
 ## 3. Résultats
