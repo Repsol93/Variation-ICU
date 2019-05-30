@@ -130,7 +130,7 @@ A l'intérieur de ces zones tampons, nous voulons essayer de caractériser l'env
 - l'emprise du bâtiment pour la ville de Paris et la Petite Couronne (ref fig.4). A l'intérieur de cette base, il y a un champ des hauteurs médianne et moyenne pour chaque emprise de bâtiment qui seront utilisés.
 - l'emprise de l'IMU du "bâti résidentiel" (ref fig.5), car elle est majoritaire dans notre zone d'étude. Nous allons plutôt nous intéresser précisement à l'indice typo-morphologique de cet IMU, pour mettre l'accent sur la rugosité urbaine de ces emprises.
 - l'emprise de la végétation obtenu grâce au NDVI calculé à partir des images satellites SENTINEL2 (ref fig.6).
-(- l'emprise des "fonds de vallées" obtenu (par un seuillage des valeurs proche de 0) d'un SVF calculé avec l'extension SAGA sur QGIS.)
+- l'emprise des zones où la visualisation du ciel est faible obtenu par un seuillage des valeurs proche de 0 d'un SVF calculé avec l'extension SAGA sur QGIS.
 
 L'étude concernant le géotraitement a été réalisé avec ModelBuilder afin de gagner du temps sur la répétition de la chaîne de traitement, sur les différentes zones tampons pour les deux jours. Cette étude est réalisés en 3 étapes :
 
@@ -242,8 +242,7 @@ Après notre jointure attributaire entre notre  table de statistique et la couch
 
 #### 2.2.4 Etape 4 : Indice de visualisation : Sky-View-Factor
 
-Le [Sky-View-Factor](https://www.researchgate.net/publication/49620296_Sky-View_Factor_as_a_Relief_Visualization_Technique)(SVF)
-utilise la partie visible du ciel ou l'hémisphère céleste (fig.17b). D'après l'étude "Sky-View-Factor as a Relief Visualization Technique" de Zaksek *et al.* publié en 2011, l'illumination du relief est corrélée à la portion du ciel visible qui est limité par l'horizon du relief. La méthode consiste à calculer l'angle d'élévation vertical de l'horizon "y1" dans n directions en spécifiant le rayon R (fig.17a).
+Le [Sky-View-Factor](https://www.researchgate.net/publication/49620296_Sky-View_Factor_as_a_Relief_Visualization_Technique) (SVF) utilise la partie visible du ciel ou l'hémisphère céleste (fig.17b). D'après l'étude "Sky-View-Factor as a Relief Visualization Technique" de Zaksek *et al.* publié en 2011, l'illumination du relief est corrélée à la portion du ciel visible qui est limité par l'horizon du relief. La méthode consiste à calculer l'angle d'élévation vertical de l'horizon "y1" dans n directions en spécifiant le rayon R (fig.17a).
 
 
 
@@ -263,7 +262,7 @@ Dans notre étude, nous nous intéressons au "couloir" formé par les bâtiments
 
 
 
-Avec nos données d'entrée, nous pouvons créer notre propre MNS avec la couche d'emprise du bâtiment et la couche d'emprise de la zone d'étude. Sachant que l'on s'intéresse seulement au bâtiment et que nous avons leurs hauteurs médianes, on considérera les zones non bâti comme une hauteur de 0m. On va [agréger](http://desktop.arcgis.com/fr/arcmap/10.3/tools/analysis-toolbox/union.htm) les emprises de bâtiment et l'emprise de la zone d'étude. Après nous allons [rasteriser](http://desktop.arcgis.com/fr/arcmap/10.3/tools/conversion-toolbox/feature-to-raster.htm) notre couche d'entités afin d'obtenir des valeurs de pixel correspondant à nos hauteurs de bâtiment et de non-bâti (fig.19).
+Avec nos données d'entrée, nous pouvons créer notre propre MNS avec la couche d'emprise du bâtiment et la couche d'emprise de la zone d'étude. Sachant que l'on s'intéresse seulement au bâtiment et que nous avons leurs hauteurs médianes, on considérera les zones non bâti comme une hauteur de 0m. On va [agréger](http://desktop.arcgis.com/fr/arcmap/10.3/tools/analysis-toolbox/union.htm) les emprises de bâtiment et l'emprise de la zone d'étude. Après nous allons [rasteriser](http://desktop.arcgis.com/fr/arcmap/10.3/tools/conversion-toolbox/feature-to-raster.htm) notre couche d'entités afin d'obtenir des valeurs de pixel correspondant à nos hauteurs de bâti et non-bâti (fig.19).
 
 
 
@@ -281,16 +280,11 @@ Le résultat nous donne un MNS (fig.20) où seulement les hauteurs des bâtiment
 
 
 
-A partir du logiciel QGIS et de la librairie SAGA, nous pouvons effectuer le traitement "Sky-View-Factor". 
+A partir du logiciel QGIS et de la librairie SAGA, nous allons calculer l'indice de visualsiation "Sky-View-Factor".
 
 *Figure 21*
 
-Cela nous donne une valeur d'indice pour chaque pixel (fig.21). Nous allons prendre un seuil de "" afin de retenir seuelemnt les valeurs inférieur à celui-ci, qui correspond à des endroits où le ciel est peu visible. Nous pouvons déterminer ensuite la surface de ces zones, grâce au comptage des pixels à l'intérieur de chaque zone tampon. Cette étape ressemble à celle utilisée pour les emprises de végétation (2.2.3). La surface de ces zones où le ciel est peu visible sera mise en lien avec les variations de températures afin de déterminer si celle-ci joue un rôle. Néanmoins la prise du seuil reste subjectif et les résultats seront à prendre avec un certain recul.
-
-
-
-
-
+En résulte un raster, où l'indice de visualisation a été calculé pour chaque pour chaque pixel (fig.21). Nous allons prendre un seuil de "" afin de retenir seulement les valeurs inférieures à celui-ci, qui correspondra aux endroits où le ciel est peu visible. Nous pouvons déterminer ensuite la surface de ces zones, grâce au comptage des pixels à l'intérieur de chaque zone tampon. Cette étape ressemble à celle utilisée pour les emprises de végétation (2.2.3). Néanmoins comme pour la surface des emprises de végétation, le choix du seuil reste subjectif et un certain recul devra être pris sur les résultats. 
 
 Nous avons terminer nos différentes étapes de la méthodologie. On a obtenu pour l'instant la surface de bâti, la hauteur pondérée, la surface de l'IMU batî avec les différents indices de rugosité (1,11,21,31 et 41), la surface de végétation et la surface des zones où la vue du ciel est faible. Avec ces différentes données obtenus de plusieurs sources, nous allons essayer de mettre en avant les variations de températures  et notamment l'effet de l'ICU dans chacune de nos zones tampon à l'intérieur de notre zone d'étude.
 
