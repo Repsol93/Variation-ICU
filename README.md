@@ -247,7 +247,9 @@ utilise la partie visible du ciel ou l'hémisphère céleste (fig.17b). D'après
 
 
 
+![svf_l](https://user-images.githubusercontent.com/48625647/58646943-c5051d80-8306-11e9-983d-8d01f9b7b0a3.png)
 *Figure 17*
+
 
 
 La mesure du SVF est normalisé et la valeur proche de 1 signifie que l'hémisphère entier est visible comme des plaines ou des pics, tandis que les valeurs proche de 0 représentent les fonds de vallées, où le ciel n'est pratiquement pas visible. De plus, le changement du nombre de direction de recherche et le rayon de recherche maximum influence la mesure, qui peut être optimiser.
@@ -255,25 +257,35 @@ La mesure du SVF est normalisé et la valeur proche de 1 signifie que l'hémisph
 Dans notre étude, nous nous intéressons au "couloir" formé par les bâtiments qui joue un rôle dans le piège des rayons lumineux. Grâce à la visualisation SVF nous pouvons obtenir les valeurs d'indice qui correspondent aux fonds de vallées (proche de 0), c'est à dire où le ciel n'est pratiquement pas visible, comme entre les hauts bâtiments. Nous allons prendre un seuil pour les faibles valeurs, afin de calculer une surface des endroits où le ciel est moins visible à l'intérieur de chaque zone tampon. Pour cela nous allons avoir besoin d'un Modèle Numérique de Surface (fig.18).
 
 
+
+![MNS_dessin](https://user-images.githubusercontent.com/48625647/58646942-c46c8700-8306-11e9-8781-ddfcf3ead701.png)
 *Figure 18*
 
 
-Avec nos données d'entrée, nous pouvons créer notre propre MNS avec la couche d'emprise du bâtiment et la couche d'emprise de la zone d'étude. Sachant que l'on s'intéresse seulement au bâtiment et que nous avons leurs hauteurs médianes, on considérera les zones non bâti comme une hauteur de 0. On va agréger les emprises de bâti et celle de la zone d'étude. Après nous allons rasteriser notre couche vecteur afin d'obtenir des valeurs de pixel correspondant à nos hauteurs de bâtiment et de non-bâti qui sera à 0 (fig.19).
 
+Avec nos données d'entrée, nous pouvons créer notre propre MNS avec la couche d'emprise du bâtiment et la couche d'emprise de la zone d'étude. Sachant que l'on s'intéresse seulement au bâtiment et que nous avons leurs hauteurs médianes, on considérera les zones non bâti comme une hauteur de 0m. On va [agréger](http://desktop.arcgis.com/fr/arcmap/10.3/tools/analysis-toolbox/union.htm) les emprises de bâtiment et l'emprise de la zone d'étude. Après nous allons [rasteriser](http://desktop.arcgis.com/fr/arcmap/10.3/tools/conversion-toolbox/feature-to-raster.htm) notre couche d'entités afin d'obtenir des valeurs de pixel correspondant à nos hauteurs de bâtiment et de non-bâti (fig.19).
+
+
+
+![creation_MNS](https://user-images.githubusercontent.com/48625647/58646940-c3d3f080-8306-11e9-8127-491908a04697.png)
 *Figure 19*
 
-Le résultat nous donne un MNS (fig.20) où seulement la hauteur des bâtiments a été pris en compte, puisqu'il joue un rôle important dans les effets de l'ICU.
+
+
+Le résultat nous donne un MNS (fig.20) où seulement les hauteurs des bâtiments ont été prises en compte, puisqu'ils jouent un rôle important dans les effets de l'ICU.
 
 
 
+![MNS](https://user-images.githubusercontent.com/48625647/58646941-c46c8700-8306-11e9-8675-57d973e07565.png)
 *Figure 20*
+
 
 
 A partir du logiciel QGIS et de la librairie SAGA, nous pouvons effectuer le traitement "Sky-View-Factor". 
 
 *Figure 21*
 
-Cela nous donne une valeur d'indice pour chaque pixel (fig 21). Nous allons prendre un seuil de "" afin de retenir seuelemnt les valeurs inférieur à celui-ci, qui correspond à des endroits où le ciel est peu visible. Nous pouvons déterminer ensuite la surface de ces zones, grâce au comptage des pixels à l'intérieur de chaque zone tampon. Cette étape ressemble à celle utilisée pour les emprises de végétation (2.2.3). La surface de ces zones où le ciel est peu visible sera mise en lien avec les variations de températures afin de déterminer si celle-ci joue un rôle. Néanmoins la prise du seuil reste subjectif et les résultats seront à prendre avec un certain recul.
+Cela nous donne une valeur d'indice pour chaque pixel (fig.21). Nous allons prendre un seuil de "" afin de retenir seuelemnt les valeurs inférieur à celui-ci, qui correspond à des endroits où le ciel est peu visible. Nous pouvons déterminer ensuite la surface de ces zones, grâce au comptage des pixels à l'intérieur de chaque zone tampon. Cette étape ressemble à celle utilisée pour les emprises de végétation (2.2.3). La surface de ces zones où le ciel est peu visible sera mise en lien avec les variations de températures afin de déterminer si celle-ci joue un rôle. Néanmoins la prise du seuil reste subjectif et les résultats seront à prendre avec un certain recul.
 
 
 
