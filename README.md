@@ -247,7 +247,7 @@ utilise la partie visible du ciel ou l'hémisphère céleste (fig.17b). D'après
 
 
 
-![svf_l](https://user-images.githubusercontent.com/48625647/58646943-c5051d80-8306-11e9-983d-8d01f9b7b0a3.png)
+![svf_l](https://user-images.githubusercontent.com/48625647/58647687-5cb73b80-8308-11e9-8d51-afa629976e1b.png)
 *Figure 17*
 
 
