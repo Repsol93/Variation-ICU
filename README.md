@@ -255,31 +255,32 @@ La mesure du SVF est normalisé et la valeur proche de 1 signifie que l'hémisph
 Dans notre étude, nous nous intéressons au "couloir" formé par les bâtiments qui joue un rôle dans le piège des rayons lumineux. Grâce à la visualisation SVF nous pouvons obtenir les valeurs d'indice qui correspondent aux fonds de vallées (proche de 0), c'est à dire où le ciel n'est pratiquement pas visible, comme entre les hauts bâtiments. Nous allons prendre un seuil pour les faibles valeurs, afin de calculer une surface des endroits où le ciel est moins visible à l'intérieur de chaque zone tampon. Pour cela nous allons avoir besoin d'un Modèle Numérique de Surface (fig.18).
 
 
-
+*Figure 18*
 
 
 Avec nos données d'entrée, nous pouvons créer notre propre MNS avec la couche d'emprise du bâtiment et la couche d'emprise de la zone d'étude. Sachant que l'on s'intéresse seulement au bâtiment et que nous avons leurs hauteurs médianes, on considérera les zones non bâti comme une hauteur de 0. On va agréger les emprises de bâti et celle de la zone d'étude. Après nous allons rasteriser notre couche vecteur afin d'obtenir des valeurs de pixel correspondant à nos hauteurs de bâtiment et de non-bâti qui sera à 0 (fig.19).
 
-
+*Figure 19*
 
 Le résultat nous donne un MNS (fig.20) où seulement la hauteur des bâtiments a été pris en compte, puisqu'il joue un rôle important dans les effets de l'ICU.
 
 
 
-
+*Figure 20*
 
 
 A partir du logiciel QGIS et de la librairie SAGA, nous pouvons effectuer le traitement "Sky-View-Factor". 
 
-Cela nous donne une valeur d'indice pour chaque pixel. Nous allons prendre un seuil de "" afin de retenir seuelemnt les valeurs inférieur à celui-ci, qui correspond à des endroits où le ciel est peu visible. Nous pouvons déterminer ensuite la surface de ces zones, grâce au comptage des pixels à l'intérieur de chaque zone tampon. Cette étape ressemble à celle utilisée pur les emprises de végétation (2.2.3).
-.
+*Figure 21*
+
+Cela nous donne une valeur d'indice pour chaque pixel (fig 21). Nous allons prendre un seuil de "" afin de retenir seuelemnt les valeurs inférieur à celui-ci, qui correspond à des endroits où le ciel est peu visible. Nous pouvons déterminer ensuite la surface de ces zones, grâce au comptage des pixels à l'intérieur de chaque zone tampon. Cette étape ressemble à celle utilisée pour les emprises de végétation (2.2.3). La surface de ces zones où le ciel est peu visible sera mise en lien avec les variations de températures afin de déterminer si celle-ci joue un rôle. Néanmoins la prise du seuil reste subjectif et les résultats seront à prendre avec un certain recul.
 
 
 
 
 
-Nous avons terminer nos différentes étapes de la méthodologie. On a obtenu pour l'instant la surface de bâti, la hauteur pondérée, la surface de l'IMU batî avec les différents indices de rugosité (1,11,21,31 et 41) et la surface de végétation.
-Avec ces différentes données obtenus de plusieurs sources, nous allons essayer de mettre en avant les variations de températures  et notamment l'effet de l'ICU dans chacune de nos zones tampon à l'intérieur de notre zone d'étude.
+
+Nous avons terminer nos différentes étapes de la méthodologie. On a obtenu pour l'instant la surface de bâti, la hauteur pondérée, la surface de l'IMU batî avec les différents indices de rugosité (1,11,21,31 et 41), la surface de végétation et la surface des zones où la vue du ciel est faible. Avec ces différentes données obtenus de plusieurs sources, nous allons essayer de mettre en avant les variations de températures  et notamment l'effet de l'ICU dans chacune de nos zones tampon à l'intérieur de notre zone d'étude.
 
 
 
