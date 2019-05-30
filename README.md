@@ -276,7 +276,7 @@ Le résultat nous donne un MNS (fig.20) où seulement les hauteurs des bâtiment
 
 
 
-![MNS](https://user-images.githubusercontent.com/48625647/58646941-c46c8700-8306-11e9-8675-57d973e07565.png)
+![MNS](https://user-images.githubusercontent.com/48625647/58647509-06e29380-8308-11e9-8f87-353eb17a1dc5.png)
 *Figure 20*
 
 
