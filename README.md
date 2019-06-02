@@ -280,13 +280,14 @@ Le résultat nous donne un MNS (fig.20) où seulement les hauteurs des bâtiment
 
 
 
-A partir du logiciel QGIS et de la librairie SAGA, nous allons calculer l'indice de visualisation "Sky-View-Factor". En résulte un raster, où l'indice de visualisation a été calculé pour chaque pour chaque pixel (fig.21). Plus l'indice est proche de 1  et plus la part du ciel visible est importante au niveau du pixel. En revanche plus l'indice est proche de 0 et plus la part du ciel visible est faible au niveau du pixel.
+A partir du logiciel QGIS et de son extension SAGA, nous allons calculer l'indice de visualisation "Sky-View-Factor". En résulte un raster, où l'indice de visualisation a été calculé pour chaque pour chaque pixel (fig.21). Plus l'indice est proche de 1  et plus la part du ciel visible est importante au niveau du pixel. En revanche plus l'indice est proche de 0 et plus la part du ciel visible est faible au niveau du pixel.
 
 *Figure 21*
 
-Nous allons prendre un seuil de "" afin de retenir seulement les valeurs inférieures à celui-ci, qui correspondra aux endroits où le ciel est peu visible. Nous pouvons déterminer ensuite la surface de ces zones, grâce au comptage des pixels à l'intérieur de chaque zone tampon. Cette étape ressemble à celle utilisée pour les emprises de végétation (2.2.3). Néanmoins comme pour la surface des emprises de végétation, le choix du seuil reste subjectif et un certain recul devra être pris sur les résultats. 
+Nous allons seuiller le raster en prenant en compte les endroits où la part du ciel visible est faible, afin de faire ressortir 
+des zones où les rayons lumineux pourrait être potentiellement piégé dû à la présence de corridor entre les bâtiments. Après avoir analysé les valeurs de pixel autour des bâtiments, le seuil pris pour les zones où la part du ciel visible est faible sera 0.70. Nous prendrons donc en compte les valeurs inférieurs à ce seuil. Nous pouvons déterminer ensuite la surface de ces zones, grâce au comptage des pixels à l'intérieur de chaque zone tampon. Cette étape ressemble à celle utilisée pour les emprises de végétation (2.2.3). Néanmoins comme pour la surface des emprises de végétation, le choix du seuil reste subjectif et un certain recul devra être pris sur les résultats. Nous obtenons à l'intérieur de chaque zone tampon, la surface de la zone où la part du ciel visible est potentiellement faible.
 
-Nous avons terminer nos différentes étapes de la méthodologie. On a obtenu pour l'instant la surface de bâti, la hauteur pondérée, la surface de l'IMU batî avec les différents indices de rugosité (1,11,21,31 et 41), la surface de végétation et la surface des zones où la vue du ciel est faible. Avec ces différentes données obtenus de plusieurs sources, nous allons essayer de mettre en avant les variations de températures  et notamment l'effet de l'ICU dans chacune de nos zones tampon à l'intérieur de notre zone d'étude.
+Nous avons terminer nos différentes étapes de la méthodologie. On a obtenu pour l'instant la surface de bâti, la hauteur pondérée, la surface de l'IMU batî avec les différents indices de rugosité (1,11,21,31 et 41), la surface de végétation et la surface des zones où la part du ciel visible est faible. Avec ces différentes données obtenus de plusieurs sources, nous allons essayer de mettre en avant les variations de températures  et notamment l'effet de l'ICU dans chacune de nos zones tampon à l'intérieur de notre zone d'étude.
 
 
 
