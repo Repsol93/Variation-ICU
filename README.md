@@ -282,7 +282,12 @@ Le résultat nous donne un MNS (fig.20) où seulement les hauteurs des bâtiment
 
 A partir du logiciel QGIS et de son extension SAGA, nous allons calculer l'indice de visualisation "Sky-View-Factor". En résulte un raster, où l'indice de visualisation a été calculé pour chaque pour chaque pixel (fig.21). Plus l'indice est proche de 1  et plus la part du ciel visible est importante au niveau du pixel. En revanche plus l'indice est proche de 0 et plus la part du ciel visible est faible au niveau du pixel.
 
+
+
+![svf_indice](https://user-images.githubusercontent.com/48625647/58759906-58219b80-8531-11e9-9edd-d651e023ef0e.png)
 *Figure 21*
+
+
 
 Nous allons seuiller le raster en prenant en compte les endroits où la part du ciel visible est faible, afin de faire ressortir 
 des zones où les rayons lumineux pourrait être potentiellement piégé dû à la présence de corridor entre les bâtiments. Après avoir analysé les valeurs de pixel autour des bâtiments, le seuil pris pour les zones où la part du ciel visible est faible sera 0.70. Nous prendrons donc en compte les valeurs inférieurs à ce seuil. Nous pouvons déterminer ensuite la surface de ces zones, grâce au comptage des pixels à l'intérieur de chaque zone tampon. Cette étape ressemble à celle utilisée pour les emprises de végétation (2.2.3). Néanmoins comme pour la surface des emprises de végétation, le choix du seuil reste subjectif et un certain recul devra être pris sur les résultats. Nous obtenons à l'intérieur de chaque zone tampon, la surface de la zone où la part du ciel visible est potentiellement faible.
