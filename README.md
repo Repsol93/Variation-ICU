@@ -284,7 +284,7 @@ A partir du logiciel QGIS et de son extension SAGA, nous allons calculer l'indic
 
 
 
-![svf_indice](https://user-images.githubusercontent.com/48625647/58759906-58219b80-8531-11e9-9edd-d651e023ef0e.png)
+![svf_indice](https://user-images.githubusercontent.com/48625647/58759925-bd758c80-8531-11e9-81e1-3fa147b826b5.png)
 *Figure 21*
 
 
