@@ -344,5 +344,15 @@ Ici l'ACP a été effectué sur la journée de 2017. Néanmoins pour la journée
 
 
 
+![eig_variance](https://user-images.githubusercontent.com/48625647/59159314-3a6fab80-8ac8-11e9-80d2-537f8e0c3fb8.png)
+
+
+
+
+
+![acp_var](https://user-images.githubusercontent.com/48625647/59159313-3a6fab80-8ac8-11e9-9825-5cf970f2f5b4.png)
+
+
+
 ## 4. Conclusion
 )
