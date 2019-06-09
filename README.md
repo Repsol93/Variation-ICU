@@ -356,9 +356,7 @@ Au vue des pourcentages de variance expliqué (fig.24) et des quantité précise
 
 
 > **Note**: Le graphique de corrélation des variables est constitué de deux axes. L'axe des abscisses correspond à la première composante et l'axe des ordonnés correspond à la deuxième composante, avec des valeurs de corrélation comprise entre -1 et 1.
-Pour l'interprétation :
-- Les variables situées en haut à droite sont corrélés positivement et au contraire les variables situées en bas à gauche sont corrélés négativement
-- Les variables qui sont le plus loin de l'origine sont les mieux représentés par l'ACP.
+Pour l'interprétation : Les variables situées en haut à droite sont corrélés positivement et au contraire les variables situées en bas à gauche sont corrélés négativement. De plus les variables qui sont le plus loin de l'origine sont les mieux représentés par l'ACP.
 
 Pour le graphique de corrélation des variables correspondant à la journée de 2017, 
 
