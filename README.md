@@ -305,14 +305,39 @@ Avec ces différentes données obtenus de plusieurs sources, nous allons essayer
 ## 3. Résultats
 
 Nous nous intéressons à la caractérisation de l'environmment aux alentours de nos stations météo, afin de faire ressortir des espaces types qui explirait les variations de températures dû à l'ICU. Nos différentes données obtenu composant notre tableau attributaire doivent être traités. Pour cela, nous allons utiliser l'[Analyse en Composantes Principales ](https://eric.univ-lyon2.fr/~ricco/cours/slides/ACP.pdf)(ACP), qui est un traitement statistiques multi-variés. Elle permet de résumer des grands tableaux de données en supprimant les informations
-redondantes. De plus elle va permet de faire des groupes de "ressemblances" entre les différentes zones tampon des station météo et mettre en relation les différentes variables obtenus précédement.
+redondantes. De plus elle va permet de faire des groupes de "ressemblances" entre les différents individus (zones tampon des station météo) et les mettre en relation avec les différentes variables obtenus précédement.
 Nous allons donc enregistrer en format CSV nos tableaux attributaires des différentes couches de zone tampon 50m, 100m et 200m, afin de les ouvrir sur le logiciel R-studio. 
 
 Ensuite avec le package FactoMineR , nous allons effectuer une ACP à partir de nos tableaux de données. Sachant que nos données n'ont pas les mêmes unités (mètres, degrés etc), nous devons les standardiser afin de les rendre comparable. Dans FactoMineR , la fonction ACP() par défault va normaliser les données de façon automatique.
+La première étape est de faire ressortir les valeurs propres de chaque axe (composante). Sachant qu'il y a autant d'axe que de variable en entrée. Il faudra donc choisir combien de composantes garder, en se basant sur leur quantité de variance exliqué.
+
+> **Note**: La valeur propre est la quantité de variance expliqué, c'est à dire que la première composante va être l'axe expliquant le plus d'information. Au fur et à mesure la valeur propre décroit jusqu'à la dernière composante. C'est à partir de la valeur propre que nous choissirons le nombre de composante principale à garder. On va donc visualiser les valeurs propres de chaque composante avec "$eig".
+
 
 ```
+install.packages("FactoMineR")
+
+library("FactoMineR")
+
+#ACP pour le jour 2017_09 avec caclul des valeurs propre, du pourcetange de variance expliqué et le cumul du pourcentage de variance.
+ACP50m<-PCA(ACPjour2017_50m)
+eig.ACP50m <- ACP50m$eig
+ACP100m<-PCA(ACPjour2017_100m)
+eig.ACP100m <- ACP100m$eig
+ACP200m<-PCA(ACPjour2017_200m)
+eig.ACP200m <- ACP200m$eig
+
+eig.ACP50m
+eig.ACP100m
+eig.ACP200m
 
 ```
+On obtient pour les trois zones tampon des stations météo leurs valeurs propres (fig.). On remarque que pour la zone tampon de 200m, sa première composante principale à une quantité de variance expliqué supérieur aux premières composantes pour l'ACP des zones tampon de 50m et 100m. Nous utiliserons donc la zone tampon de 200m pour notre analyse sur l'ACP.
+
+
+
+
+
 
 ## 4. Conclusion
 )
