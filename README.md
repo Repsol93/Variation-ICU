@@ -296,7 +296,7 @@ Nous avons terminer nos différentes étapes de la méthodologie. On obtenons da
 
 
 ![csv](https://user-images.githubusercontent.com/48625647/59157096-39795280-8aa5-11e9-9b24-b233980af73d.png)
-
+*Figure 22*
 
 Avec ces différentes données obtenus de plusieurs sources, nous allons essayer de mettre en avant les variations de températures et notamment l'effet de l'ICU dans chacune de nos zones tampon à l'intérieur de notre zone d'étude.
 
@@ -332,14 +332,17 @@ eig.ACP100m
 eig.ACP200m
 
 ```
-On obtient pour les trois zones tampon des stations météo leurs valeurs propres (fig.). On remarque que pour la zone tampon de 200m, sa première composante principale à une quantité de variance expliqué supérieur aux premières composantes pour l'ACP des zones tampon de 50m et 100m. Nous utiliserons donc la zone tampon de 200m pour notre analyse sur l'ACP.
+On obtient pour les trois zones tampon des stations météo leurs valeurs propres (fig.23). On remarque que pour la zone tampon de 200m de la journée 2017, sa première composante principale à une quantité de variance expliqué (33.67522) supérieur aux premières composantes pour l'ACP des zones tampon de 50m (32.76488) et 100m (33.62581). Néanmoins pour la zone tampon de 100m de la journée 2018, sa première composante principale à une quantité de variance expliqué (34.51747) supérieur aux premières composantes pour l'ACP des zones tampon de 50m (33.80514) et 200m (34.29261). Nous utiliserons donc la zone tampon de 100m pour notre analyse sur l'ACP des deux journées, car elle obtient une quantité de variance expliqué majoritairement plus importante. De plus cela permettra de comparer les deux journées avec une zone tampon de dimension égale.
 
 
 
 ![eig](https://user-images.githubusercontent.com/48625647/59158621-12c71600-8abd-11e9-8fb4-be76950ef747.png)
-
+*Figure 23*
 
 
 Ici l'ACP a été effectué sur la journée de 2017. Néanmoins pour la journée de 2018, l'ACP de la zone tampon de 200m obtient une première composante principale avec la plus forte valeur propre par rapport aux autres zones tampons. Nous utiliserons comme pour la journée de 2017 la zone tampon de 200m. Après avoir analysé les valeurs propres, nous allons les visualiser dans graphique afin de décider du choix du nombre de composante principale a conserver.
+
+
+
 ## 4. Conclusion
 )
