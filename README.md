@@ -340,18 +340,27 @@ On obtient pour les trois zones tampon des stations météo leurs valeurs propre
 *Figure 23*
 
 
-Ici l'ACP a été effectué sur la journée de 2017. Néanmoins pour la journée de 2018, l'ACP de la zone tampon de 200m obtient une première composante principale avec la plus forte valeur propre par rapport aux autres zones tampons. Nous utiliserons comme pour la journée de 2017 la zone tampon de 200m. Après avoir analysé les valeurs propres, nous allons les visualiser dans graphique afin de décider du choix du nombre de composante principale a conserver.
+Ici l'ACP a été effectué sur la journée de 2017. Néanmoins pour la journée de 2018, l'ACP de la zone tampon de 200m obtient une première composante principale avec la plus forte valeur propre par rapport aux autres zones tampons. Nous utiliserons comme pour la journée de 2017 la zone tampon de 200m. Après avoir analysé les valeurs propres, nous allons les visualiser dans graphique (fig.24) afin de décider du choix du nombre de composante principale a conserver.
 
 
 
 ![eig_variance](https://user-images.githubusercontent.com/48625647/59159314-3a6fab80-8ac8-11e9-80d2-537f8e0c3fb8.png)
 
 
+Au vue des pourcentages de variance expliqué (fig.24) et des quantité précise et cumulatif du pourcentage de variance expliqué (fig.23), nous allons retenir 6 composantes principales pour la journée de 2017 et 2018. Le pourcentage de variance expliqué est donc de 84,82% pour 2017 et 85% pour 2018. Nous allons ensuite analyser le graphique de corrélation des variables entre les deux premières composantes de la journée de 2017 et 2018.
 
 
 
 ![acp_var](https://user-images.githubusercontent.com/48625647/59159313-3a6fab80-8ac8-11e9-9825-5cf970f2f5b4.png)
 
+
+
+> **Note**: Le graphique de corrélation des variables est constitué de deux axes. L'axe des abscisses correspond à la première composante et l'axe des ordonnés correspond à la deuxième composante, avec des valeurs de corrélation comprise entre -1 et 1.
+Pour l'interprétation :
+- Les variables situées en haut à droite sont corrélés positivement et au contraire les variables situées en bas à gauche sont corrélés négativement
+- Les variables qui sont le plus loin de l'origine sont les mieux représentés par l'ACP.
+
+Pour le graphique de corrélation des variables correspondant à la journée de 2017, 
 
 
 ## 4. Conclusion
