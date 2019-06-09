@@ -336,7 +336,7 @@ On obtient pour les trois zones tampon des stations météo leurs valeurs propre
 
 
 
-![eig](https://user-images.githubusercontent.com/48625647/59158621-12c71600-8abd-11e9-8fb4-be76950ef747.png)
+![eig](https://user-images.githubusercontent.com/48625647/59158796-40618e80-8ac0-11e9-8917-f21be3154eaa.png)
 *Figure 23*
 
 
