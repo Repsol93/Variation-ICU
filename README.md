@@ -336,8 +336,10 @@ On obtient pour les trois zones tampon des stations météo leurs valeurs propre
 
 
 
+![eig](https://user-images.githubusercontent.com/48625647/59158621-12c71600-8abd-11e9-8fb4-be76950ef747.png)
 
 
 
+Ici l'ACP a été effectué sur la journée de 2017. Néanmoins pour la journée de 2018, l'ACP de la zone tampon de 200m obtient une première composante principale avec la plus forte valeur propre par rapport aux autres zones tampons. Nous utiliserons comme pour la journée de 2017 la zone tampon de 200m. Après avoir analysé les valeurs propres, nous allons les visualiser dans graphique afin de décider du choix du nombre de composante principale a conserver.
 ## 4. Conclusion
 )
