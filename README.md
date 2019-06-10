@@ -358,7 +358,8 @@ Au vue des pourcentages de variance expliqué (fig.24) et des quantité précise
 > **Note**: Le graphique de corrélation des variables est constitué de deux axes. L'axe des abscisses correspond à la première composante et l'axe des ordonnés correspond à la deuxième composante, avec des valeurs de corrélation comprise entre -1 et 1.
 Pour l'interprétation : Les variables situées en haut à droite sont corrélés positivement et au contraire les variables situées en bas à gauche sont corrélés négativement. De plus les variables qui sont le plus loin de l'origine sont les mieux représentés par l'ACP.
 
-Pour le graphique de corrélation des variables correspondant à la journée de 2017, 
+Sur le graphique de corrélation des variables de 2017 et 2018, on retrouve pour la première composante principale (axe des abscisses), des variables corrélés positivement que sont les températures moyennes , la surface de bâti, la hauteur pondéré et la surface des zones où la part du ciel visible est faible. L'interprétation de ces variables est que plus la température moyenne est élévée et plus les autres variables cité au dessus le seront à l'intérieur de ma zone tampon. Reciproquement, la surface de végétation est corrélé négativement par rapport à la température moyenne. Donc plus la température moyenne est élévé et plus la surface de végétation sera faible. Le résultat paraît logique avec ce que nous avions analysé les effets de l'ICU avec les différentes surfaces.
+Pour la deuxième composante (axe des ordonnées), on retrouve pour la journée de 2017 les variables de surface de l'IMU d'indice 21 notamment corrélé négativement alors que pour la journée de 2018, on a la variable qui est corrélés positivement.Vu l'éloignement de la variable à son origine, cette variable est bien représenté.
 
 
 ## 4. Conclusion
