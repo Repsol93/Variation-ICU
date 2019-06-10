@@ -428,7 +428,7 @@ write.csv(ResJour2018, file = "ResJour2018.csv",row.names=TRUE)
 ```
 
 
-Après avoir importer sur ArcGIS nos deux tableaux au format csv, nous allons effectuer une jointure attributaire de notre table jusqu'à notre couche des stations météo. Nous pouvons grâce à la symbologie essayer de distinguer les différents cluster et leur répartition spatiale par rapport à l'analyse des résultats de la CAH (fig.28).
+Après avoir importer sur ArcGIS nos deux tableaux au format csv, nous allons effectuer une jointure attributaire de notre table jusqu'à notre couche des stations météo. Nous pouvons grâce à la symbologie essayer d'interpréter la répartition spatiale des différents cluster par rapport à l'analyse des résultats de la CAH (fig.28).
 
 
 
