@@ -388,7 +388,7 @@ Pour la deuxième composante (axe des ordonnées), on retrouve pour la journée 
 ### 3.2 Classification Ascendante Hiérarchique
 
 Ayant choisis le nombre de composante principale a garder, nous allons effectuer une [Classification Ascendante Hiérarchique](http://math.agrocampus-ouest.fr/infoglueDeliverLive/digitalAssets/100457_AnaDo_CLASSIF_cours_slides.pdf) (CAH) afin de classer nos stations météo dans des "cluster" et obtenir des espaces caractéristiques de l'ICU à partir de nos variables. A l'issue de cette classification, nous exporterons le tableau avec le numéro de cluster pour chaque individu vers un logiciel SIG afin de spatialiser l'information.
-La CAH sera effectué sur les résultats des ACP pour la zone tampon de 100m et en ayant conservé 6 composantes principales.
+La CAH sera effectué sur les résultats des ACP pour la zone tampon de 100m et en ayant conservé 6 composantes principales (fig.27).
 
 ```
 library(FactoMineR)
@@ -404,6 +404,10 @@ ACP100m2<-PCA(ACPjour2018_100m,ncp = 6,graph = FALSE)
 CAH100m2<-HCPC(ACP100m2)
 
 ```
+
+
+![CAH](https://user-images.githubusercontent.com/48625647/59183309-0352d600-8b6c-11e9-939d-dc34b18c337b.png)
+*Figure 27*
 
 
 
