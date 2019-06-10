@@ -410,6 +410,22 @@ CAH100m2<-HCPC(ACP100m2)
 *Figure 27*
 
 
+Etant donnée le nombre de station météo (individu), la visibilité sur le graphique de la CAH n'est lisible et c'est pour cela que nous allons exporter le résultat sur ArcGIS.
+
+```
+
+#Enregistrement de la table résultant de la CAH avec la colonne "cluster".
+
+ResJour2017<-CAH100m$data.clust
+ResJour2018<-CAH100m2$data.clust
+
+#Export au format csv de la table
+
+write.csv(ResJour2017, file = "ResJour2017.csv",row.names=FALSE)
+write.csv(ResJour2018, file = "ResJour2018.csv",row.names=FALSE)
+
+```
+
 
 ## 4. Conclusion
 )
