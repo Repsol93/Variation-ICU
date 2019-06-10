@@ -341,12 +341,14 @@ On obtient pour les trois zones tampon des stations météo leurs valeurs propre
 
 Ici l'ACP a été effectué sur la journée de 2017. Néanmoins pour la journée de 2018, l'ACP de la zone tampon de 200m obtient une première composante principale avec la plus forte valeur propre par rapport aux autres zones tampons. Nous utiliserons comme pour la journée de 2017 la zone tampon de 200m. Après avoir analysé les valeurs propres, nous allons les visualiser dans graphique (fig.24) afin de décider du choix du nombre de composante principale a conserver.
 
-
 ```
+
 #Execution du graphique avec ajout de la ligne de valeur.
 
 barplot(eig.ACP100m[, 2], names.arg = 1:nrow(eig.ACP100m),  col ="blue", ylim = c(0,40), main = "Pourcentage de variance expliquée par les composantes principales de l'ACP Jour 2017", xlab = "Composantes Principales", ylab = "Pourcentage de variance" )
 lines(x = 1:nrow(eig.ACP100m ), eig.ACP100m[, 2], type = "o", col = "red")
+
+
 ```
 
 ![eig_variance](https://user-images.githubusercontent.com/48625647/59159314-3a6fab80-8ac8-11e9-80d2-537f8e0c3fb8.png)
@@ -354,6 +356,14 @@ lines(x = 1:nrow(eig.ACP100m ), eig.ACP100m[, 2], type = "o", col = "red")
 
 Au vue des pourcentages de variance expliqué (fig.24) et des quantité précise et cumulatif du pourcentage de variance expliqué (fig.23), nous allons retenir 5 composantes principales pour la journée de 2017 et 2018. Le pourcentage de variance expliqué est donc de 78% pour 2017 et 2018. Avant d'analyser le graphique de corrélation, nous allons voir les différentes graphiques entre chaque variables afin de détailler les quelques corrélation qui pourrait être observable.
 
+```
+
+#Affichage des plots entre les différentes variables.
+pairs(ACPjour2017_100m)
+
+```
+
+![plot](https://user-images.githubusercontent.com/48625647/59181176-039ca280-8b67-11e9-9074-e52cfc7e7377.png)
 
 
 
