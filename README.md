@@ -410,7 +410,8 @@ CAH100m2<-HCPC(ACP100m2)
 *Figure 27*
 
 
-L'interprétation des résultats de la CAH est a lié avec le graphique de corrélation des variables. En effet les groupes situé plus à droite vont être situé au niveau des variables de surface de bâti, de hauteur pondéré forte. Tandis que les groupes situé plus à gauche seront au niveau de la variable surface de végétation forte. Etant donnée le nombre de station météo (individu), la visibilité sur le détail du graphique de la CAH n'est pas lisible et c'est pour cela que nous allons exporter le résultat sur ArcGIS. 
+L'interprétation des résultats de la CAH est a lié avec le graphique de corrélation des variables. En effet les groupes situé plus à droite vont être situé au niveau des variables de surface de bâti, de hauteur pondéré, de température moyenne et de surface de zone où la part du ciel visible est faible. Tandis que les groupes situé plus à gauche seront au niveau de la variable surface de végétation. La tendance des résultats serait que le cluster 4,5,6 -> bâti tandis que le 3 (intermédiaire) et le 1,2 végétation et moins de température élévé pour la journée 2017. Presque pareil pour la journée de 2018.
+Etant donnée le nombre de station météo (individu), la visibilité sur le détail du graphique de la CAH n'est pas lisible et c'est pour cela que nous allons exporter le résultat sur ArcGIS. 
 
 
 ```
