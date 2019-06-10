@@ -357,7 +357,7 @@ lines(x = 1:nrow(eig.ACP100m ), eig.ACP100m[, 2], type = "o", col = "red")
 ![eig_variance](https://user-images.githubusercontent.com/48625647/59159314-3a6fab80-8ac8-11e9-80d2-537f8e0c3fb8.png)
 *Figure 24*
 
-Au vue des pourcentages de variance expliqué (fig.24) et des quantité précise et cumulatif du pourcentage de variance expliqué (fig.23), nous allons retenir 5 composantes principales pour la journée de 2017 et 2018. Le pourcentage de variance expliqué est donc de 78% pour 2017 et 2018, il est acceptable. Avant d'analyser le graphique de corrélation, nous allons voir les différents graphiques (fig.25) entre chaque variables afin de détailler les quelques corrélation qui pourrait être observable.
+Au vue des pourcentages de variance expliqué (fig.24) et des quantité précise et cumulatif du pourcentage de variance expliqué (fig.23), nous allons retenir 6 composantes principales pour la journée de 2017 et 2018. Le pourcentage de variance expliqué est donc de 85% pour 2017 et 2018, il est acceptable. Avant d'analyser le graphique de corrélation, nous allons voir les différents graphiques (fig.25) entre chaque variables afin de détailler les quelques corrélation qui pourrait être observable.
 
 ```
 
@@ -388,8 +388,22 @@ Pour la deuxième composante (axe des ordonnées), on retrouve pour la journée 
 ### 3.2 Classification Ascendante Hiérarchique
 
 Ayant choisis le nombre de composante principale a garder, nous allons effectuer une [Classification Ascendante Hiérarchique](http://math.agrocampus-ouest.fr/infoglueDeliverLive/digitalAssets/100457_AnaDo_CLASSIF_cours_slides.pdf) (CAH) afin de classer nos stations météo dans des "cluster" et obtenir des espaces caractéristiques de l'ICU à partir de nos variables. A l'issue de cette classification, nous exporterons le tableau avec le numéro de cluster pour chaque individu vers un logiciel SIG afin de spatialiser l'information.
+La CAH sera effectué sur les résultats des ACP pour la zone tampon de 100m et en ayant conservé 6 composantes principales.
 
+```
+library(FactoMineR)
 
+#ACP (conservation de 6 composantes principales) pour le jour 2017
+ACP100m<-PCA(ACPjour2017_100m,ncp = 6,graph = FALSE)
+#CAH
+CAH100m<-HCPC(ACP100m)
+
+#ACP (conservation de 6 composantes principales) pour le jour 2018
+ACP100m2<-PCA(ACPjour2018_100m,ncp = 6,graph = FALSE)
+#CAH
+CAH100m2<-HCPC(ACP100m2)
+
+```
 
 
 
