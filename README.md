@@ -304,9 +304,12 @@ Avec ces différentes données obtenus de plusieurs sources, nous allons essayer
 
 ## 3. Résultats
 
-Nous nous intéressons à la caractérisation de l'environmment aux alentours de nos stations météo, afin de faire ressortir des espaces types qui explirait les variations de températures dû à l'ICU. Nos différentes données obtenu composant notre tableau attributaire doivent être traités. Pour cela, nous allons utiliser l'[Analyse en Composantes Principales ](https://eric.univ-lyon2.fr/~ricco/cours/slides/ACP.pdf)(ACP), qui est un traitement statistiques multi-variés. Elle permet de résumer des grands tableaux de données en supprimant les informations
+Nous nous intéressons à la caractérisation de l'environmment aux alentours de nos stations météo, afin de faire ressortir des espaces types qui explirait les variations de températures dû à l'ICU. Nos différentes données obtenu composant notre tableau attributaire doivent être traités. Pour cela, nous allons utiliser l'[Analyse en Composantes Principales](https://eric.univ-lyon2.fr/~ricco/cours/slides/ACP.pdf)(ACP), qui est un traitement statistiques multi-variés. Elle permet de résumer des grands tableaux de données en supprimant les informations
 redondantes. De plus elle va permet de faire des groupes de "ressemblances" entre les différents individus (zones tampon des station météo) et les mettre en relation avec les différentes variables obtenus précédement.
 Nous allons donc enregistrer en format CSV nos tableaux attributaires des différentes couches de zone tampon 50m, 100m et 200m, afin de les ouvrir sur le logiciel R-studio. 
+
+
+### 3.1 Analyse en Composantes Principales
 
 Ensuite avec le package FactoMineR , nous allons effectuer une ACP à partir de nos tableaux de données. Sachant que nos données n'ont pas les mêmes unités (mètres, degrés etc), nous devons les standardiser afin de les rendre comparable. Dans FactoMineR , la fonction ACP() par défault va normaliser les données de façon automatique.
 La première étape est de faire ressortir les valeurs propres de chaque axe (composante). Sachant qu'il y a autant d'axe que de variable en entrée. Il faudra donc choisir combien de composantes garder, en se basant sur leur quantité de variance exliqué.
@@ -352,9 +355,9 @@ lines(x = 1:nrow(eig.ACP100m ), eig.ACP100m[, 2], type = "o", col = "red")
 ```
 
 ![eig_variance](https://user-images.githubusercontent.com/48625647/59159314-3a6fab80-8ac8-11e9-80d2-537f8e0c3fb8.png)
+*Figure 24*
 
-
-Au vue des pourcentages de variance expliqué (fig.24) et des quantité précise et cumulatif du pourcentage de variance expliqué (fig.23), nous allons retenir 5 composantes principales pour la journée de 2017 et 2018. Le pourcentage de variance expliqué est donc de 78% pour 2017 et 2018. Avant d'analyser le graphique de corrélation, nous allons voir les différentes graphiques entre chaque variables afin de détailler les quelques corrélation qui pourrait être observable.
+Au vue des pourcentages de variance expliqué (fig.24) et des quantité précise et cumulatif du pourcentage de variance expliqué (fig.23), nous allons retenir 5 composantes principales pour la journée de 2017 et 2018. Le pourcentage de variance expliqué est donc de 78% pour 2017 et 2018, il est acceptable. Avant d'analyser le graphique de corrélation, nous allons voir les différents graphiques (fig.25) entre chaque variables afin de détailler les quelques corrélation qui pourrait être observable.
 
 ```
 
@@ -364,15 +367,15 @@ pairs(ACPjour2017_100m)
 ```
 
 ![plot](https://user-images.githubusercontent.com/48625647/59181176-039ca280-8b67-11e9-9074-e52cfc7e7377.png)
+*Figure 25*
 
 
-
-Nous pouvons distinguer quelques tendances entre variables mais leur distribution reste assez flou. Pour cela nous allons ensuite nous intéresser au graphique de corrélation des variables entre les deux premières composantes de la journée de 2017 et 2018.
+Nous pouvons distinguer quelques tendances entre variables mais leur distribution reste assez flou. Pour cela nous allons ensuite nous intéresser au graphique de corrélation des variables (fig.26) entre les deux premières composantes de la journée de 2017 et 2018.
 
 
 
 ![acp_var](https://user-images.githubusercontent.com/48625647/59159313-3a6fab80-8ac8-11e9-9825-5cf970f2f5b4.png)
-
+*Figure 26*
 
 
 > **Note**: Le graphique de corrélation des variables est constitué de deux axes. L'axe des abscisses correspond à la première composante et l'axe des ordonnés correspond à la deuxième composante, avec des valeurs de corrélation comprise entre -1 et 1.
@@ -380,6 +383,9 @@ Pour l'interprétation : Les variables situées en haut à droite sont corrélé
 
 Sur le graphique de corrélation des variables de 2017 et 2018, on retrouve pour la première composante principale (axe des abscisses), des variables corrélés positivement que sont les températures moyennes , la surface de bâti, la hauteur pondéré et la surface des zones où la part du ciel visible est faible. L'interprétation de ces variables est que plus la température moyenne est élévée et plus les autres variables cité au dessus le seront à l'intérieur de ma zone tampon. Reciproquement, la surface de végétation est corrélé négativement par rapport à la température moyenne. Donc plus la température moyenne est élévé et plus la surface de végétation sera faible. Le résultat paraît logique avec ce que nous avions analysé les effets de l'ICU avec les différentes surfaces.
 Pour la deuxième composante (axe des ordonnées), on retrouve pour la journée de 2017 les variables de surface de l'IMU d'indice 21 notamment corrélé négativement alors que pour la journée de 2018, on a la variable qui est corrélés positivement.Vu l'éloignement de la variable à son origine, cette variable est bien représenté.
+
+
+### 3.2 Classification Ascendante Hiérarchique
 
 Ayant choisis le nombre de composante principale a garder, nous allons effectuer une [Classification Ascendante Hiérarchique](http://math.agrocampus-ouest.fr/infoglueDeliverLive/digitalAssets/100457_AnaDo_CLASSIF_cours_slides.pdf) (CAH) afin de classer nos stations météo dans des "cluster" et obtenir des espaces caractéristiques de l'ICU à partir de nos variables. A l'issue de cette classification, nous exporterons le tableau avec le numéro de cluster pour chaque individu vers un logiciel SIG afin de spatialiser l'information.
 
