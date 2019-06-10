@@ -352,7 +352,12 @@ lines(x = 1:nrow(eig.ACP100m ), eig.ACP100m[, 2], type = "o", col = "red")
 ![eig_variance](https://user-images.githubusercontent.com/48625647/59159314-3a6fab80-8ac8-11e9-80d2-537f8e0c3fb8.png)
 
 
-Au vue des pourcentages de variance expliqué (fig.24) et des quantité précise et cumulatif du pourcentage de variance expliqué (fig.23), nous allons retenir 5 composantes principales pour la journée de 2017 et 2018. Le pourcentage de variance expliqué est donc de 84,82% pour 2017 et 85% pour 2018. Nous allons ensuite analyser le graphique de corrélation des variables entre les deux premières composantes de la journée de 2017 et 2018.
+Au vue des pourcentages de variance expliqué (fig.24) et des quantité précise et cumulatif du pourcentage de variance expliqué (fig.23), nous allons retenir 5 composantes principales pour la journée de 2017 et 2018. Le pourcentage de variance expliqué est donc de 78% pour 2017 et 2018. Avant d'analyser le graphique de corrélation, nous allons voir les différentes graphiques entre chaque variables afin de détailler les quelques corrélation qui pourrait être observable.
+
+
+
+
+Nous pouvons distinguer quelques tendances entre variables mais leur distribution reste assez flou. Pour cela nous allons ensuite nous intéresser au graphique de corrélation des variables entre les deux premières composantes de la journée de 2017 et 2018.
 
 
 
@@ -366,7 +371,7 @@ Pour l'interprétation : Les variables situées en haut à droite sont corrélé
 Sur le graphique de corrélation des variables de 2017 et 2018, on retrouve pour la première composante principale (axe des abscisses), des variables corrélés positivement que sont les températures moyennes , la surface de bâti, la hauteur pondéré et la surface des zones où la part du ciel visible est faible. L'interprétation de ces variables est que plus la température moyenne est élévée et plus les autres variables cité au dessus le seront à l'intérieur de ma zone tampon. Reciproquement, la surface de végétation est corrélé négativement par rapport à la température moyenne. Donc plus la température moyenne est élévé et plus la surface de végétation sera faible. Le résultat paraît logique avec ce que nous avions analysé les effets de l'ICU avec les différentes surfaces.
 Pour la deuxième composante (axe des ordonnées), on retrouve pour la journée de 2017 les variables de surface de l'IMU d'indice 21 notamment corrélé négativement alors que pour la journée de 2018, on a la variable qui est corrélés positivement.Vu l'éloignement de la variable à son origine, cette variable est bien représenté.
 
-Ayant choisis le nombre de composante principale a garder, nous allons effectuer une [Classification Ascendante Hiérarchique](http://math.agrocampus-ouest.fr/infoglueDeliverLive/digitalAssets/100457_AnaDo_CLASSIF_cours_slides.pdf) (CAH) afin de classer nos stations météo dans des "cluster" et obtenir des espaces caractéristiques de l'ICU à partir de nos variables.
+Ayant choisis le nombre de composante principale a garder, nous allons effectuer une [Classification Ascendante Hiérarchique](http://math.agrocampus-ouest.fr/infoglueDeliverLive/digitalAssets/100457_AnaDo_CLASSIF_cours_slides.pdf) (CAH) afin de classer nos stations météo dans des "cluster" et obtenir des espaces caractéristiques de l'ICU à partir de nos variables. A l'issue de cette classification, nous exporterons le tableau avec le numéro de cluster pour chaque individu vers un logiciel SIG afin de spatialiser l'information.
 
 
 
