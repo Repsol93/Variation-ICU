@@ -410,7 +410,7 @@ CAH100m2<-HCPC(ACP100m2)
 *Figure 27*
 
 
-Etant donnée le nombre de station météo (individu), la visibilité sur le graphique de la CAH n'est lisible et c'est pour cela que nous allons exporter le résultat sur ArcGIS.
+L'interprétation des résultats de la CAH est a lié avec le graphique de corrélation des variables. En effet les groupes situé plus à droite vont être situé au niveau des variables de surface de bâti, de hauteur pondéré forte. Tandis que les groupes situé plus à gauche seront au niveau de la variable surface de végétation forte. Etant donnée le nombre de station météo (individu), la visibilité sur le détail du graphique de la CAH n'est pas lisible et c'est pour cela que nous allons exporter le résultat sur ArcGIS. 
 
 ```
 
@@ -421,11 +421,11 @@ ResJour2018<-CAH100m2$data.clust
 
 #Export au format csv de la table
 
-write.csv(ResJour2017, file = "ResJour2017.csv",row.names=FALSE)
-write.csv(ResJour2018, file = "ResJour2018.csv",row.names=FALSE)
+write.csv(ResJour2017, file = "ResJour2017.csv",row.names=TRUE)
+write.csv(ResJour2018, file = "ResJour2018.csv",row.names=TRUE)
 
 ```
-
+Après avoir importer sur ArcGIS nos deux tableaux au format csv, nous allons effectuer une jointure attributaire de notre table jusqu'à notre couche des stations météo. Nous pouvons grâce à la symbologie essayer de distinguer les différents cluster et leur répartition spatiale par rapport à l'analyse des résultats de la CAH.
 
 ## 4. Conclusion
 )
