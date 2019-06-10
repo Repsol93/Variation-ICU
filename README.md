@@ -335,7 +335,6 @@ eig.ACP200m
 On obtient pour les trois zones tampon des stations météo leurs valeurs propres (fig.23). On remarque que pour la zone tampon de 200m de la journée 2017, sa première composante principale à une quantité de variance expliqué (33.67522) supérieur aux premières composantes pour l'ACP des zones tampon de 50m (32.76488) et 100m (33.62581). Néanmoins pour la zone tampon de 100m de la journée 2018, sa première composante principale à une quantité de variance expliqué (34.51747) supérieur aux premières composantes pour l'ACP des zones tampon de 50m (33.80514) et 200m (34.29261). Nous utiliserons donc la zone tampon de 100m pour notre analyse sur l'ACP des deux journées, car elle obtient une quantité de variance expliqué majoritairement plus importante. De plus cela permettra de comparer les deux journées avec une zone tampon de dimension égale.
 
 
-
 ![eig](https://user-images.githubusercontent.com/48625647/59158796-40618e80-8ac0-11e9-8917-f21be3154eaa.png)
 *Figure 23*
 
@@ -343,11 +342,17 @@ On obtient pour les trois zones tampon des stations météo leurs valeurs propre
 Ici l'ACP a été effectué sur la journée de 2017. Néanmoins pour la journée de 2018, l'ACP de la zone tampon de 200m obtient une première composante principale avec la plus forte valeur propre par rapport aux autres zones tampons. Nous utiliserons comme pour la journée de 2017 la zone tampon de 200m. Après avoir analysé les valeurs propres, nous allons les visualiser dans graphique (fig.24) afin de décider du choix du nombre de composante principale a conserver.
 
 
+```
+#Execution du graphique avec ajout de la ligne de valeur.
+
+barplot(eig.ACP100m[, 2], names.arg = 1:nrow(eig.ACP100m),  col ="blue", ylim = c(0,40), main = "Pourcentage de variance expliquée par les composantes principales de l'ACP Jour 2017", xlab = "Composantes Principales", ylab = "Pourcentage de variance" )
+lines(x = 1:nrow(eig.ACP100m ), eig.ACP100m[, 2], type = "o", col = "red")
+```
 
 ![eig_variance](https://user-images.githubusercontent.com/48625647/59159314-3a6fab80-8ac8-11e9-80d2-537f8e0c3fb8.png)
 
 
-Au vue des pourcentages de variance expliqué (fig.24) et des quantité précise et cumulatif du pourcentage de variance expliqué (fig.23), nous allons retenir 6 composantes principales pour la journée de 2017 et 2018. Le pourcentage de variance expliqué est donc de 84,82% pour 2017 et 85% pour 2018. Nous allons ensuite analyser le graphique de corrélation des variables entre les deux premières composantes de la journée de 2017 et 2018.
+Au vue des pourcentages de variance expliqué (fig.24) et des quantité précise et cumulatif du pourcentage de variance expliqué (fig.23), nous allons retenir 5 composantes principales pour la journée de 2017 et 2018. Le pourcentage de variance expliqué est donc de 84,82% pour 2017 et 85% pour 2018. Nous allons ensuite analyser le graphique de corrélation des variables entre les deux premières composantes de la journée de 2017 et 2018.
 
 
 
@@ -362,5 +367,10 @@ Sur le graphique de corrélation des variables de 2017 et 2018, on retrouve pour
 Pour la deuxième composante (axe des ordonnées), on retrouve pour la journée de 2017 les variables de surface de l'IMU d'indice 21 notamment corrélé négativement alors que pour la journée de 2018, on a la variable qui est corrélés positivement.Vu l'éloignement de la variable à son origine, cette variable est bien représenté.
 
 Ayant choisis le nombre de composante principale a garder, nous allons effectuer une [Classification Ascendante Hiérarchique](http://math.agrocampus-ouest.fr/infoglueDeliverLive/digitalAssets/100457_AnaDo_CLASSIF_cours_slides.pdf) (CAH) afin de classer nos stations météo dans des "cluster" et obtenir des espaces caractéristiques de l'ICU à partir de nos variables.
+
+
+
+
+
 ## 4. Conclusion
 )
