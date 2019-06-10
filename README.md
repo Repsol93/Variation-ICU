@@ -410,8 +410,7 @@ CAH100m2<-HCPC(ACP100m2)
 *Figure 27*
 
 
-L'interprétation des résultats de la CAH est a lié avec le graphique de corrélation des variables. En effet les groupes situé plus à droite vont être situé au niveau des variables de surface de bâti, de hauteur pondéré, de température moyenne et de surface de zone où la part du ciel visible est faible. Tandis que les groupes situé plus à gauche seront au niveau de la variable surface de végétation. La tendance des résultats serait que le cluster 4,5,6 -> bâti tandis que le 3 (intermédiaire) et le 1,2 végétation et moins de température élévé pour la journée 2017. Presque pareil pour la journée de 2018.
-Etant donnée le nombre de station météo (individu), la visibilité sur le détail du graphique de la CAH n'est pas lisible et c'est pour cela que nous allons exporter le résultat sur ArcGIS. 
+L'interprétation des résultats de la CAH est a lié avec le graphique de corrélation des variables. En effet les groupes situés plus à droite vont être au niveau des variables de surface de bâti, de hauteur pondéré, de température moyenne et de surface de zone où la part du ciel visible est faible. Tandis que les groupes situé plus à gauche seront au niveau de la variable surface de végétation. Pour l'interprétation des résultats de la journée de 2017,  les cluster 4,5 et surtout le 6 serait un environnement très urbain avec des moyennes de température plus élevé. Au contaire les clusters 1,2 serait un environement plus végétal avec des températures moyennes moins importantes. Néanmoins le cluster 3 proche de l'origine est difficile à carcatériser. Il en ressort également la même tendance pour la journée de 2018 avec les clusters 3,4 et 5 qui sont plutôt urbains avec une morphologie du bâti importante et des températures moyennes élevées. Alors que le cluster 1 est largement vers les surfaces végétalisés et des températures plus faible. Puis le cluster 2 assez proche de l'origine qui reste difficile aussi à caractériser. Etant donnée le nombre de station météo (individu), la visibilité sur le détail du graphique de la CAH n'est pas lisible et c'est pour cela que nous allons exporter le résultat sur ArcGIS. En vue de cette export, cela nous permettra de vérifier nos hypothèses sur les différentes caractérisations de ces clusters à partir de la représentation spatiale.
 
 
 ```
@@ -436,6 +435,9 @@ Après avoir importer sur ArcGIS nos deux tableaux au format csv, nous allons ef
 ![spatiale_cluster](https://user-images.githubusercontent.com/48625647/59196952-5d659280-8b90-11e9-9b83-ef6a8b1af4ee.png)
 *Figure 28*
 
+
+
+Que ce soit pour la journée de 2017 et de 2018, on voit que les clusters correspondant à du bâti dense et avec des températures moyennes plus élevée se situe au centre de Paris et plus l'on s'éloigne de la capitale et plus les clusters caractérisé par une surface de végétation plus importante et des températures plus faible sont nombreux. L'ICU à Paris est bien visible dans notre résultat. Néanmoins la comparaison entre les deux journées sont assez difficile à percevoir au niveau du résultat cartographique.
 
 
 ## 4. Conclusion
