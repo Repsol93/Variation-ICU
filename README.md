@@ -1,14 +1,14 @@
 
 # Etude de l'îlot de chaleur urbain et de la variation de température entre espace urbain et rurale dans la région d'Île-De-France.
 
-  Au cours du second semestre du master 2 Télédétection et Géomatique Appliquées à l'Environnement (TGAE) en 2019, j'ai eu a réaliser un mini-projet. Celui-ci s'intéresse aux variations de températures liés aux effets de l'îlots de chaleur urbain à partir de données obtenus par des stations météo de particuliers. L'étude a été effectué avec des logiciels SIG (ArcGIS 10.5.1 et QGIS 2.18.15). De plus, les traitements statistiques ont été faits avec le logiciel RStudio.
+  Au cours du second semestre du master 2 Télédétection et Géomatique Appliquées à l'Environnement (TGAE) en 2019, j'ai eu à réaliser un mini-projet. Celui-ci s'intéresse aux variations de températures liées aux effets de l'îlot de chaleur urbain à partir de données obtenues par des stations météo de particuliers. L'étude a été effectuée avec des logiciels SIG (ArcGIS 10.5.1 et QGIS 2.18.15). De plus, les traitements statistiques ont été faits avec le logiciel RStudio.
 
 
 
 
 ## 1. Introduction
 
-  L'agglomération de Paris est touché comme chaque ville fortement urbanisé, par une élévation des températures. Elle se produit la nuit, lors de l'évaporation de la chaleur, piégée et enmaganisée par la surface du sol durant la journée. Ce phénomène est nommé "[Îlot de Chaleur Urbain](https://www.grandlyon.com/fileadmin/user_upload/media/pdf/voirie/referentiel-espaces-publics/20091201_gl_referentiel_espaces_publics_thematique_lutte_contre_ilots_chaleur_urbains.pdf)" (ICU). L'objectif de cette étude est d'appréhender ces variations de température dû à l'ICU dans la région de l'Île-de-France. 
+  L'agglomération de Paris est touchée comme chaque ville fortement urbanisée, par une élévation des températures. Elle se produit la nuit, lors de l'évaporation de la chaleur, piégée et enmaganisée par la surface du sol durant la journée. Ce phénomène est nommé "[Îlot de Chaleur Urbain](https://www.grandlyon.com/fileadmin/user_upload/media/pdf/voirie/referentiel-espaces-publics/20091201_gl_referentiel_espaces_publics_thematique_lutte_contre_ilots_chaleur_urbains.pdf)" (ICU). L'objectif de cette étude est d'appréhender ces variations de température dû à l'ICU dans la région de l'Île-de-France. 
   
   
 
@@ -18,7 +18,7 @@
 
 
 
-  On observe un ICU pour l'agglomération de Paris comparés a ses alentours (moins urbanisé). Pour simplifier il y a un décalage de température la nuit entre la "ville" et la "campagne" car les caractéristiques de la surface du sol et la morphologie de l'espace est différentes. En effet les rayons lumineux piégés entre les hauts bâtiments accumulent la chaleur, puis l'absorption et la retention de la chaleur diffères selon le type de sol (fig.1). Ce qui est particulièrement intéressant dans cette étude est d'essayer de montrer la variation décroissante de la température, depuis le centre de Paris jusqu'au limite de l'Île-de-France, à partir de données libres acquises par des particuliers.
+  On observe un ICU pour l'agglomération de Paris comparé à ses alentours (moins urbanisé). Pour simplifier il y a un décalage de température la nuit entre la "ville" et la "campagne" car les caractéristiques de la surface du sol et la morphologie de l'espace sont différentes. En effet les rayons lumineux piégés entre les hauts bâtiments accumulent la chaleur, puis l'absorption et la retention de la chaleur diffèrent selon le type de sol (fig.1). Ce qui est particulièrement intéressant dans cette étude est d'essayer de montrer la variation décroissante de la température, depuis le centre de Paris jusqu'au limite de l'Île-de-France, à partir de données libres acquises par des particuliers.
   
 Le choix de la zone d'étude s'est porté sur l'endroit où la position des stations était le plus homogène. Nous avons sélectionné le sud de Paris et les alentours, afin d'avoir une zone tranversale (fig.2). En effet celle-ci se situe à l'intérieur d'une partie de l'agglomération de Paris (ville) et va jusqu'au delà de la petite couronne (zone rurale). 
 
@@ -65,7 +65,7 @@ Le choix de la zone d'étude s'est porté sur l'endroit où la position des stat
 - Base de données de l'Institut d'Aménagement et d'Urbanisme de la région Île-de-France :
     - [Ilôts Morphologiques Urbains (IMU)](https://www.iau-idf.fr/fileadmin/NewEtudes/Etude_1270/Les_ilots_morphologiques_urbains.pdf)
 
-> **Note**: Les données contiennent un "Shapefile" avec les entités de chaque IMU d'Île-de-France . L'IAU se sont inpirés pour parfaire leurs classes, de plusieurs exemples d'îlot et de recherches, tel que la classification Local Climate Zone ([LCZ](https://iainstew.files.wordpress.com/2013/01/seattle.pdf)) de Stewart et Oke . Les îlots morphologiques urbains comprennent différents mode d'occupation du sol avec un indice typo-morphologique de la rugosité urbaine renseigné dans le champ "Classe_IMU" (fig 5). Celui-ci est calculé à partir du coefficient d'emprise au sol, de la densité du bâti volumique et de la hauteur moyenne pondéré du bâti. Si l'indice est élevé la rugosité urbaine est importante, c'est à dire une concentration et des hauteurs de bâtiment fortes. Voir ci-dessous :
+> **Note**: Les données contiennent un "Shapefile" avec les entités de chaque IMU d'Île-de-France . L'IAU s'est inpiré pour parfaire leurs classes, de plusieurs exemples d'îlot et de recherches, tel que la classification Local Climate Zone ([LCZ](https://iainstew.files.wordpress.com/2013/01/seattle.pdf)) de Stewart et Oke . Les îlots morphologiques urbains comprennent différents mode d'occupation du sol avec un indice typo-morphologique de la rugosité urbaine renseigné dans le champ "Classe_IMU" (fig 5). Celui-ci est calculé à partir du coefficient d'emprise au sol, de la densité du bâti volumique et de la hauteur moyenne pondéré du bâti. Si l'indice est élevé la rugosité urbaine est importante, c'est à dire une concentration et des hauteurs de bâtiment fortes. Voir ci-dessous :
 
 
 
@@ -78,7 +78,7 @@ Le choix de la zone d'étude s'est porté sur l'endroit où la position des stat
     - Image du 6 mai 2018 
     - Image du 27 août 2018 
 
-> **Note**: Les images satellites SENTINEL2 de Level-2A (fig.6) comporte une correction atmosphériques qui vise à transformer la réflectance Top Of Atmosphere (TOA) en réflectance Bottom Of Atmosphere (BOA). Les images ont des résolutions de 10,20 et 60m. 
+> **Note**: Les images satellites SENTINEL2 de Level-2A (fig.6) comportent une correction atmosphérique qui vise à transformer la réflectance Top Of Atmosphere (TOA) en réflectance Bottom Of Atmosphere (BOA). Les images ont des résolutions de 10,20 et 60m. 
 
 
    
@@ -88,7 +88,7 @@ Le choix de la zone d'étude s'est porté sur l'endroit où la position des stat
 
 ### 2.2 Description de la méthodologie
 
-L'étude repose sur les valeurs de températures obtenus de stations météo détenus par des particuliers. Chaque station est localisée par ses coordonnées géographique. Le but de cette méthodologie est d'utiliser les outils de géomatique afin de caractéristisés l'espace autour de chaque station. En effet, l'environnement autour d'une station pourrait nous permettre de distinguer des types d'espace particuliers qui serait propice à des températures importantes ou non. La position des stations pourrait également nous permettre de vérifier l'effet de l'ICU entre la ville de Paris et ses alentours. Tout d'abord nous allons sélectionner dans notre base de donnée pour les deux jours, les températures calculée de 19h à 6h. 
+L'étude repose sur les valeurs de températures obtenues de stations météo détenues par des particuliers. Chaque station est localisée par ses coordonnées géographiques. Le but de cette méthodologie est d'utiliser les outils de géomatique afin de caractéristiser l'espace autour de chaque station. En effet, l'environnement autour d'une station pourrait nous permettre de distinguer des types d'espace particuliers qui serait propice à des températures importantes ou non. La position des stations pourrait également nous permettre de vérifier l'effet de l'ICU entre la ville de Paris et ses alentours. Tout d'abord nous allons sélectionner dans notre base de données pour les deux jours, les températures calculées de 19h à 6h. 
 
 > **Note**: Les effets de l'ICU se produisent la nuit et c'est pour cette raison que nous sélectionnons les températures dans cette tranche horaire.
 
@@ -127,12 +127,12 @@ Afin de caractériser l'environnement de chaque station, nous allons créer des 
 
 
 A l'intérieur de ces zones tampons, nous voulons essayer de caractériser l'environnement par rapport à l'occupation du sol et à la rugosité des bâtiments. Pour cela nous utiliserons nos données d'entrée (ref 2.1) afin de représenter pour chaque zone tampon la surface de:
-- l'emprise du bâtiment pour la ville de Paris et la Petite Couronne (ref fig.4). A l'intérieur de cette base, il y a un champ des hauteurs médianne et moyenne pour chaque emprise de bâtiment qui seront utilisés.
+- l'emprise du bâtiment pour la ville de Paris et la Petite Couronne (ref fig.4). A l'intérieur de cette base, il y a un champ des hauteurs médiannes et moyennes pour chaque emprise de bâtiment qui seront utilisés.
 - l'emprise de l'IMU du "bâti résidentiel" (ref fig.5), car elle est majoritaire dans notre zone d'étude. Nous allons plutôt nous intéresser précisement à l'indice typo-morphologique de cet IMU, pour mettre l'accent sur la rugosité urbaine de ces emprises.
-- l'emprise de la végétation obtenu grâce au NDVI calculé à partir des images satellites SENTINEL2 (ref fig.6).
-- l'emprise des zones où la visualisation du ciel est faible obtenu par un seuillage des valeurs proche de 0 d'un SVF calculé avec l'extension SAGA sur QGIS.
+- l'emprise de la végétation obtenue grâce au NDVI calculé à partir des images satellites SENTINEL2 (ref fig.6).
+- l'emprise des zones où la visualisation du ciel est faible obtenue par un seuillage des valeurs proches de 0 d'un SVF calculé avec l'extension SAGA sur QGIS.
 
-L'étude concernant le géotraitement a été réalisé avec ModelBuilder afin de gagner du temps sur la répétition de la chaîne de traitement, sur les différentes zones tampons pour les deux jours. Cette étude est réalisés en 3 étapes :
+L'étude concernant le géotraitement a été réalisé avec ModelBuilder afin de gagner du temps sur la répétition de la chaîne de traitement, sur les différentes zones tampons pour les deux jours. Cette étude est réalisée en 3 étapes :
 
 
 #### 2.2.1 Etape 1 : Emprise du bâtiment 
@@ -146,7 +146,7 @@ Dans cette partie, nous voulons obtenir la surface et la hauteur du bâti à l'i
   *Figure 8*
 
 
-Afin d'être rigoureux dans la caractérisation de l'environnement des stations météo, nous allons calculer une hauteur pondéré à l'intérieur de notre zone tampon, au lieu d'estimer une moyenne de la hauteur. En effet la hauteur pondéré permet de prendre en compte la surface du bâti ce qui donne un poid plus ou moins important à la hauteur de celui-ci. 
+Afin d'être rigoureux dans la caractérisation de l'environnement des stations météo, nous allons calculer une hauteur pondérée à l'intérieur de notre zone tampon, au lieu d'estimer une moyenne de la hauteur. En effet la hauteur pondérée permet de prendre en compte la surface du bâti ce qui donne un poid plus ou moins important à la hauteur de celui-ci. 
 
 
 
@@ -158,7 +158,7 @@ Dans l'exemple figure 9, le bâtiment bleu à 10 étages avec une surface de 500
 
 (10 x 500 + 2 x 100) / 600 = 8,6 m
 
-Le résultat donne une hauteur pondéré de 8,6m. En effet le poid du bâtiment bleu est plus forte, car celui-ci à une emprise plus importante dans la zone tampon que le bâtiment rouge. La chaîne de traitement pour le calcul de la hauteur pondéré est à voir ci-dessous :
+Le résultat donne une hauteur pondérée de 8,6m. En effet le poids du bâtiment bleu est plus fort, car celui-ci à une emprise plus importante dans la zone tampon que le bâtiment rouge. La chaîne de traitement pour le calcul de la hauteur pondérée est à voir ci-dessous :
 
 
 
@@ -166,7 +166,7 @@ Le résultat donne une hauteur pondéré de 8,6m. En effet le poid du bâtiment 
   *Figure 10*
 
 
-Afin de calculer notre hauteur pondéré, nous allons créer un champ pour le calcul de la hauteur fois la surface. Puis un champ pour le calcul de la surface du bâti dans notre zone tampon. A partir d'ArcGIS nous allons [fusionner](https://desktop.arcgis.com/fr/arcmap/latest/tools/coverage-toolbox/dissolve.htm) notre couche. Cela va nous permettre de sommer nos deux champs nouvellement créé dans notre table attributaire. Après traitement, il suffira de créer et calculer un nouveau champ qui sera notre hauteur pondérée. On divisera nos deux champs précédent afin d'en finir et d'obtenir comme résultat la hauteur pondéré pour chaque zone tampon (fig.10). Donc nous obtenons la surface du bâti, ainsi que la hauteur pondéré à l'intérieur de chaque zone tampon d'une station météo.
+Afin de calculer notre hauteur pondérée, nous allons créer un champ pour le calcul de la hauteur fois la surface. Puis un champ pour le calcul de la surface du bâti dans notre zone tampon. A partir d'ArcGIS nous allons [fusionner](https://desktop.arcgis.com/fr/arcmap/latest/tools/coverage-toolbox/dissolve.htm) notre couche. Cela va nous permettre de sommer nos deux champs nouvellement créés dans notre table attributaire. Après traitement, il suffira de créer et calculer un nouveau champ qui sera notre hauteur pondérée. On divisera nos deux champs précédents afin d'en finir et d'obtenir comme résultat la hauteur pondérée pour chaque zone tampon (fig.10). Donc nous obtenons la surface du bâti, ainsi que la hauteur pondérée à l'intérieur de chaque zone tampon d'une station météo.
 
 
 #### 2.2.2 Etape 2 : Emprise des IMU
@@ -194,7 +194,7 @@ Le prochain traitement va nous permettre de calculer la surface de chaque empris
 
 
 
-L'intérêt d'effectuer la sélection de chaque indice de rugosité est pour la mise en forme de la données en sortie. En effet l'on veut avoir les surfaces de chaque indice de rugosité en colonne et non en ligne. Nous effectuons maintenant la [jointure attributaire](http://desktop.arcgis.com/fr/arcmap/10.3/manage-data/tables/joining-attributes-in-one-table-to-another.htm) entre nos couches d'indices et la couche de zone tampon. En sortie, nous avons notre couche de zone tampon avec à l'intérieur de notre table attributaire, la surface des emprises d'indices de rugosité en colonne (fig.13).
+L'intérêt d'effectuer la sélection de chaque indice de rugosité est pour la mise en forme de la donnée en sortie. En effet l'on veut avoir les surfaces de chaque indice de rugosité en colonne et non en ligne. Nous effectuons maintenant la [jointure attributaire](http://desktop.arcgis.com/fr/arcmap/10.3/manage-data/tables/joining-attributes-in-one-table-to-another.htm) entre nos couches d'indices et la couche de zone tampon. En sortie, nous avons notre couche de zone tampon avec à l'intérieur de notre table attributaire, la surface des emprises d'indices de rugosité en colonne (fig.13).
 
 
 
@@ -203,12 +203,12 @@ L'intérêt d'effectuer la sélection de chaque indice de rugosité est pour la 
 
 
 A la fin de notre traitement nous obtenons pour chaque zone tampon d'une station météo, la surface des emprises d'indices de rugosité (1,11,21,31 et 41)
-> **Rappel**: L'indice typo-morphologique de rugosité urbaine est calculé à partir du coefficient d'emprise au sol, de la densité du bâti volumique et de la hauteur moyenne pondéré du bâti. Si l'indice est élevé la rugosité urbaine est importante, c'est à dire que la concentration et les hauteurs de bâtiments sont élévées.
+> **Rappel**: L'indice typo-morphologique de rugosité urbaine est calculé à partir du coefficient d'emprise au sol, de la densité du bâti volumique et de la hauteur moyenne pondérée du bâti. Si l'indice est élevé la rugosité urbaine est importante, c'est à dire que la concentration et les hauteurs de bâtiments sont élévées.
 
 
 #### 2.2.3 Etape 3 : Emprise de la végétation
 
-La végétation est un facteur également essentiel pour la caractérisation des emprises. Celle-ci joue un rôle dans la diminution de l'ICU. Ici nous voulons évaluer la surface prise par la végétation dans chacune des zones tampons comportant une station météo. Pour cela nous avons téléchargé deux images satellites SENTINEL2 du 6 mai 2018 et du 27 août 2018. Nous voulons à partir des deux images calculer l'[indice de végétation par différence normalisé](https://www.dronesimaging.com/wp-content/uploads/2013/05/documentation/indice%20de%20v%C3%A9g%C3%A9tation%20NDVI.pdf) (ou NDVI). Les deux images ont un niveau Level-2A, c'est-à-dire que des traitements ont été effectué dessus et nottament une correction atmosphériques. Celle-ci a consister à transformer la réflectance Top Of Atmosphere (TOA) en réflectance Bottom Of Atmosphere (BOA). Pour le calcul de NDVI, la valeur de réflectance BOA utilisé se rapprochera plus de la valeur mesuré au sol. La précision sur nos valeurs de NDVI n'en sera que plus forte. 
+La végétation est un facteur également essentiel pour la caractérisation des emprises. Celle-ci joue un rôle dans la diminution de l'ICU. Ici nous voulons évaluer la surface prise par la végétation dans chacune des zones tampons comportant une station météo. Pour cela nous avons téléchargé deux images satellites SENTINEL2 du 6 mai 2018 et du 27 août 2018. Nous voulons à partir des deux images calculer l'[indice de végétation par différence normalisé](https://www.dronesimaging.com/wp-content/uploads/2013/05/documentation/indice%20de%20v%C3%A9g%C3%A9tation%20NDVI.pdf) (ou NDVI). Les deux images ont un niveau Level-2A, c'est-à-dire que des traitements ont été effectués dessus et notamment une correction atmosphérique. Celle-ci a consisté à transformer la réflectance Top Of Atmosphere (TOA) en réflectance Bottom Of Atmosphere (BOA). Pour le calcul de NDVI, la valeur de réflectance BOA utilisée se rapprochera plus de la valeur mesurée au sol. La précision sur nos valeurs de NDVI n'en sera que plus forte. 
 Nous prendrons les images satellites à une résolution de 10 mètres, où plusieurs bandes spectrales à disposition (fig.14).
 
 
@@ -228,7 +228,7 @@ Afin de calculer le NDVI pour les deux dates à partir d'ArcGIS et de la calcula
 
 
 A partir du NDVI nous allons pouvoir extraire les emprises de végétation. En effet, plus le NDVI est fort et plus il y a de présence de végétation. C'est pour cela que nous devons prendre un seuil du NDVI qui prendra en compte les emprises de végétation. Dans la littérature scientifique, les formations végétales ont des valeurs NDVI entre 0.1 et 0.7. Néanmoins à une résolution de 10m, la valeur du seuil pris pour l'image du 6 mai 2018 est de 0,5 et celle du 27 août 2017 est de 0,6. Nous avons évalué le résultat des emprises de végétation obtenu avec différents seuils afin de choisir le plus optimum. Néanmoins la valeur de seuil reste subjectif.
-Afin d'obtenir les emprises de végétation, nous allons effectuer une [reclassification](http://desktop.arcgis.com/fr/arcmap/10.3/tools/spatial-analyst-toolbox/reclassify.htm). Les pixels de végétation (>0,6) sont classés dans la classe 1. Les autres sont classés en valeur NoData, car elle ne nous intéresse pas. Après ce traitement, nous allons calculer les statistiques à l'intérieur de chaque zone tampon afin d'en déterminer une surface de végétation. En effet, le traitement [statistiques zonales (table)](http://desktop.arcgis.com/fr/arcmap/10.3/tools/spatial-analyst-toolbox/zonal-statistics-as-table.htm) permet d'obtenir un comptage des pixels à l'intérieur de chaque zone tampon. Ensuite  on multiplie le nombre total de pixel obtenu lors du comptage par 100 , afin d'obtenir la surface. 
+Afin d'obtenir les emprises de végétation, nous allons effectuer une [reclassification](http://desktop.arcgis.com/fr/arcmap/10.3/tools/spatial-analyst-toolbox/reclassify.htm). Les pixels de végétation (>0,6) sont classés dans la classe 1. Les autres sont classés en valeur NoData, car elles ne nous intéressent pas. Après ce traitement, nous allons calculer les statistiques à l'intérieur de chaque zone tampon afin d'en déterminer une surface de végétation. En effet, le traitement [statistiques zonales (table)](http://desktop.arcgis.com/fr/arcmap/10.3/tools/spatial-analyst-toolbox/zonal-statistics-as-table.htm) permet d'obtenir un comptage des pixels à l'intérieur de chaque zone tampon. Ensuite  on multiplie le nombre total de pixel obtenu lors du comptage par 100 , afin d'obtenir la surface. 
 
 > **Note**: Connaissant la résolution de l'image de 10m nous savons que chaque pixel fait 10m de côté. La surface d'un carré est égale à côté fois côté, ce qui donne 100m² pour un pixel de 10m.
 
@@ -251,9 +251,9 @@ Le [Sky-View-Factor](https://www.researchgate.net/publication/49620296_Sky-View_
 
 
 
-La mesure du SVF est normalisé et la valeur proche de 1 signifie que l'hémisphère entier est visible comme des plaines ou des pics, tandis que les valeurs proche de 0 représentent les fonds de vallées, où le ciel n'est pratiquement pas visible. De plus, le changement du nombre de direction de recherche et le rayon de recherche maximum influence la mesure, qui peut être optimiser.
+La mesure du SVF est normalisée et la valeur proche de 1 signifie que l'hémisphère entier est visible comme des plaines ou des pics, tandis que les valeurs proches de 0 représentent les fonds de vallées, où le ciel n'est pratiquement pas visible. De plus, le changement du nombre de direction de recherche et le rayon de recherche maximum influencent la mesure, qui peut être optimisée.
 
-Dans notre étude, nous nous intéressons au "couloir" formé par les bâtiments qui joue un rôle dans le piège des rayons lumineux. Grâce à la visualisation SVF nous pouvons obtenir les valeurs d'indice qui correspondent aux fonds de vallées (proche de 0), c'est à dire où le ciel n'est pratiquement pas visible, comme entre les hauts bâtiments. Nous allons prendre un seuil pour les faibles valeurs, afin de calculer une surface des endroits où le ciel est moins visible à l'intérieur de chaque zone tampon. Pour cela nous allons avoir besoin d'un Modèle Numérique de Surface (fig.18).
+Dans notre étude, nous nous intéressons au "couloir" formé par les bâtiments qui jouent un rôle dans le piège des rayons lumineux. Grâce à la visualisation SVF nous pouvons obtenir les valeurs d'indice qui correspondent aux fonds de vallées (proche de 0), c'est à dire où le ciel n'est pratiquement pas visible, comme entre les hauts bâtiments. Nous allons prendre un seuil pour les faibles valeurs, afin de calculer une surface des endroits où le ciel est moins visible à l'intérieur de chaque zone tampon. Pour cela nous allons avoir besoin d'un Modèle Numérique de Surface (fig.18).
 
 
 
@@ -280,7 +280,7 @@ Le résultat nous donne un MNS (fig.20) où seulement les hauteurs des bâtiment
 
 
 
-A partir du logiciel QGIS et de son extension SAGA, nous allons calculer l'indice de visualisation "Sky-View-Factor". En résulte un raster, où l'indice de visualisation a été calculé pour chaque pour chaque pixel (fig.21). Plus l'indice est proche de 1  et plus la part du ciel visible est importante au niveau du pixel. En revanche plus l'indice est proche de 0 et plus la part du ciel visible est faible au niveau du pixel.
+A partir du logiciel QGIS et de son extension SAGA, nous allons calculer l'indice de visualisation "Sky-View-Factor". En résulte un raster, où l'indice de visualisation a été calculé pour chaque pixel (fig.21). Plus l'indice est proche de 1 et plus la part du ciel visible est importante au niveau du pixel. En revanche plus l'indice est proche de 0 et plus la part du ciel visible est faible au niveau du pixel.
 
 
 
@@ -290,31 +290,31 @@ A partir du logiciel QGIS et de son extension SAGA, nous allons calculer l'indic
 
 
 Nous allons seuiller le raster en prenant en compte les endroits où la part du ciel visible est faible, afin de faire ressortir 
-des zones où les rayons lumineux pourrait être potentiellement piégé dû à la présence de corridor entre les bâtiments. Après avoir analysé les valeurs de pixel autour des bâtiments, le seuil pris pour les zones où la part du ciel visible est faible sera 0.70. Nous prendrons donc en compte les valeurs inférieurs à ce seuil. Nous pouvons déterminer ensuite la surface de ces zones, grâce au comptage des pixels à l'intérieur de chaque zone tampon. Cette étape ressemble à celle utilisée pour les emprises de végétation (2.2.3). Néanmoins comme pour la surface des emprises de végétation, le choix du seuil reste subjectif et un certain recul devra être pris sur les résultats. Nous obtenons à l'intérieur de chaque zone tampon, la surface de la zone où la part du ciel visible est potentiellement faible.
+des zones où les rayons lumineux pourraient être potentiellement piégés dû à la présence de corridor entre les bâtiments. Après avoir analysé les valeurs de pixel autour des bâtiments, le seuil pris pour les zones où la part du ciel visible est faible sera 0.70. Nous prendrons donc en compte les valeurs inférieures à ce seuil. Nous pouvons déterminer ensuite la surface de ces zones, grâce au comptage des pixels à l'intérieur de chaque zone tampon. Cette étape ressemble à celle utilisée pour les emprises de végétation (2.2.3). Néanmoins comme pour la surface des emprises de végétation, le choix du seuil reste subjectif et un certain recul devra être pris sur les résultats. Nous obtenons à l'intérieur de chaque zone tampon, la surface de la zone où la part du ciel visible est potentiellement faible.
 
-Nous avons terminer nos différentes étapes de la méthodologie. On obtenons dans notre table attributaire pour chaque station météo, la moyenne des températures (entre 19h et 6h), la surface de bâti, la hauteur pondérée, la surface de l'IMU batî avec les différents indices de rugosité (1,11,21,31 et 41), la surface de végétation et la surface des zones où la part du ciel visible est faible (fig.22). 
+Nous avons terminé nos différentes étapes de la méthodologie. Nous obtenons dans notre table attributaire pour chaque station météo, la moyenne des températures (entre 19h et 6h), la surface de bâti, la hauteur pondérée, la surface de l'IMU batî avec les différents indices de rugosité (1,11,21,31 et 41), la surface de végétation et la surface des zones où la part du ciel visible est faible (fig.22). 
 
 
 ![csv](https://user-images.githubusercontent.com/48625647/59157096-39795280-8aa5-11e9-9b24-b233980af73d.png)
 *Figure 22*
 
-Avec ces différentes données obtenus de plusieurs sources, nous allons essayer de mettre en avant les variations de températures et notamment l'effet de l'ICU dans chacune de nos zones tampon à l'intérieur de notre zone d'étude.
+Avec ces différentes données obtenues de plusieurs sources, nous allons essayer de mettre en avant les variations de températures et notamment l'effet de l'ICU dans chacune de nos zones tampon à l'intérieur de notre zone d'étude.
 
 
 
 ## 3. Résultats
 
-Nous nous intéressons à la caractérisation de l'environmment aux alentours de nos stations météo, afin de faire ressortir des espaces types qui explirait les variations de températures dû à l'ICU. Nos différentes données obtenu composant notre tableau attributaire doivent être traités. Pour cela, nous allons utiliser l'[Analyse en Composantes Principales](https://eric.univ-lyon2.fr/~ricco/cours/slides/ACP.pdf)(ACP), qui est un traitement statistiques multi-variés. Elle permet de résumer des grands tableaux de données en supprimant les informations
-redondantes. De plus elle va permet de faire des groupes de "ressemblances" entre les différents individus (zones tampon des station météo) et les mettre en relation avec les différentes variables obtenus précédement.
+Nous nous intéressons à la caractérisation de l'environnement aux alentours de nos stations météo, afin de faire ressortir des espaces types qui expliqueraient les variations de températures dû à l'ICU. Nos différentes données obtenues composant notre tableau attributaire doivent être traitées. Pour cela, nous allons utiliser l'[Analyse en Composantes Principales](https://eric.univ-lyon2.fr/~ricco/cours/slides/ACP.pdf)(ACP), qui est un traitement statistiques multi-variés. Elle permet de résumer des grands tableaux de données en supprimant les informations
+redondantes. De plus elle va permettre de faire des groupes de "ressemblances" et d'"oppositions" entre les différents individus (zones tampon des station météo) et les mettre en relation avec les différentes variables obtenues précédement.
 Nous allons donc enregistrer en format CSV nos tableaux attributaires des différentes couches de zone tampon 50m, 100m et 200m, afin de les ouvrir sur le logiciel R-studio. 
 
 
 ### 3.1 Analyse en Composantes Principales
 
 Ensuite avec le package FactoMineR , nous allons effectuer une ACP à partir de nos tableaux de données. Sachant que nos données n'ont pas les mêmes unités (mètres, degrés etc), nous devons les standardiser afin de les rendre comparable. Dans FactoMineR , la fonction ACP() par défault va normaliser les données de façon automatique.
-La première étape est de faire ressortir les valeurs propres de chaque axe (composante). Sachant qu'il y a autant d'axe que de variable en entrée. Il faudra donc choisir combien de composantes garder, en se basant sur leur quantité de variance exliqué.
+La première étape est de faire ressortir les valeurs propres de chaque axe (composante). Sachant qu'il y a autant d'axe que de variable en entrée. Il faudra donc choisir combien de composantes gardées, en se basant sur leur quantité de variance exliqué.
 
-> **Note**: La valeur propre est la quantité de variance expliqué, c'est à dire que la première composante va être l'axe expliquant le plus d'information. Au fur et à mesure la valeur propre décroit jusqu'à la dernière composante. C'est à partir de la valeur propre que nous choissirons le nombre de composante principale à garder. On va donc visualiser les valeurs propres de chaque composante avec "$eig".
+> **Note**: La valeur propre est la quantité de variance expliqué, c'est à dire que la première composante va être l'axe expliquant le plus d'information. Au fur et à mesure la valeur propre décroit jusqu'à la dernière composante. C'est à partir de la valeur propre que nous choissirons le nombre de composantes principales à garder. On va donc visualiser les valeurs propres de chaque composante avec "$eig".
 
 
 ```
@@ -335,14 +335,14 @@ eig.ACP100m
 eig.ACP200m
 
 ```
-On obtient pour les trois zones tampon des stations météo leurs valeurs propres (fig.23). On remarque que pour la zone tampon de 200m de la journée 2017, sa première composante principale à une quantité de variance expliqué (33.67522) supérieur aux premières composantes pour l'ACP des zones tampon de 50m (32.76488) et 100m (33.62581). Néanmoins pour la zone tampon de 100m de la journée 2018, sa première composante principale à une quantité de variance expliqué (34.51747) supérieur aux premières composantes pour l'ACP des zones tampon de 50m (33.80514) et 200m (34.29261). Nous utiliserons donc la zone tampon de 100m pour notre analyse sur l'ACP des deux journées, car elle obtient une quantité de variance expliqué majoritairement plus importante. De plus cela permettra de comparer les deux journées avec une zone tampon de dimension égale.
+On obtient pour les trois zones tampon des stations météo, leurs valeurs propres (fig.23). On remarque que pour la zone tampon de 200m de la journée 2017, sa première composante principale à une quantité de variance expliqué (33.67522) supérieure aux premières composantes pour l'ACP des zones tampon de 50m (32.76488) et 100m (33.62581). Néanmoins pour la zone tampon de 100m de la journée 2018, sa première composante principale à une quantité de variance expliqué (34.51747) supérieure aux premières composantes pour l'ACP des zones tampon de 50m (33.80514) et 200m (34.29261). Nous utiliserons donc la zone tampon de 100m pour notre analyse sur l'ACP des deux journées, car elle obtient une quantité de variance expliqué majoritairement plus importante. De plus cela permettra de comparer les deux journées avec une zone tampon de dimension égale.
 
 
 ![eig](https://user-images.githubusercontent.com/48625647/59158796-40618e80-8ac0-11e9-8917-f21be3154eaa.png)
 *Figure 23*
 
 
-Ici l'ACP a été effectué sur la journée de 2017. Néanmoins pour la journée de 2018, l'ACP de la zone tampon de 200m obtient une première composante principale avec la plus forte valeur propre par rapport aux autres zones tampons. Nous utiliserons comme pour la journée de 2017 la zone tampon de 200m. Après avoir analysé les valeurs propres, nous allons les visualiser dans graphique (fig.24) afin de décider du choix du nombre de composante principale a conserver.
+Ici l'ACP a été effectué sur la journée de 2017. Néanmoins pour la journée de 2018, l'ACP de la zone tampon de 100m obtient une première composante principale avec la plus forte valeur propre par rapport aux autres zones tampons. Nous utiliserons comme pour la journée de 2017 la zone tampon de 100m. Après avoir analysé les valeurs propres, nous allons les visualiser dans le graphique (fig.24) afin de décider du choix du nombre de composante principale à conserver.
 
 ```
 
@@ -357,7 +357,7 @@ lines(x = 1:nrow(eig.ACP100m ), eig.ACP100m[, 2], type = "o", col = "red")
 ![eig_variance](https://user-images.githubusercontent.com/48625647/59159314-3a6fab80-8ac8-11e9-80d2-537f8e0c3fb8.png)
 *Figure 24*
 
-Au vue des pourcentages de variance expliqué (fig.24) et des quantité précise et cumulatif du pourcentage de variance expliqué (fig.23), nous allons retenir 6 composantes principales pour la journée de 2017 et 2018. Le pourcentage de variance expliqué est donc de 85% pour 2017 et 2018, il est acceptable. Avant d'analyser le graphique de corrélation, nous allons voir les différents graphiques (fig.25) entre chaque variables afin de détailler les quelques corrélation qui pourrait être observable.
+Au vue des pourcentages de variance expliqué (fig.24) et des quantités précises et cumulatives du pourcentage de variance expliqué (fig.23), nous allons retenir 6 composantes principales pour la journée de 2017 et 2018. Le pourcentage de variance expliqué est donc de 85% pour 2017 et 2018, il est acceptable. Avant d'analyser le graphique de corrélation, nous allons voir les différents graphiques (fig.25) entre chaque variable afin de détailler les quelques corrélations qui pourrait être observable.
 
 ```
 
@@ -379,16 +379,16 @@ Nous pouvons distinguer quelques tendances entre variables mais leur distributio
 
 
 > **Note**: Le graphique de corrélation des variables est constitué de deux axes. L'axe des abscisses correspond à la première composante et l'axe des ordonnés correspond à la deuxième composante, avec des valeurs de corrélation comprise entre -1 et 1.
-Pour l'interprétation : Les variables situées en haut à droite sont corrélés positivement et au contraire les variables situées en bas à gauche sont corrélés négativement. De plus les variables qui sont le plus loin de l'origine sont les mieux représentés par l'ACP.
+Pour l'interprétation : Les variables situées en haut à droite sont corrélées positivement et au contraire les variables situées en bas à gauche sont corrélées négativement. De plus les variables qui sont le plus loin de l'origine sont les mieux représentées par l'ACP.
 
-Sur le graphique de corrélation des variables de 2017 et 2018, on retrouve pour la première composante principale (axe des abscisses), des variables corrélés positivement que sont les températures moyennes , la surface de bâti, la hauteur pondéré et la surface des zones où la part du ciel visible est faible. L'interprétation de ces variables est que plus la température moyenne est élévée et plus les autres variables cité au dessus le seront à l'intérieur de ma zone tampon. Reciproquement, la surface de végétation est corrélé négativement par rapport à la température moyenne. Donc plus la température moyenne est élévé et plus la surface de végétation sera faible. Le résultat paraît logique avec ce que nous avions analysé les effets de l'ICU avec les différentes surfaces.
-Pour la deuxième composante (axe des ordonnées), on retrouve pour la journée de 2017 les variables de surface de l'IMU d'indice 21 notamment corrélé négativement alors que pour la journée de 2018, on a la variable qui est corrélés positivement.Vu l'éloignement de la variable à son origine, cette variable est bien représenté.
+Sur le graphique de corrélation des variables de 2017 et 2018, on retrouve pour la première composante principale (axe des abscisses), des variables corrélées positivement que sont les températures moyennes , la surface de bâti, la hauteur pondérée et la surface des zones où la part du ciel visible est faible. L'interprétation de ces variables est que plus la température moyenne est élévée et plus les autres variables citées au dessus le seront à l'intérieur de la zone tampon. Reciproquement, la surface de végétation est corrélée négativement par rapport à la température moyenne. Donc plus la température moyenne est élévée et plus la surface de végétation sera faible. Le résultat paraît logique avec ce que nous avions analysé sur les effets de l'ICU.
+Pour la deuxième composante (axe des ordonnées), on retrouve pour la journée de 2017 les variables de surface de l'IMU d'indice 21 notamment corrélées négativement alors que pour la journée de 2018, on a la variable qui est corrélée positivement.Vu l'éloignement de la variable à son origine, cette variable est bien représentée.
 
 
 ### 3.2 Classification Ascendante Hiérarchique
 
-Ayant choisis le nombre de composante principale a garder, nous allons effectuer une [Classification Ascendante Hiérarchique](http://math.agrocampus-ouest.fr/infoglueDeliverLive/digitalAssets/100457_AnaDo_CLASSIF_cours_slides.pdf) (CAH) afin de classer nos stations météo dans des "cluster" et obtenir des espaces caractéristiques de l'ICU à partir de nos variables. A l'issue de cette classification, nous exporterons le tableau avec le numéro de cluster pour chaque individu vers un logiciel SIG afin de spatialiser l'information.
-La CAH sera effectué sur les résultats des ACP pour la zone tampon de 100m et en ayant conservé 6 composantes principales (fig.27).
+Ayant choisis le nombre de composante principale à garder, nous allons effectuer une [Classification Ascendante Hiérarchique](http://math.agrocampus-ouest.fr/infoglueDeliverLive/digitalAssets/100457_AnaDo_CLASSIF_cours_slides.pdf) (CAH) afin de classer nos stations météo dans des "cluster" et obtenir des espaces caractéristiques de l'ICU à partir de nos variables. A l'issue de cette classification, nous exporterons le tableau avec le numéro de cluster pour chaque individu vers un logiciel SIG afin de spatialiser l'information.
+La CAH sera effectuée sur les résultats des ACP pour la zone tampon de 100m et en ayant conservé 6 composantes principales (fig.27).
 
 ```
 library(FactoMineR)
@@ -410,7 +410,7 @@ CAH100m2<-HCPC(ACP100m2)
 *Figure 27*
 
 
-L'interprétation des résultats de la CAH est a lié avec le graphique de corrélation des variables. En effet les groupes situés plus à droite vont être au niveau des variables de surface de bâti, de hauteur pondéré, de température moyenne et de surface de zone où la part du ciel visible est faible. Tandis que les groupes situé plus à gauche seront au niveau de la variable surface de végétation. Pour l'interprétation des résultats de la journée de 2017,  les cluster 4,5 et surtout le 6 serait un environnement très urbain avec des moyennes de température plus élevé. Au contaire les clusters 1,2 serait un environement plus végétal avec des températures moyennes moins importantes. Néanmoins le cluster 3 proche de l'origine est difficile à carcatériser. Il en ressort également la même tendance pour la journée de 2018 avec les clusters 3,4 et 5 qui sont plutôt urbains avec une morphologie du bâti importante et des températures moyennes élevées. Alors que le cluster 1 est largement vers les surfaces végétalisés et des températures plus faible. Puis le cluster 2 assez proche de l'origine qui reste difficile aussi à caractériser. Etant donnée le nombre de station météo (individu), la visibilité sur le détail du graphique de la CAH n'est pas lisible et c'est pour cela que nous allons exporter le résultat sur ArcGIS. En vue de cette export, cela nous permettra de vérifier nos hypothèses sur les différentes caractérisations de ces clusters à partir de la représentation spatiale.
+L'interprétation des résultats de la CAH est à lier avec le graphique de corrélation des variables. En effet les groupes situés plus à droite vont être au niveau des variables de surface de bâti, de hauteur pondérée, de température moyenne et de surface de zone où la part du ciel visible est faible. Tandis que les groupes situés plus à gauche seront au niveau de la variable surface de végétation. Pour l'interprétation des résultats de la journée de 2017,  les cluster 4,5 et surtout le 6 serait un environnement très urbain avec des moyennes de température plus élevées. Au contaire les clusters 1,2 serait un environement plus végétal avec des températures moyennes moins importantes. Néanmoins le cluster 3 proche de l'origine est difficile à caractériser. Il en ressort également la même tendance pour la journée de 2018 avec les clusters 3,4 et 5 qui sont plutôt urbains avec une morphologie du bâti importante et des températures moyennes élevées. Alors que le cluster 1 est largement vers les surfaces végétalisées et des températures plus faibles. Puis le cluster 2 assez proche de l'origine qui reste difficile aussi à caractériser. Etant donné le nombre de stations météo (individu), la visibilité sur le détail du graphique de la CAH n'est pas lisible et c'est pour cela que nous allons exporter le résultat sur ArcGIS. En vue de cet export, cela nous permettra de vérifier nos hypothèses sur les différentes caractérisations de ces clusters à partir de leur représentation spatiale.
 
 
 ```
@@ -428,7 +428,7 @@ write.csv(ResJour2018, file = "ResJour2018.csv",row.names=TRUE)
 ```
 
 
-Après avoir importer sur ArcGIS nos deux tableaux au format csv, nous allons effectuer une jointure attributaire de notre table jusqu'à notre couche des stations météo. Nous pouvons grâce à la symbologie essayer d'interpréter la répartition spatiale des différents cluster par rapport à l'analyse des résultats de la CAH (fig.28).
+Après avoir importé sur ArcGIS nos deux tableaux au format csv, nous allons effectuer une jointure attributaire de notre table jusqu'à notre couche des stations météo. Nous pouvons grâce à la symbologie essayer d'interpréter la répartition spatiale des différents cluster par rapport à l'analyse des résultats de la CAH (fig.28).
 
 
 
@@ -437,7 +437,7 @@ Après avoir importer sur ArcGIS nos deux tableaux au format csv, nous allons ef
 
 
 
-Que ce soit pour la journée de 2017 et de 2018, on voit que les clusters correspondant à du bâti dense et avec des températures moyennes plus élevée se situe au centre de Paris et plus l'on s'éloigne de la capitale et plus les clusters caractérisé par une surface de végétation plus importante et des températures plus faible sont nombreux. L'ICU à Paris est bien visible dans notre résultat. Néanmoins la comparaison entre les deux journées sont assez difficile à percevoir au niveau du résultat cartographique.
+Que ce soit pour la journée de 2017 et de 2018, on voit que les clusters correspondants à du bâti dense et avec des températures moyennes plus élevées se situent à Paris. Plus nous nous éloignons de la capitale et plus les clusters caractérisés par une surface de végétation élevée et des températures moyennes plus faibles sont importantes. L'ICU à Paris est bien visible dans notre résultat. Néanmoins la comparaison entre les deux journées sont assez difficiles à percevoir au niveau du résultat cartographique.
 
 
 ## 4. Conclusion
