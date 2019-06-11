@@ -1,5 +1,5 @@
 
-# Etude de l'îlot de chaleur urbain et de la variation de température entre espace urbain et rurale dans la région d'Île-De-France.
+# Etude de l'îlot de chaleur urbain et de la variation de température entre espace urbain et rural dans la région d'Île-De-France.
 
   Au cours du second semestre du master 2 Télédétection et Géomatique Appliquées à l'Environnement (TGAE) en 2019, j'ai eu à réaliser un mini-projet. Celui-ci s'intéresse aux variations de températures liées aux effets de l'îlot de chaleur urbain à partir de données obtenues par des stations météo de particuliers. L'étude a été effectuée avec des logiciels SIG (ArcGIS 10.5.1 et QGIS 2.18.15). De plus, les traitements statistiques ont été faits avec le logiciel RStudio.
 
