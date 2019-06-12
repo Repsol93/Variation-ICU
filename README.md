@@ -151,6 +151,7 @@ Afin d'être rigoureux dans la caractérisation de l'environnement des stations 
 
 
 ![exemple2](https://user-images.githubusercontent.com/48625647/57558573-81119f00-737e-11e9-8812-25b39e714905.png)
+
   *Figure 9*
 
 
@@ -440,8 +441,9 @@ Après avoir importé sur ArcGIS nos deux tableaux au format csv, nous allons ef
 
 
 
-Que ce soit pour la journée de 2017 et de 2018, on voit que les clusters correspondants à du bâti dense et avec des températures moyennes plus élevées se situent à Paris. Plus nous nous éloignons de la capitale et plus les clusters caractérisés par une surface de végétation élevée et des températures moyennes plus faibles sont importantes. L'ICU à Paris est bien visible dans notre résultat. Néanmoins la comparaison entre les deux journées sont assez difficiles à percevoir au niveau du résultat cartographique.
+Que ce soit pour la journée de 2017 et de 2018, on voit que les clusters correspondants à du bâti dense et avec des températures moyennes plus élevées se situent à Paris. Plus nous nous éloignons de la capitale et plus les clusters caractérisés par une surface de végétation élevée et des températures moyennes plus faibles sont importantes. L'ICU à Paris est visible dans notre résultat. D'un côté les températures sont plus élevées avec une surface de bâti , une hauteur pondérée et des zones où le ciel est peu visible (succeptible de piégés les rayons) importantes. Au contraire lorsque que l'on regarde aux alentours de Paris les températures moyennes sont plus faibles et avec des surfaces de végétation plus importante. Néanmoins certaines exceptions sont présentent à Paris avec un cluster qui correspondrait à un environnement avec une végétation plus présente par rapport aux clusters alentours.
 
 
 ## 4. Conclusion
-)
+
+Ainsi à partir de données de stations météo de particulier
