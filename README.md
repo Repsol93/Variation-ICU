@@ -446,4 +446,9 @@ Que ce soit pour la journée de 2017 et de 2018, on voit que les clusters corres
 
 ## 4. Conclusion
 
-Ainsi à partir de données de stations météo de particulier
+Ainsi nos données de température acquisent par des stations météo de particuliers avec le complément de nos différentes données d'entrée ont pu apporter une visualisation spatiale de l'effet de l'ICU à Paris et ses alentours. En effet à partir de nos résultats statistiques , nous avons pu caractériser les environnements autour de nos zones tampon. D. Nos résultats sont néanmoins à prendre avec du recul, notamment avec le seuillage de nos zones de végétation et de zones où la part du ciel est peu visible, qui ne reflète pas un choix totalement objectif. A la suite de cette étude, certains résultats pourraient appronfondie comme les différentes surface d'IMU.
+
+
+
+
+
