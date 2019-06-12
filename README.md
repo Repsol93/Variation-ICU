@@ -180,6 +180,7 @@ De la même manière que pour l'étape précédente, nous allons effectuer une i
 
 
 ![etape1IMU](https://user-images.githubusercontent.com/48625647/57558310-799dc600-737d-11e9-83e4-2f3916d97236.png)
+
   *Figure 11*
 
 
