@@ -69,6 +69,7 @@ Le choix de la zone d'étude s'est porté sur l'endroit où la position des stat
 
 
 ![IMU](https://user-images.githubusercontent.com/48625647/57013236-d6c1ab00-6c0a-11e9-9520-510c7ae50765.png)
+
   *Figure 5*
 
 #### 2.1.4 Données satellites SENTINEL2
@@ -214,6 +215,7 @@ Nous prendrons les images satellites à une résolution de 10 mètres, où plusi
 
 
 ![image_gallery](https://user-images.githubusercontent.com/48625647/57800626-1b445f00-7752-11e9-885f-a906dff049f6.jpg)
+
   *Figure 14*
 
 
@@ -258,6 +260,7 @@ Dans notre étude, nous nous intéressons au "couloir" formé par les bâtiments
 
 
 ![MNS_dessin](https://user-images.githubusercontent.com/48625647/58646942-c46c8700-8306-11e9-8781-ddfcf3ead701.png)
+
 *Figure 18*
 
 
